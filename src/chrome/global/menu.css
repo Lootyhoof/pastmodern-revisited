@@ -1,0 +1,286 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ * 
+ * The Original Code is mozilla.org code.
+ * 
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== menu.css =======================================================
+  == Styles used by XUL menu-related elements.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: menu/menuitem ::::: */
+
+menu,
+menuitem {
+  -moz-box-align: center;
+  font: menu;
+  color: rgb(0, 0, 0);
+  list-style-image: none;
+  -moz-image-region: auto;
+}
+
+menuitem[default="true"] {
+  font-weight: bold;
+}
+
+menu[disabled="true"],
+menuitem[disabled="true"],
+menu[_moz-menuactive="true"][disabled="true"],
+menuitem[_moz-menuactive="true"][disabled="true"] {
+  color: rgb(140, 153, 171);
+}
+
+menuitem.spell-suggestion {
+  font-weight:bold;
+}
+
+/* ..... internal content .... */
+
+.menu-text,
+.menu-iconic-left,
+.menu-iconic-text {
+  color: inherit;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 2px !important;
+}
+
+.menu-iconic-left {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.menu-iconic-icon {
+  width: 16px;
+  height: 16px;
+  list-style-image: inherit;
+}
+
+.menu-text {
+  font-weight: inherit;
+  -moz-margin-start: 18px !important;
+}
+
+.menu-description {
+  font-style: italic;
+  color: rgb(140, 153, 171);
+  -moz-margin-start: 1ex !important;
+}
+
+.menu-accel,
+.menu-iconic-accel {
+  color: inherit;
+  -moz-padding-end: 14px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 7px !important;
+  -moz-margin-end: 2px !important;
+}
+
+/* ..... menu arrow box ..... */
+
+.menu-right {
+  width: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 6px;
+  -moz-margin-end: 0;
+  list-style-image: url("chrome://global/skin/menu/menu-arrow.gif");
+  -moz-image-region: rect(0px, 4px, 7px, 0px);
+}
+
+.menu-right[_moz-menuactive="true"] {
+  -moz-image-region: rect(0px, 8px, 7px, 4px);
+}
+
+.menu-right[disabled="true"] {
+  -moz-image-region: rect(0px, 12px, 7px, 8px) !important;
+}
+
+/* ::::: menu/menuitems in menubar ::::: */
+
+menubar > menu {
+  padding-top: 1px;
+  padding-bottom: 2px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 4px;
+  margin: 1px 0;
+  border: 1px solid transparent;
+}
+
+menubar > menu:not([open="true"]):not([disabled="true"]):hover, /* 仮修正 */
+menubar > menu[_moz-menuactive="true"]:not([disabled="true"]) {
+  border: 1px outset rgb(221, 227, 235);
+}
+
+menubar > menu[_moz-menuactive="true"][open="true"] {
+  border-style: inset;
+}
+
+/* ::::: lightweight themes用スタイル ::::: */
+
+menubar > menu:-moz-lwtheme {
+  border-style: solid !important;
+  border-color: transparent !important;
+}
+
+menubar > menu:-moz-lwtheme:not([disabled="true"]) {
+  color: inherit !important;
+}
+
+menubar > menu:-moz-lwtheme[_moz-menuactive="true"]:not([disabled="true"]) {
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(66, 79, 99);
+  text-shadow: none;
+}
+
+menubar > menu:-moz-window-inactive {
+  color: ThreeDShadow;
+}
+
+/* ..... internal content .... */
+
+.menubar-left {
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 2px;
+}
+
+.menubar-text {
+  color: inherit;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 2px !important;
+}
+
+/* ::::: menu/menuitems in popups ::::: */
+
+popup > menu,
+popup > menuitem,
+menupopup > menu,
+menupopup > menuitem {
+  max-width: 38em;
+  padding: 2px;
+}
+
+popup > menu[_moz-menuactive="true"],
+popup > menuitem[_moz-menuactive="true"],
+menupopup > menu[_moz-menuactive="true"],
+menupopup > menuitem[_moz-menuactive="true"] {
+  color: rgb(255, 255, 255);
+  background-color: rgb(66, 79, 99);
+}
+
+/* ::::: menu/menuitems in menulist popups ::::: */
+
+menulist > menupopup > menu,
+menulist > menupopup > menuitem,
+.menulist-menupopup > menu,
+.menulist-menupopup > menuitem {
+  max-width: none;
+  font: message-box;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -moz-padding-end: 26px;
+}
+
+/* ..... selected state ..... */
+
+.menulist-menupopup > menuitem[selected="true"],
+menulist > menupopup > menuitem[selected="true"] {
+  list-style-image: url("chrome://global/skin/menu/menu-check.gif");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+.menulist-menupopup > menuitem[_moz-menuactive="true"][selected="true"],
+menulist > menupopup > menuitem[_moz-menuactive="true"][selected="true"] {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+/* ::::: checkbox menuitem ::::: */
+
+menuitem[checked="true"] {
+  list-style-image: url("chrome://global/skin/menu/menu-check.gif");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+menuitem[checked="true"][_moz-menuactive="true"] {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+menuitem[checked="true"][disabled="true"] {
+  -moz-image-region: rect(0px, 48px, 16px, 32px) !important;
+}
+
+/* ::::: radio menuitem ::::: */
+
+menuitem[checked="true"][type="radio"] {
+  list-style-image: url("chrome://global/skin/menu/menu-radio.gif");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+menuitem[checked="true"][type="radio"][_moz-menuactive="true"] {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+menuitem[checked="true"][type="radio"][disabled="true"] {
+  -moz-image-region: rect(0px, 48px, 16px, 32px) !important;
+}
+
+/* ::::: menuseparator ::::: */
+
+menuseparator {
+  margin: 2px 3px;
+  border-top: 1px solid rgb(165, 171, 192);
+  border-bottom: 1px solid rgb(238, 241, 247);
+}
+
+menulist > menupopup > menuseparator,
+.menulist-menupopup > menuseparator {
+  margin: 2px 0;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-bottom-width: 0;
+}
+
+/* ::::: autocomplete ::::: */
+
+.autocomplete-history-popup > menuitem {
+  max-width: none !important;
+  font: message-box;
+}
+
+/* ::::: tree column picker ::::: */
+
+.treecell-popupcell-menu {
+  -moz-margin-start: -2px;
+  list-style-image: url("chrome://global/skin/tree/columnpicker.gif");
+  -moz-image-region: auto;
+}

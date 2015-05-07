@@ -1,0 +1,54 @@
+/* ::::: about:sessionrestore ::::: */
+
+#errorPageContainer {
+  background-image: url("chrome://global/skin/icons/warning-large.png");
+}
+
+#tabList {
+  width: 100%;
+  height: 12em;
+}
+
+treechildren::-moz-tree-row(alternate) {
+  background-color: rgb(243, 243, 243);
+}
+
+treechildren::-moz-tree-row(alternate, selected) {
+  background-color: rgb(199, 208, 217);
+}
+
+treechildren::-moz-tree-row(alternate, selected, focus) {
+  background-color: rgb(66, 79, 99);
+}
+
+treechildren::-moz-tree-image(icon),
+treechildren::-moz-tree-image(noicon) {
+  width: 16px;
+  height: 16px;
+  -moz-padding-end: 2px;
+  margin: 0px 2px;
+}
+
+treechildren::-moz-tree-image(noicon) {
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+treechildren::-moz-tree-image(container, noicon) {
+  list-style-image: url("chrome://browser/skin/aboutSessionRestore-window-icon.png");
+}
+
+treechildren::-moz-tree-image(checked) {
+  list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+}
+
+treechildren::-moz-tree-image(partial) {
+  list-style-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif");
+}
+
+#buttons {
+  width: 100%;
+}
+
+#buttons > button {
+  margin-top: 2em;
+}

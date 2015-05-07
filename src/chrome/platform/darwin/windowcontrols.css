@@ -1,0 +1,25 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* full-screen window controls */
+#minimize-button,
+#close-button,
+#fullscreen-button ~ #window-controls > #restore-button {
+  display: none;
+}
+
+/* ..... restore window button ..... */
+
+#restore-button {
+  list-style-image: url("chrome://platform/skin/Restore.png");
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
+  padding: 3px 4px !important;
+  border-width: 0;
+}
+
+#restore-button:hover {
+  -moz-image-region: rect(24px, 24px, 48px, 0px);
+}
+
+#restore-button:hover:active {
+  -moz-image-region: rect(48px, 24px, 72px, 0px);
+}

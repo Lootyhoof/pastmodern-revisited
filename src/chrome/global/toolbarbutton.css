@@ -1,0 +1,175 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is mozilla.org code.
+ * 
+ * The Initial Developer of the Original Code is 
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ *  Joe Hewitt (hewitt@netscape.com)
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== toolbarbutton.css ==============================================
+  == Styles used by XUL toolbarbutton elements.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: ツールバーボタン ::::: */
+
+toolbarbutton {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  font: message-box;
+  color: rgb(0, 0, 0);
+  padding: 1px 2px;
+  margin: 0;
+  border: 1px solid transparent;
+}
+
+.toolbarbutton-icon[label]:not([label=""]),
+.toolbarbutton-icon[type="menu"] {
+  -moz-margin-end: 2px;
+}
+
+.toolbarbutton-text {
+  text-align: center;
+  margin: 0 !important;
+}
+
+/* ..... フォーカスが入るツールバーボタン ..... */
+
+toolbarbutton.tabbable {
+  -moz-user-focus: normal !important;
+  outline: 1px dotted transparent;
+  outline-offset: -2px;
+}
+
+toolbarbutton.tabbable:focus {
+  outline-color: rgb(0, 0, 0);
+}
+
+toolbarbutton[buttonover="true"],
+toolbarbutton:hover:not([disabled="true"]) {
+  border-top-color: rgb(238, 240, 243);
+  border-right-color: rgb(134, 146, 158);
+  border-bottom-color: rgb(134, 146, 158);
+  border-left-color: rgb(238, 240, 243);
+}
+
+toolbarbutton[open="true"],
+toolbarbutton[open="true"]:hover,
+toolbarbutton:hover:active:not([disabled="true"]) {
+  padding-top: 2px;
+  padding-bottom: 0;
+  -moz-padding-start: 3px;
+  -moz-padding-end: 1px;
+  border-top-color: rgb(134, 146, 158);
+  border-right-color: rgb(238, 240, 243);
+  border-bottom-color: rgb(238, 240, 243);
+  border-left-color: rgb(134, 146, 158);
+}
+
+toolbarbutton[disabled="true"] {
+  color: rgb(147, 153, 171);
+  border-color: transparent;
+}
+
+/* lightweight themes用スタイル */
+toolbarbutton:-moz-lwtheme[disabled="true"] {
+  color: rgb(123, 138, 152);
+  text-shadow: 1px 1px rgb(226, 231, 235);
+}
+
+toolbarbutton[checked="true"] {
+  color: rgb(239, 241, 244);
+  background-color: rgb(140, 154, 168);
+  border-top-color: rgb(69, 76, 85) !important;
+  border-right-color: rgb(125, 132, 141) !important;
+  border-bottom-color: rgb(125, 132, 141) !important;
+  border-left-color: rgb(69, 76, 85) !important;
+}
+
+toolbarbutton[checked="true"]:hover:active {
+  padding: 1px 2px;
+}
+
+toolbarbutton[checked="true"][disabled="true"] {
+  color: rgb(199, 208, 217) !important;
+  text-shadow: none; /* lightweight themes用スタイル */
+}
+
+/* ..... lightweight themes用スタイル ..... */
+
+toolbarbutton:-moz-lwtheme {
+  text-shadow: none;
+}
+
+toolbarbutton:-moz-lwtheme:not([checked="true"]):not([disabled="true"]) {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+/* ::::: ツールバーボタン メニュー ::::: */
+
+.toolbarbutton-menu-dropmarker {
+  background-color: transparent !important;
+  list-style-image: url("chrome://global/skin/button/tbmenu-arrow.png");
+  padding: 0;
+  margin-top: 1px; /* Bug 491218参照 */
+  border-width: 0 !important;
+}
+
+.toolbarbutton-menu-dropmarker[disabled="true"] {
+  list-style-image: url("chrome://global/skin/button/tbmenu-arrow-dis.png");
+}
+
+/* ::::: ツールバーボタン メニューボタン ::::: */
+
+toolbarbutton[type="menu-button"] {
+  -moz-box-align: stretch;
+  -moz-box-orient: horizontal !important;
+}
+
+toolbarbutton[type="menu-button"],
+toolbarbutton[type="menu-button"]:hover,
+toolbarbutton[type="menu-button"]:hover:active,
+toolbarbutton[type="menu-button"][open="true"],
+toolbarbutton[type="menu-button"][disabled="true"] {
+  padding: 0 !important;
+  border-style: none;
+}
+
+.toolbarbutton-menubutton-button {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  -moz-box-orient: vertical;
+  font: inherit;
+}
+
+/* ..... ドロップマーカ ..... */
+
+.toolbarbutton-menubutton-dropmarker {
+  background-color: transparent !important;
+  list-style-image: url("chrome://global/skin/button/tbmenu-arrow.png");
+  padding: 2px;
+  border-width: 0 !important;
+}
+
+.toolbarbutton-menubutton-dropmarker[disabled="true"] {
+  list-style-image: url("chrome://global/skin/button/tbmenu-arrow-dis.png");
+}

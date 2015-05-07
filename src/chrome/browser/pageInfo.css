@@ -1,0 +1,196 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is mozilla.org code.
+ * 
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-2004
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ *   Kevin Gerich  <webmail@kmgerich.com>
+ *   Daniel Brooks <db48x@yahoo.com>
+ *   Florian QUEZE <f.qu@queze.net>
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+@import url("chrome://global/skin/");
+
+/* ::::: 一番上の切り替え部分 ::::: */
+/* chrome://browser/content/pageinfo/pageInfo.css参照 */
+
+#topBar {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid;
+  -moz-border-bottom-colors: rgb(238, 240, 243) rgb(110, 115, 120);
+}
+
+#viewGroup {
+  -moz-padding-start: 5px !important;
+  -moz-padding-end: 1em;
+}
+
+#mainDeck {
+  padding: 10px;
+}
+
+tree {
+  margin: 0.5em;
+}
+
+.gridSeparator {
+  width: 0.5em;
+}
+
+textbox {
+  background-color: transparent !important;
+  padding: 0;
+  border-width: 0;
+}
+
+textbox[disabled] {
+  font-style: italic;
+  color: rgb(140, 153, 171);
+}
+
+label.header,
+textbox.header {
+  -moz-margin-start: 0;
+}
+
+/* ::::: 全般 ::::: */
+
+groupbox.collapsable caption .caption-icon { 
+  width: 10px;
+  height: 10px;
+  background-image: url("chrome://global/skin/tree/twisty-open.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-margin-end: 2px;
+}
+
+groupbox.collapsable[closed="true"] {
+  border-width: 0;
+}
+
+groupbox.collapsable[closed="true"] caption .caption-icon { 
+  background-image: url("chrome://global/skin/tree/twisty-clsd.png");
+}
+
+groupbox tree { 
+  margin: 0 4px;
+}
+
+#securityBox description {
+  -moz-margin-start: 10px;
+}
+
+#general-security-identity {
+  line-height: 2em;
+  white-space: pre-wrap;
+}
+
+/* ::::: メディア ::::: */
+
+#imagetree {
+  min-height: 10em;
+}
+
+treechildren::-moz-tree-cell-text(broken) {
+  font-style: italic;
+  color: rgb(140, 153, 171);
+}
+
+#mediaGrid {
+  min-height: 9em;
+}
+
+#mediaLabelColumn {
+  min-width: 10em;
+}
+
+#mediaPreviewBox .iframe {
+  margin: 0.5em;
+  background-color: rgb(255, 255, 255);
+  overflow: auto;
+}
+
+#thepreviewimage {
+  margin: 1em;
+}
+
+/* ::::: フィード ::::: */
+
+#feedListbox {
+  margin: 0;
+}
+
+#feedListbox > richlistitem {
+  min-height: 25px;
+  padding: 6px 7px;
+  border-top-width: 0;
+  border-bottom: 1px solid rgb(165, 171, 192) !important;
+}
+
+#feedListbox > richlistitem[selected="true"] {
+  background-color: rgb(218, 227, 232);
+}
+
+#feedListbox:focus > richlistitem[selected="true"] {
+  color: rgb(0, 0, 0);
+  background-color: rgb(183, 219, 235);
+}
+
+.feedTitle { 
+  font-weight: bold;
+}
+
+/* ::::: パーミション ::::: */
+
+#permPanel > hbox {
+  -moz-box-align: center;
+  margin-bottom: 0.5em;
+}
+
+#permList {
+  background-color: rgb(199, 208, 217);
+  margin: 0;
+  border: 2px solid;
+  -moz-border-top-colors: rgb(190, 195, 211) rgb(93, 97, 110);
+  -moz-border-right-colors: rgb(248, 250, 254) rgb(93, 97, 110);
+  -moz-border-bottom-colors: rgb(248, 250, 254) rgb(93, 97, 110);
+  -moz-border-left-colors: rgb(190, 195, 211) rgb(93, 97, 110);
+  overflow: auto;
+}
+
+.permission {
+  min-height: 25px;
+  padding: 6px 7px;
+  border-bottom: 1px solid rgb(152, 165, 178);
+}
+
+.permissionLabel {
+  font-weight: bold;
+}
+
+/* ::::: セキュリティ ::::: */
+
+#securityPanel .fieldLabel {
+  margin: 4px 10px;
+}
+
+#securityPanel .fieldValue {
+  font-weight: bold;
+  margin: 4px 10px;
+}

@@ -1,0 +1,99 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ * 
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-1999
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== radio.css ===================================================
+  == Styles used by the XUL radio element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: radio ::::: */
+
+radio {
+  -moz-box-align: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 2px;
+  margin: 0 2px;
+  border: 2px solid transparent;
+  -moz-border-radius: 5px 6px;
+}
+
+.radio-icon {
+  -moz-margin-start: 2px;
+}
+
+/* フォーカス時枠線色 */
+radio[focused="true"] {
+  border-color: rgb(152, 165, 178);
+}
+
+/* 無効時文字色 */
+radio[disabled="true"] {
+  color: rgb(140, 153, 171);
+}
+
+/* ..... 非選択時画像 ..... */
+
+.radio-check-box1 {
+  width: 13px;
+  height: 13px;
+  list-style-image: none; /* radioから継承されるので */
+  background-image: url("chrome://global/skin/radio/radio.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+radio:hover:active > .radio-check-box1 {
+  background-position: center center;
+}
+
+radio[disabled="true"] > .radio-check-box1 {
+  background-position: center bottom !important;
+}
+
+/* ..... 選択時画像 ..... */
+
+.radio-check-box2 {
+  width: 13px;
+  height: 13px;
+  list-style-image: none; /* radioから継承されるので */
+  background-image: none;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+radio[selected="true"] > .radio-check-box1 > .radio-check-box2 {
+  background-image: url("chrome://global/skin/radio/radio-check.png");
+}
+
+radio[selected="true"]:hover:active > .radio-check-box1 > .radio-check-box2 {
+  background-position: center center;
+}
+
+radio[selected="true"][disabled="true"] > .radio-check-box1 > .radio-check-box2 {
+  background-position: center bottom !important;
+}

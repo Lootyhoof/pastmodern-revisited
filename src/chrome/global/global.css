@@ -1,0 +1,458 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is mozilla.org code.
+ * 
+ * The Initial Developer of the Original Code is 
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ *  Joe Hewitt (hewitt@netscape.com)
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== global.css =====================================================
+  == Styles that apply everywhere.
+  ======================================================================= */
+
+@import url("chrome://global/locale/intl.css"); /* ロケールによるスタイル指定 */
+@import url("chrome://addons/skin/addons.css"); /* 拡張への対応 */
+@import url("chrome://platform/skin/platform.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: XBL bindings ::::: */
+
+menulist > menupopup,
+.menulist-menupopup {
+  -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
+}
+
+.menulist-compact {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#menulist-compact");
+}
+
+radio {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
+}
+
+/* ::::: root elements ::::: */
+
+window,
+page,
+dialog,
+wizard,
+prefwindow {
+  font: message-box;
+  color: rgb(0, 0, 0);
+  background-color: rgb(199, 208, 217);
+}
+
+window.dialog {
+  padding-top: 7px;
+  padding-bottom: 5px;
+  -moz-padding-start: 5px;
+  -moz-padding-end: 5px;
+}
+
+/* ::::: 警告とかのアイコン :::::*/
+
+.message-icon {
+  width: 46px;
+  height: 42px;
+  list-style-image: url("chrome://global/skin/icons/information-48.png");
+  -moz-image-region: rect(3px, 47px, 45px, 1px);
+}
+
+.alert-icon {
+  width: 46px;
+  height: 36px;
+  list-style-image: url("chrome://global/skin/icons/warning-large.png");
+  -moz-image-region: rect(6px, 47px, 42px, 1px);
+}
+
+.error-icon {
+  width: 46px;
+  height: 36px;
+  list-style-image: url("chrome://global/skin/icons/error-48.png");
+  -moz-image-region: rect(6px, 47px, 42px, 1px);
+}
+
+.question-icon {
+  width: 46px;
+  height: 38px;
+  list-style-image: url("chrome://global/skin/icons/question-48.png");
+  -moz-image-region: rect(5px, 47px, 43px, 1px);
+}
+
+/* ツールバーのモード */
+toolbar[mode="text"] .toolbarbutton-text {
+  padding: 0 !important;
+  margin: 1px 5px !important;
+}
+
+/* ::::: ブックマーク ::::: */
+
+.bookmark-item {
+  list-style-image: url("chrome://global/skin/icons/notloading_16.png");
+}
+
+.bookmark-item[container] {
+  list-style-image: url("chrome://global/skin/dirListing/directory.png");
+}
+
+.bookmark-item[container][open] {
+  list-style-image: url("chrome://global/skin/icons/bookmark-folder-open.png");
+}
+
+/* ..... ライブブックマーク ..... */
+
+.bookmark-item[container][livemark] {
+  list-style-image: url("chrome://browser/skin/page-livemarks.png");
+}
+
+.bookmark-item[type="menu"][livemark] {
+  list-style-image: url("chrome://browser/skin/livemark-folder.png");
+}
+
+.bookmark-item[container][livemark] .bookmark-item {
+  list-style-image: url("chrome://browser/skin/livemark-item.png");
+}
+
+/* ..... 問い合わせ ..... */
+
+.bookmark-item[container][query] {
+  list-style-image: url("chrome://browser/skin/places/query.png");
+}
+
+.bookmark-item[query][tagContainer] {
+  list-style-image: url("chrome://mozapps/skin/places/tagContainerIcon.png");
+}
+
+.bookmark-item[query][dayContainer] {
+  list-style-image: url("chrome://browser/skin/places/calendar.png");
+}
+
+.bookmark-item[query][hostContainer] {
+  list-style-image: url("chrome://global/skin/dirListing/directory.png");
+}
+
+.bookmark-item[query][hostContainer][open] {
+  list-style-image: url("chrome://global/skin/icons/bookmark-folder-open.png");
+}
+
+/* ブックマークメニューのブックマークツールバーのアイコン */
+#bookmarksToolbarFolderMenu {
+  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png");  
+}
+
+/* ::::: iframe ::::: */
+
+iframe {
+  width: 100px;
+  height: 100px;
+  min-width: 10px;
+  min-height: 10px;
+  border-width: 0;
+}
+
+/* ::::: sidebar ::::: */
+
+sidebarheader {
+  height: 25px;
+  background-color: rgb(185, 196, 208);
+  background-image: -moz-linear-gradient(left center, rgb(204, 213, 222), rgb(185, 196, 208) 100px);
+  background-repeat: no-repeat;
+  border-bottom: 2px solid;
+  -moz-border-bottom-colors: rgb(218, 227, 237) rgb(150, 167, 184);
+  text-shadow: none !important;
+  color: black !important;
+}
+
+#sidebar-title {
+  font-weight: bold;
+}
+
+/* ::::: status bar ::::: */
+
+statusbar,
+#addon-bar {
+  min-width: 1px; /* 念のため */
+  min-height: 15px;
+  font-size: smaller;
+  color: rgb(34, 38, 47);
+  background-color: rgb(199, 208, 217);
+  border-top: 1px solid rgb(199, 208, 217);
+}
+
+statusbarpanel {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  padding: 0 4px;
+  border-top: 1px solid rgb(224, 236, 246);
+  border-right: 1px solid rgb(137, 151, 161);
+  border-left: 1px solid rgb(224, 236, 246);
+}
+
+.statusbar-resizerpanel {
+  -moz-box-align: end;
+  -moz-box-pack: end;
+  padding: 0;
+  border-width: 0;
+}
+
+.statusbarpanel-progress {
+  -moz-box-align: stretch;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+}
+
+.statusbarpanel-text {
+  margin: 0;
+}
+
+.statusbarpanel-iconic, 
+.statusbarpanel-iconic-text,
+.statusbarpanel-menu-iconic {
+  padding: 0 1px;
+}
+
+/* ブラウザウィンドウやソースビューアのステータスバー */
+#status-bar {
+  border-top-width: 0;
+}
+
+/* その他 */
+.toolbar-focustarget {
+  -moz-user-focus: ignore !important;
+}
+
+/* ::::: lightweight themes用スタイル ::::: */
+
+:root:-moz-lwtheme-darktext {
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+:root:-moz-lwtheme-brighttext {
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+sidebarheader:-moz-lwtheme {
+  background-color: transparent;
+  background-image: none;
+  -moz-border-bottom-colors: transparent transparent;
+}
+
+statusbar:-moz-lwtheme {
+  color: inherit;
+  background-color: transparent;
+  border-top-color: transparent;
+}
+
+statusbar > statusbarpanel:-moz-lwtheme:first-child {
+  border-left-color: transparent;
+}
+
+.statusbar-resizerpanel:-moz-lwtheme {
+  border-top-width: 1px;
+}
+
+/* ::::: miscellaneous formatting ::::: */
+
+.inset {
+  margin-top: 0;
+  margin-bottom: 5px;
+  -moz-margin-start: 5px;
+  -moz-margin-end: 5px;
+  border: 1px inset rgb(199, 208, 217);
+}
+
+.outset {
+  border: 1px outset rgb(199, 208, 217);
+}
+
+/* ..... standard separators ..... */
+
+separator:not([orient="vertical"]) {
+  height: 1.5em;
+}
+
+separator[orient="vertical"] {
+  width: 1.5em;
+}
+
+/* ..... thinner separators (50% size) ..... */
+
+separator.thin:not([orient="vertical"]) {
+  height: 0.5em;
+}
+
+separator.thin[orient="vertical"] {
+  width: 0.5em;
+}
+
+/* ..... groove separators (50% size) ..... */
+
+separator.groove:not([orient="vertical"]) {
+  height: 0;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  border-top: 1px solid rgb(122, 132, 144);
+  border-bottom: 1px solid rgb(254, 254, 254);
+}
+
+separator.groove[orient="vertical"] {
+  -moz-margin-start: 0.4em;
+  -moz-margin-end: 0.4em;
+  border-left: 1px solid rgb(122, 132, 144);
+  border-right: 1px solid rgb(254, 254, 254);
+}
+
+/* reduced margin for some UI */
+.small-margin {
+  margin: 1px 2px;
+}
+
+.plain {
+  padding: 0;
+  margin: 0 !important;
+  border-width: 0;
+}
+
+description,
+label {
+  margin-top: 1px;
+  margin-bottom: 2px;
+  -moz-margin-start: 5px;
+  -moz-margin-end: 5px;
+  cursor: default;
+}
+
+description {
+  margin-bottom: 4px;
+}
+
+label[disabled="true"] {
+  color: rgb(140, 153, 171);
+}
+
+.tooltip-label {
+  margin: 0 !important;
+}
+
+.header {
+  font-weight: bold;
+}
+ 
+.monospace {
+  font-family: monospace;
+}
+
+.indent {
+  -moz-margin-start: 20px;
+}
+
+.box-padded {
+  padding: 5px;
+}
+
+.spaced {
+  margin-top: 3px;
+  margin-bottom: 4px;
+  -moz-margin-start: 5px;
+  -moz-margin-end: 5px;
+}
+
+.wizard-box {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  -moz-padding-start: 44px;
+  -moz-padding-end: 44px;
+}
+
+/* ..... class for text with a 'link' appearance ..... */
+
+.text-link {
+  color: rgb(0, 0, 255);
+  text-decoration: underline;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.text-link:focus {
+  border: 1px dotted rgb(0, 0, 0);
+}
+
+.text-link:hover:active {
+  color: rgb(255, 0, 0);
+}
+
+/* :::::: オートスクロールのアイコン ::::: */
+
+.autoscroller {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  background-image: url("chrome://global/skin/icons/autoscroll.png");
+  background-position: center top;
+  padding: 0;
+  margin: -14px;
+  border-width: 0;
+  cursor: all-scroll;
+}
+
+.autoscroller[scrolldir="NS"] {
+  background-position: center center;
+  cursor: ns-resize;
+}
+
+.autoscroller[scrolldir="EW"] {
+  background-position: center bottom;
+  cursor: ew-resize;
+}
+
+/* 証明書ビューア */
+#certDumpVal {
+  font: menu !important;
+}
+
+/* :::::: aboutダイアログのバージョン表示部 :::::: */
+
+#version {
+  color: rgb(131, 147, 167) !important;
+}
+
+#copyright > .text-link {
+  border: 1px solid transparent;
+}
+
+#copyright > .text-link:focus {
+  border: 1px dotted rgb(0, 0, 0);
+}
+
+/* プロファイルの移行 */
+#dataSources {
+  -moz-appearance: none !important; /* migration.xul参照 */
+  background-color: rgb(255, 255, 255);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 2px 4px;
+  border: 2px solid;
+  -moz-border-top-colors: rgb(190, 195, 211) rgb(93, 97, 110);
+  -moz-border-right-colors: rgb(248, 250, 254) rgb(93, 97, 110);
+  -moz-border-bottom-colors: rgb(248, 250, 254) rgb(93, 97, 110);
+  -moz-border-left-colors: rgb(190, 195, 211) rgb(93, 97, 110);
+}

@@ -1,0 +1,120 @@
+.searchbar-textbox {
+  width: 6em;
+  min-width: 6em;
+  min-height: 24px;
+  background-color: rgb(237, 245, 247);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  -moz-border-top-colors: rgb(190, 195, 211) rgb(93, 97, 110);
+  -moz-border-right-colors: rgb(238, 241, 247) rgb(93, 97, 110);
+  -moz-border-bottom-colors: rgb(238, 241, 247) rgb(93, 97, 110);
+  -moz-border-left-colors: rgb(190, 195, 211) rgb(93, 97, 110);
+}
+
+.searchbar-textbox[focused="true"] {
+  -moz-border-top-colors: rgb(152, 165, 178) rgb(0, 0, 0);
+  -moz-border-right-colors: rgb(152, 165, 178) rgb(0, 0, 0);
+  -moz-border-bottom-colors: rgb(152, 165, 178) rgb(0, 0, 0);
+  -moz-border-left-colors: rgb(152, 165, 178) rgb(0, 0, 0);
+}
+
+/* lightweight themes用スタイル */
+.searchbar-textbox:-moz-lwtheme:not([focused="true"]) {
+  opacity: 0.85;
+}
+
+/* ::::: Web検索バーの検索エンジンボタン ::::: */
+
+.searchbar-engine-button {
+  -moz-box-align: center;
+  min-width: 0;
+  background-image: -moz-linear-gradient(center top, rgb(221, 227, 235), rgb(221, 227, 235) 20%, rgb(199, 208, 217) 50%, rgb(177, 189, 201) 80%);
+  background-repeat: no-repeat;
+  padding: 2px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 2px;
+  border-top-width: 0;
+  border-right: 1px solid;
+  -moz-border-right-colors: rgb(93, 97, 110) !important;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-radius: 0;
+  -moz-box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3) inset, -1px -1px 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.searchbar-engine-button[open="true"] {
+  background-image: -moz-linear-gradient(center top, rgb(198, 208, 219), rgb(198, 208, 219) 20%, rgb(170, 182, 196) 50%, rgb(141, 156, 173) 80%);
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2) inset, -1px -1px 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.searchbar-engine-button > .button-box {
+  background-color: transparent !important;
+}
+
+.searchbar-engine-image {
+  height: 16px;
+  width: 16px;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  -moz-margin-start: 3px;
+}
+
+.searchbar-dropmarker-image {
+  list-style-image: url("chrome://browser/skin/mainwindow-dropdown-arrow.png");
+  -moz-image-region: rect(0px, 10px, 11px, 0px);
+}
+
+.searchbar-engine-button[addengines="true"] > .searchbar-dropmarker-image {
+  -moz-image-region: rect(0px, 20px, 11px, 10px);
+}
+
+.textbox-input-box {
+  -moz-margin-start: 0;
+}
+
+/* ::::: Web検索バーの検索エンジンボタンのプルダウンメニュー ::::: */
+
+/* 念のため */
+.searchbar-popup {
+  min-width: 100px;
+}
+
+.searchbar-engine-menuitem[selected="true"] > .menu-iconic-text {
+  font-weight: bold;
+}
+
+/* ::::: Web検索バーの検索ボタン ::::: */
+
+.search-go-container {
+  -moz-box-align: center;
+}
+
+.search-go-button {
+  list-style-image: url("chrome://global/skin/icons/Search-glass.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -moz-padding-start: 1px;
+  -moz-padding-end: 2px;
+}
+
+.search-go-button:hover:active {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+/* ::::: Web検索バーの履歴自動補完リスト表示ボタン ::::: */
+
+.autocomplete-history-dropmarker {
+  width: 13px;
+  list-style-image: url("chrome://browser/skin/history-dropmarker.png");
+  -moz-image-region: rect(0px, 13px, 12px, 0px);
+  padding: 0 !important;
+  -moz-margin-start: 4px;
+  -moz-margin-end: 3px;
+}
+
+.autocomplete-history-dropmarker[open="true"] {
+  -moz-image-region: rect(12px, 13px, 24px, 0px);
+}

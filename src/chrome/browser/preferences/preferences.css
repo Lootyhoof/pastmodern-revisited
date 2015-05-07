@@ -1,0 +1,160 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is the Firefox Preferences System.
+ *
+ * The Initial Developer of the Original Code is
+ * Ben Goodger.
+ * Portions created by the Initial Developer are Copyright (C) 2005
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Ben Goodger (ben@mozilla.org)
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+#saveToRow {
+  -moz-box-align: center;
+}
+
+/* Privacy Pane */
+
+/* styles for the link elements copied from .text-link in global.css */
+
+.inline-link {
+  color: rgb(0, 0, 255);
+  text-decoration: underline;
+}
+
+.inline-link:not(:focus) {
+  outline-color: transparent;
+}
+
+.inline-link:focus {
+  outline-color: rgb(0, 0, 0);
+}
+
+.inline-link:hover:active {
+  color: rgb(255, 0, 0);
+}
+
+/* Advanced Pane */
+
+/* Adding padding-bottom prevents the bottom of the tabpanel from being cutoff
+   when browser.preferences.animateFadeIn = true */
+#advancedPrefs {
+  padding-bottom: 8px;
+}
+
+/* bottom-most box containing a groupbox in a prefpane. Prevents the bottom
+   of the groupbox from being cutoff */
+.bottomBox {
+  padding-bottom: 4px;
+}
+
+/* ::::: Modeless Window Dialogs ::::: */
+
+.windowDialog,
+.windowDialog prefpane {
+  padding: 0;
+}
+
+.contentPane {
+  margin-top: 9px;
+  margin-bottom: 5px;
+  -moz-margin-start: 8px;
+  -moz-margin-end: 8px;
+}
+
+.actionButtons {
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+  -moz-margin-start: 5px !important;
+  -moz-margin-end: 0 !important;
+}
+
+.actionButtons:only-child {
+  -moz-margin-end: 5px !important;
+}
+
+/* Applications Pane */
+#BrowserPreferences[animated="true"] #handlersView {
+  height: 25em;
+}
+
+#BrowserPreferences[animated="false"] #handlersView {
+  -moz-box-flex: 1;
+}
+
+/* ::::: Cookieマネージャ ::::: */
+
+#cookiesChildren::-moz-tree-image(domainCol) {
+  width: 16px;
+  height: 16px;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+  margin: 0 2px;
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container) {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container, open) {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+#cookieInfoBox {
+  margin: 5px;
+  border-top: 1px solid rgb(110, 115, 120);
+  border-right: 1px solid rgb(238, 240, 243);
+  border-bottom: 1px solid rgb(238, 240, 243);
+  border-left: 1px solid rgb(110, 115, 120);
+}
+
+#cookieInfoBox textbox {
+  background-color: transparent;
+}
+
+#cookieInfoGrid {
+  background-color: rgb(187, 198, 209);
+}
+
+#cookieInfoGrid textbox[disabled="true"] {
+  color: rgb(140, 153, 171);
+}
+
+#certificatesGroup separator + hbox {
+  -moz-box-orient: vertical !important;
+  float: left !important;
+  width: 100%;
+}
+
+/* Sync Pane */
+
+#syncDesc {
+  padding: 0 8em;
+}
+
+.syncGroupBox {
+  padding: 10px;
+}
+
+#accountCaptionImage {
+  list-style-image: url("chrome://mozapps/skin/profile/profileicon.png");
+}
+
+#syncAddDeviceLabel {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

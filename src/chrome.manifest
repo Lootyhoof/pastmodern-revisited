@@ -1,0 +1,11 @@
+skin 	browser 	pastmodern-r chrome/browser/
+skin 	communicator 	pastmodern-r chrome/communicator/
+skin 	global 	pastmodern-r chrome/global/
+skin 	mozapps 	pastmodern-r chrome/mozapps/
+skin 	inspector 	pastmodern-r chrome/inspector/
+skin 	reporter 	pastmodern-r chrome/reporter/
+skin 	addons 	pastmodern-r chrome/addons/
+skin 	platform 	pastmodern-r chrome/platform/standard/
+skin 	platform 	pastmodern-r chrome/platform/winnt/ os=WINNT
+skin 	platform 	pastmodern-r chrome/platform/linux/ os=Linux
+skin 	platform 	pastmodern-r chrome/platform/darwin/ os=Darwin

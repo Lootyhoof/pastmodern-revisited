@@ -1,0 +1,134 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is mozilla.org code.
+ * 
+ * The Initial Developer of the Original Code is
+ * Dao Gottwald.
+ * Portions created by the Initial Developer are Copyright (C) 2007
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ *   Dao Gottwald <dao@design-noir.de>
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+:root {
+  font: message-box;
+  color: rgb(0, 0, 0);
+  background-color: rgb(199, 208, 217);
+  -moz-padding-start: 2em;
+  -moz-padding-end: 2em;
+}
+
+body {
+  min-width: 30em;
+  max-width: 65em;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 3em;
+  margin: 4em auto;
+  border: 1px solid rgb(122, 132, 144);
+  -moz-border-radius: 10px;
+}
+
+h1 {
+  font-size: 160%;
+  font-weight: normal;
+  color: rgb(91, 118, 147);
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  border-bottom: 1px solid rgb(122, 132, 144);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 110%;
+}
+
+#UI_goUp {
+  margin-top: 0;
+  float: left;
+}
+
+#UI_showHidden {
+  margin-top: 0;
+  float: right;
+}
+
+table {
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 5%;
+  -moz-margin-end: auto;
+  border-collapse: collapse;
+  clear: both;
+}
+
+thead {
+  font-size: 110%;
+}
+
+td:first-child {
+  -moz-padding-end: 1.5em;
+}
+
+/* let 'Size' and 'Last Modified' take only
+   as much space as they need and 'Name' all the rest */
+td:not(:first-child) {
+  width: 0;
+}
+
+td:first-child + td {
+  -moz-padding-end: 1.5em;
+}
+
+td:first-child + td + td {
+  -moz-padding-start: 1px;
+}
+
+/* last modifiedの時間 */
+td:last-child {
+  text-align: right;
+  -moz-padding-start: 0.5em;
+  -moz-padding-end: 2px;
+}
+
+tbody > tr:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+.up {
+  padding: 0 0.5em;
+  -moz-margin-start: 24px;
+}
+
+.up::before {
+  vertical-align: middle;
+  content: url("chrome://global/skin/dirListing/up.png");
+  -moz-margin-start: -24px;
+  -moz-margin-end: 4px;
+}
+
+.dir::before {
+  content: url("chrome://global/skin/dirListing/directory.png");
+}

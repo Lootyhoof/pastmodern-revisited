@@ -1,0 +1,73 @@
+/* ::::: Tab Mix Plus ::::: */
+
+.tabbrowser-tabs[flowing=multibar][inline=true]:not([toolbarmode]) .tabs-frame,
+.tabbrowser-tabs[flowing=multibar][multibar]:not([toolbarmode]) .tabs-frame {
+  margin-top: 1px;
+}
+
+.tabbrowser-tabs[flowing=multibar][inline=true] > .tabbrowser-tab,
+.tabbrowser-tabs[flowing=multibar][multibar] > .tabbrowser-tab {
+  margin-top: 2px;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] > .tabbrowser-tab .tab-middle .tab-text {
+  border-width: 0 !important;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] > .tabbrowser-tab .always-left {
+  -moz-margin-end: 2px;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] > .tabbrowser-tab .tab-middle .progress-bar {
+  background-color: rgb(107, 123, 141) !important;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] > .tabbrowser-tab[selected="true"] .tab-middle .progress-bar,
+.tabbrowser-tabs[tabmix_firefox3] > .tabbrowser-tab[selected="true"]:hover:active .tab-middle .progress-bar {
+  background-color: rgb(144, 161, 179) !important;
+}
+
+.tabs-newbutton-menu {
+  list-style-image: none !important;
+}
+
+/* ::::: Scroll button on the tab bar ::::: */
+
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-up:not(:-moz-lwtheme),
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-down:not(:-moz-lwtheme) {
+  height: 22px;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-up:not(:-moz-lwtheme) {
+  border-right: 1px solid !important;
+  -moz-border-right-colors: transparent !important;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-down:not(:-moz-lwtheme) {
+  border-left: 1px solid !important;
+  -moz-border-left-colors: transparent !important;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-up:not(:-moz-lwtheme):hover:not([disabled="true"]) {
+  -moz-border-right-colors: rgb(134, 146, 158) !important;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-down:not(:-moz-lwtheme):hover:not([disabled="true"]) {
+  -moz-border-left-colors: rgb(238, 240, 243) !important;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-up:not(:-moz-lwtheme):hover:active:not([disabled="true"]) {
+  -moz-border-right-colors: rgb(125, 132, 141) !important;
+}
+
+.tabbrowser-tabs[tabmix_firefox3] .tabbrowser-arrowscrollbox
+ > .scrollbutton-down:not(:-moz-lwtheme):hover:active:not([disabled="true"]) {
+  -moz-border-left-colors: rgb(69, 76, 85) !important;
+}

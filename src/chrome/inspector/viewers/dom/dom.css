@@ -1,0 +1,80 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is mozilla.org code.
+ * 
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 2001
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com) (original author)
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+@import url("chrome://inspector/skin");
+
+/* :::::::: node type color coding :::::::: */
+
+treechildren::-moz-tree-cell-text(ACCESSIBLE_NODE) {
+  font-weight: bold;
+}
+
+treechildren::-moz-tree-cell-text(ELEMENT_NODE) {
+  color: rgb(0, 0, 0);
+}
+
+treechildren::-moz-tree-cell-text(ATTRIBUTE_NODE) {
+  color: rgb(85, 107, 47);
+}
+
+treechildren::-moz-tree-cell-text(CDATA_SECTION_NODE),
+treechildren::-moz-tree-cell-text(TEXT_NODE) {
+  color: rgb(0, 0, 170);
+}
+
+treechildren::-moz-tree-cell-text(COMMENT_NODE) {
+  color: rgb(34, 139, 34);
+}
+
+treechildren::-moz-tree-cell-text(DOCUMENT_NODE) {
+  color: rgb(128, 0, 128);
+}
+
+treechildren::-moz-tree-cell-text(DOCUMENT_TYPE_NODE) {
+  color: rgb(96, 96, 0);
+}
+
+treechildren::-moz-tree-cell-text(PROCESSING_INSTRUCTION_NODE) {
+  color: rgb(128, 128, 128);
+}
+
+treechildren::-moz-tree-cell-text(anonymous) {
+  color: rgb(255, 0, 0);
+}
+
+treechildren::-moz-tree-cell-text(selected, focus) {
+  color: rgb(255, 255, 255);
+}
+
+/* :::::::: drag and drop insertion indicators :::::::: */
+
+treechildren::-moz-tree-column(dnd-insert-before) {
+  border-left: 2px solid rgb(0, 0, 0);
+}
+
+treechildren::-moz-tree-column(dnd-insert-after) {
+  border-right: 2px solid rgb(0, 0, 0);
+}
+

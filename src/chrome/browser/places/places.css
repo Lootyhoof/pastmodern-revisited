@@ -1,0 +1,207 @@
+/* ::::: ブラウザウィンドウのサイドバーのブックマーク ::::: */
+
+.sidebar-placesTree {
+  margin: 0;
+  border-top: 1px solid;
+  -moz-border-top-colors: rgb(150, 167, 184);
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(leaf),
+.sidebar-placesTreechildren::-moz-tree-image(leaf) {
+  cursor: pointer;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(container, hover) {
+  text-decoration: underline;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(leaf, hover) {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(separator) {
+  cursor: default;
+}
+
+/* ::::: Placesのtree ::::: */
+
+treechildren::-moz-tree-image(title) {
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+  width: 16px;
+  height: 16px;
+  -moz-padding-end: 2px;
+  margin: 0 2px;
+}
+
+treechildren::-moz-tree-image(title, livemarkItem) {
+  list-style-image: url("chrome://browser/skin/livemark-item.png");
+}
+
+treechildren::-moz-tree-image(title, separator) {
+  width: 0;
+  height: 0;
+  list-style-image: none;
+}
+
+treechildren::-moz-tree-image(title, container) {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+treechildren::-moz-tree-image(title, open) {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+treechildren::-moz-tree-image(title, container, livemark) {
+  list-style-image: url("chrome://browser/skin/page-livemarks.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_AllBookmarks) {
+  list-style-image: url("chrome://browser/skin/places/allBookmarks.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar) {
+  list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu) {
+  list-style-image: url("chrome://browser/skin/places/bookmarksMenu.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks) {
+  list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png");
+  -moz-image-region: auto;
+}
+
+/* query-nodes should be styled even if they're not expandable */
+treechildren::-moz-tree-image(title, query) {
+  list-style-image: url("chrome://browser/skin/places/query.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(title, query, tagContainer),
+treechildren::-moz-tree-image(query, OrganizerQuery_Tags) {
+  list-style-image: url("chrome://mozapps/skin/places/tagContainerIcon.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(query, OrganizerQuery_Downloads) {
+  list-style-image: url("chrome://browser/skin/places/downloads.png");
+  -moz-image-region: auto;
+}
+
+/* calendar icon for folders grouping items by date */ 
+treechildren::-moz-tree-image(title, query, dayContainer) {
+  list-style-image: url("chrome://browser/skin/places/calendar.png");
+  -moz-image-region: auto;
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer) {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer, open) {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
+  list-style-image: url("chrome://browser/skin/places/history.png");
+}
+
+/* ::::: いくつかのqueryにフォルダデザインのアイコンを使うため ::::: */
+/* この(title, query, folder)は(title, query)より後に記述すること */
+
+treechildren::-moz-tree-image(title, query, folder) {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+treechildren::-moz-tree-image(title, query, folder, open) {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+treechildren::-moz-tree-row(session-start) {
+  font-weight: bold;
+  border-top: 1px dotted rgb(165, 171, 176);
+}
+
+treechildren::-moz-tree-cell-text(date, session-continue) {
+  color: rgb(255, 255, 255);
+}
+
+/* ::::: サイドバー（履歴） ::::: */
+
+#viewButton {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  font: message-box;
+  padding: 2px; /* アクセスキーとフォーカスリングが重なるので上下に1pxづつプラス */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 1px !important;
+  border: 1px solid;
+  -moz-border-top-colors: transparent;
+  -moz-border-right-colors: transparent;
+  -moz-border-bottom-colors: transparent;
+  -moz-border-left-colors: transparent;
+  -moz-border-radius: 0;
+  outline: 1px dotted transparent;
+  outline-offset: -2px;
+}
+
+#viewButton > .button-box {
+  background-color: transparent;
+}
+
+#viewButton > .button-box > .box-inherit > .button-icon {
+  -moz-margin-start: 0;
+}
+
+#viewButton > .button-box > .box-inherit > .button-text {
+  margin: 0 !important;
+}
+
+#viewButton:focus {
+  outline-color: rgb(0, 0, 0);
+}
+
+#viewButton:hover {
+  -moz-border-top-colors: rgb(238, 240, 243);
+  -moz-border-right-colors: rgb(134, 146, 158);
+  -moz-border-bottom-colors: rgb(134, 146, 158);
+  -moz-border-left-colors: rgb(238, 240, 243);
+}
+
+#viewButton:hover:active,
+#viewButton[open="true"] {
+  color: rgb(0, 0, 0);
+}
+
+#viewButton[open="true"] {
+  -moz-border-top-colors: rgb(134, 146, 158);
+  -moz-border-right-colors: rgb(238, 240, 243);
+  -moz-border-bottom-colors: rgb(238, 240, 243);
+  -moz-border-left-colors: rgb(134, 146, 158);
+}
+
+#viewButton > hbox > .button-menu-dropmarker {
+  width: 6px;
+  height: 3px;
+  list-style-image: url("chrome://global/skin/button/tbmenu-arrow.png");
+  padding-top: 0;
+  padding-bottom: 0;
+  -moz-padding-start: 2px;
+  -moz-padding-end: 0;
+  margin: 0;
+}

@@ -1,0 +1,214 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ * 
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-2001 Netscape Communications Corporation. All
+ * Rights Reserved.
+ * 
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== autocomplete.css =================================================
+  == Styles used by the autocomplete widget.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* ::::: autocomplete ::::: */
+
+/* .padded is used by autocomplete widgets that don't have an icon. Gross. -dwh */
+textbox:not(.padded) {
+  padding: 0;
+  cursor: default;
+}
+
+textbox[nomatch="true"][highlightnonmatches="true"] {
+  color: rgb(255, 0, 0);
+}
+
+.textbox-input-box,
+.autocomplete-textbox-container {
+  -moz-box-align: center;
+}
+
+textbox:not(.padded) .textbox-input-box {
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 2px;
+  -moz-margin-end: 0;
+}
+
+/* ::::: history button ::::: */
+
+.autocomplete-history-dropmarker {
+  background-color: transparent !important;
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  padding: 2px;
+  border-width: 0 !important;
+}
+
+.autocomplete-history-dropmarker[open="true"]:not([disabled="true"]) {
+  padding-top: 3px;
+  padding-bottom: 1px;
+  -moz-padding-start: 3px;
+  -moz-padding-end: 1px;
+}
+
+textbox[disabled="true"] > .autocomplete-history-dropmarker {
+  list-style-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
+}
+
+/* ::::: autocomplete popups ::::: */
+
+panel[type="autocomplete"],
+panel[type="autocomplete-richlistbox"],
+.autocomplete-history-popup {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+  -moz-border-top-colors: rgb(107, 116, 126);
+  -moz-border-right-colors: rgb(107, 116, 126);
+  -moz-border-bottom-colors: rgb(107, 116, 126);
+  -moz-border-left-colors: rgb(107, 116, 126);
+  margin-left: 0px !important;
+}
+
+.autocomplete-history-popup {
+  max-height: 180px;
+}
+
+/* ::::: tree ::::: */
+
+.autocomplete-tree {
+  background-color: transparent !important;
+  border-width: 0 !important;
+}
+
+.autocomplete-treecol {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-width: 0 !important;
+}
+
+.autocomplete-treebody::-moz-tree-cell-text {
+  color: rgb(0, 0, 0);
+  -moz-padding-start: 8px;
+}
+
+treechildren.autocomplete-treebody::-moz-tree-row(selected) {
+  background-color: rgb(66, 79, 99);
+}
+
+treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
+  color: rgb(255, 255, 255) !important;
+}
+
+.autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue) {
+  max-width: 16px;
+  height: 16px;
+}
+
+/* ::::: richlistbox autocomplete ::::: */
+
+.autocomplete-richlistbox {
+  margin: 0;
+  border-width: 0;
+}
+
+.autocomplete-richlistitem {
+  padding: 1px 2px;
+  border-bottom-width: 0;
+}
+
+.autocomplete-richlistitem:not(:first-child) {
+  border-top: 1px solid rgb(152, 165, 178);
+}
+
+.autocomplete-richlistitem[selected="true"] {
+  color: rgb(255, 255, 255);
+  background-color: rgb(66, 79, 99);
+}
+
+.ac-site-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 0;
+  margin-bottom: -3px;
+  -moz-margin-start: 2px;
+  -moz-margin-end: 7px;
+}
+
+.ac-type-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.ac-extra > .ac-result-type-tag {
+  margin: 0 2px;
+}
+
+.ac-extra > .ac-comment {
+  -moz-padding-end: 5px;
+}
+
+.ac-ellipsis-after {
+  min-width: 1em;
+  padding: 0;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 0 !important;
+}
+
+.ac-normal-text {
+  padding: 0;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 0 !important;
+}
+
+.ac-normal-text > html|span {
+  padding: 0;
+  margin: 0 !important;
+}
+
+html|span.ac-emphasize-text {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+html|span.ac-emphasize-alt {
+  text-decoration: underline;
+}
+
+.ac-title,
+.ac-url {
+  overflow: hidden;
+}
+
+/* ::::: textboxes inside toolbarpaletteitems ::::: */
+
+toolbarpaletteitem > toolbaritem > textbox > hbox > hbox > html|*.textbox-input {
+  visibility: hidden;
+}
+
+toolbarpaletteitem > toolbaritem > * > textbox > hbox > hbox > html|*.textbox-input {
+  visibility: hidden;
+}

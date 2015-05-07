@@ -1,0 +1,39 @@
+body.private > #errorPageContainer {
+  background-image: url("chrome://browser/skin/Privacy-48.png");
+}
+
+body.normal > #errorPageContainer {
+  background-image: url("chrome://global/skin/icons/question-48.png");
+}
+
+#clearRecentHistoryDesc {
+  margin-top: 2em;
+}
+
+#clearRecentHistoryDesc > p {
+  font-size: 110%; /* netError.cssに合わせるため */
+}
+
+#startPrivateBrowsingDesc > button {
+  -moz-margin-start: 0;
+}
+
+#footerDesc > p {
+  font-size: 110%; /* netError.cssに合わせるため */
+}
+
+#moreInfo {
+  font-size: 110%; /* netError.cssに合わせるため */
+  background-image: url("chrome://global/skin/icons/information-16.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  -moz-padding-start: 25px;
+}
+
+#moreInfoText {
+  margin-bottom: 0;
+}
+
+#moreInfoLinkContainer {
+  margin-top: 0.5em;
+}

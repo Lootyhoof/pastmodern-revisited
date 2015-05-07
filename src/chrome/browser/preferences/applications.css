@@ -1,0 +1,130 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is the Firefox Preferences System.
+ *
+ * The Initial Developer of the Original Code is Mozilla Foundation.
+ * Portions created by the Initial Developer are Copyright (C) 2005
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Florian Queze <florian@mozilla.com>
+ * 
+ * ***** END LICENSE BLOCK ***** */
+
+/*
+ * Line up the actions menu with action labels above and below it.
+ * Equalize the distance from the left side of the action box to the left side
+ * of the icon for both the menu and the non-menu versions of the action box.
+ * Also make sure the labels are the same distance away from the icons.
+ */
+
+.typeIcon,
+.actionIcon {
+  -moz-margin-start: 2px;
+}
+
+richlistitem {
+  min-height: 24px;
+}
+
+richlistitem:nth-child(even):not([selected="true"]) {
+  background-color: rgb(243, 243, 243);
+}
+
+richlistitem[appHandlerIcon="ask"],
+menuitem[appHandlerIcon="ask"] {
+  list-style-image: url("chrome://browser/skin/preferences/alwaysAsk.png");
+}
+
+richlistitem[appHandlerIcon="save"],
+menuitem[appHandlerIcon="save"] {
+  list-style-image: url("chrome://browser/skin/preferences/saveFile.png");
+}
+
+richlistitem[appHandlerIcon="feed"],
+menuitem[appHandlerIcon="feed"] {
+  list-style-image: url("chrome://browser/skin/page-livemarks.png");
+}
+
+richlistitem[appHandlerIcon="plugin"],
+menuitem[appHandlerIcon="plugin"] {
+  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric-16.png");
+}
+
+richlistitem > hbox > hbox + hbox {
+  -moz-padding-start: 8px;
+}
+
+/* ::::: メニューリスト ::::: */
+
+.actionsMenu {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  min-height: 0;
+  color: rgb(0, 0, 0);
+  background-color: rgb(166, 179, 192);
+  padding: 1px;
+  margin: -1px 0;
+  border: 2px solid;
+  -moz-border-top-colors: rgb(206, 213, 221) rgb(166, 179, 192);
+  -moz-border-right-colors: rgb(93, 97, 110) rgb(153, 169, 186);
+  -moz-border-bottom-colors: rgb(93, 97, 110) rgb(153, 169, 186);
+  -moz-border-left-colors: rgb(206, 213, 221) rgb(166, 179, 192);
+  border-radius: 0;
+}
+
+.actionsMenu > .menulist-label-box {
+  background-color: transparent;
+  padding: 0;
+  border-width: 0;
+}
+
+.actionsMenu > .menulist-label-box > .menulist-icon {
+	display: none;
+}
+
+.actionsMenu > .menulist-label-box > .menulist-label {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 3px !important;
+  -moz-margin-end: 0 !important;
+}
+
+.actionsMenu > .menulist-dropmarker {
+  background: transparent;
+  border-width: 0;
+}
+
+.actionsMenu > .menulist-dropmarker,
+.actionsMenu[open="true"] > .menulist-dropmarker {
+  list-style-image: url("chrome://global/skin/menulist/mlist-arrow-compact.png");
+  margin: 0 1px;
+}
+
+.actionsMenu:focus {
+  background-color: rgb(152, 165, 178);
+  border-radius: 0 !important;
+}
+
+.actionsMenu[open="true"] {
+  background-color: rgb(145, 162, 180);
+  -moz-border-top-colors: rgb(120, 135, 151) rgb(145, 162, 180);
+  -moz-border-right-colors: rgb(93, 97, 110) rgb(120, 135, 151);
+  -moz-border-bottom-colors: rgb(93, 97, 110) rgb(120, 135, 151);
+  -moz-border-left-colors: rgb(120, 135, 151) rgb(145, 162, 180);
+}
+
+.actionsMenu menuitem[selected="true"] {
+  -moz-image-region: auto !important;
+}

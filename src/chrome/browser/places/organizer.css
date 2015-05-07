@@ -1,0 +1,200 @@
+/* ::::: Library ::::: */
+
+#placesToolbar {
+  background-image: -moz-linear-gradient(center top, rgb(221, 227, 235), rgb(221, 227, 235) 10%, rgb(199, 208, 217) 50%, rgb(177, 189, 201) 80%);
+  background-repeat: no-repeat;
+  border-top-color: rgb(235, 244, 255);
+  border-right-color: rgb(149, 160, 173);
+  border-bottom-color: rgb(149, 160, 173);
+  border-left-color: rgb(218, 227, 237);
+}
+
+/* OS X対応 */
+#placesToolbar > toolbarbutton[type="menu"] {
+  min-height: 28px;
+}
+
+/* ::::: 「戻る」と「進む」ボタン ::::: */
+
+#back-button,
+#forward-button {
+  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  border-width: 0 !important;
+}
+
+/* ::::: 戻る ::::: */
+
+#back-button {
+  -moz-padding-start: 4px !important;
+  -moz-padding-end: 0 !important;
+  -moz-image-region: rect(0px, 387px, 26px, 360px);
+}
+
+#back-button:not([disabled="true"]):hover {
+  -moz-image-region: rect(26px, 387px, 52px, 360px);
+}
+
+#back-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(52px, 387px, 78px, 360px);
+}
+
+#back-button[disabled="true"] {
+  -moz-image-region: rect(78px, 387px, 104px, 360px);
+}
+
+/* ::::: 進む ::::: */
+
+#forward-button {
+  -moz-padding-start: 0 !important;
+  -moz-padding-end: 4px !important;
+  -moz-image-region: rect(0px, 414px, 26px, 387px);
+}
+
+#forward-button:not([disabled="true"]):hover {
+  -moz-image-region: rect(26px, 414px, 52px, 387px);
+}
+
+#forward-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(52px, 414px, 78px, 387px);
+}
+
+#forward-button[disabled="true"] {
+  -moz-image-region: rect(78px, 414px, 104px, 387px);
+}
+
+/* ::::: メニューバー ::::: */
+
+#placesMenu {
+  background-color: transparent;
+  border-width: 0;
+}
+
+#placesMenu > menu {
+  min-height: 28px;
+}
+
+#placesMenu > menu:not([open="true"]):not([disabled="true"]):hover,
+#placesMenu > menu[_moz-menuactive="true"]:not([disabled="true"]) {
+  border-style: solid;
+  border-top-color: rgb(248, 250, 253);
+  border-right-color: rgb(134, 146, 158);
+  border-bottom-color: rgb(124, 136, 148);
+  border-left-color: rgb(238, 240, 243);
+}
+
+#placesMenu > menu[_moz-menuactive="true"][open="true"] {
+  border-style: solid;
+  border-top-color: rgb(144, 156, 168);
+  border-right-color: rgb(238, 240, 243);
+  border-bottom-color: rgb(228, 230, 233);
+  border-left-color: rgb(134, 146, 158);
+}
+
+/* ::::: PlaceリストとPlaceコンテント ::::: */
+
+/* 左ペイン */
+#placesList {
+  border-width: 0;
+}
+
+/* 右ペイン */
+#contentView {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+#searchModifiers {
+  background-color: rgb(199, 208, 217);
+}
+
+#organizerScopeBar {
+  border-bottom-width: 2px;
+  -moz-border-bottom-colors: rgb(73, 79, 93) rgb(134, 146, 158);
+}
+
+#advancedSearch {
+  padding-top: 1px;
+}
+
+#advancedSearch > hbox,
+#advancedSearchRows > row {
+  -moz-box-align: center;
+}
+
+#searchActions,
+#advancedSearchRows {
+  -moz-padding-end: 2px;
+}
+
+.small {
+  min-width: 0;
+  margin: 2px 0;
+}
+
+.small > .button-box,
+.small > .button-box > .button-text {
+  padding: 0;
+}
+
+#saveSearch {
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-end: 2px;
+}
+
+/* ::::: 右ペインのツリー ::::: */
+
+.placesTree {
+  margin: 0;
+}
+
+#placeContent {
+  border-width: 0;
+}
+
+#placeContent > treechildren::-moz-tree-row(even) {
+  background-color: rgb(243, 243, 243);
+}
+
+#placeContent > treechildren::-moz-tree-row(even, selected) {
+  background-color: rgb(199, 208, 217);
+}
+
+#placeContent > treechildren::-moz-tree-row(even, selected, focus) {
+  background-color: rgb(66, 79, 99);
+}
+
+/* ::::: 情報ペイン ::::: */
+
+#detailsDeck {
+  background-color: rgb(199, 208, 217);
+  padding: 5px;
+  border-top: 2px solid;
+  -moz-border-top-colors: rgb(73, 79, 93) rgb(224, 236, 246);
+}
+
+#editBMPanel_loadInSidebarCheckbox {
+  margin-top: 2px;
+}
+
+#infoBoxExpanderLabel {
+  -moz-margin-start: 0;
+}
+
+/**
+ * Downloads pane
+ */
+
+#clearDownloadsButton > .toolbarbutton-icon {
+  display: none;
+}
+
+#clearDownloadsButton {
+  -moz-padding-start: 9px;
+  -moz-padding-end: 9px;
+}
+
+
+

@@ -1,0 +1,74 @@
+/*
+ * This file's style only applies to broken objects, not the rest of the page.
+ */
+
+@namespace html url("http://www.w3.org/1999/xhtml"); /* namespace for HTML elements */
+
+html|object:not([width]),
+html|object[width=""],
+html|embed:not([width]),
+html|embed[width=""],
+html|applet:not([width]),
+html|applet[width=""] {
+  width: 240px;
+}
+
+html|object:not([height]),
+html|object[height=""],
+html|embed:not([height]),
+html|embed[height=""],
+html|applet:not([height]),
+html|applet[height=""] {
+  height: 200px;
+}
+
+html|object > *|*,
+html|embed > *|*,
+html|applet > *|* {
+  width: inherit;
+  height: inherit;
+}
+
+html|a,
+html|div {
+  -moz-user-select: none;
+  vertical-align: inherit;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border: 1px outset; /* 相対配色（コンテンツ表示部分に使われるから） */
+  /* overflow: hidden makes baseline vertical-alignment act like plugins */
+  overflow: hidden;
+  display: inline-block;
+}
+
+vbox {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  width: inherit;
+  height: inherit;
+}
+
+#missingPluginPlaceholder,
+#disabledPluginPlaceholder,
+#blockedPluginPlaceholder {
+  width: 32px;
+  height: 32px;
+  border-width: 0;
+  display: block;
+}
+
+#missingPluginPlaceholder {
+  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric.png");
+}
+
+#disabledPluginPlaceholder {
+  list-style-image: url("chrome://mozapps/skin/plugins/pluginDisabled.png");
+}
+
+#blockedPluginPlaceholder {
+  list-style-image: url("chrome://mozapps/skin/plugins/pluginBlocked.png");
+}

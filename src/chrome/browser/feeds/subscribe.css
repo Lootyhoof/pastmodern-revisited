@@ -1,0 +1,202 @@
+*[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 3mm;
+  font-family: tahoma, arial, helvetica, sans-serif;
+  background-color: rgb(199, 208, 217);
+}
+
+#feedBody {
+  background-color: rgb(255, 255, 255);
+  padding-top: 3em;
+  padding-bottom: 3em;
+  -moz-padding-start: 30px;
+  -moz-padding-end: 3em;
+  margin: 2em auto;
+  border: 1px solid rgb(122, 132, 144);
+}
+
+#feedHeaderContainer {
+  background-color: rgb(255, 255, 231);
+  margin-top: -4em;
+  margin-bottom: 0;
+  -moz-margin-start: auto;
+  -moz-margin-end: auto;
+  border: 1px solid rgb(149, 160, 173);
+  -moz-border-radius: 10px;
+}
+
+/* ::::: フィードのスタイル付けのヘッダ部 ::::: */
+
+#handlersMenuList > .menulist-label-box > .menulist-icon {
+  display: none;
+}
+
+#handlersMenuList > .menulist-label-box > .menulist-label {
+  -moz-margin-start: 2px !important;
+}
+
+#feedHeaderContainer checkbox {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#feedHeaderContainer checkbox:focus {
+  border-color: rgb(252, 238, 144);
+}
+
+#feedHeader {
+  font-size: 110%;
+  -moz-padding-start: 2.9em;
+  margin-top: 4.9em;
+  margin-bottom: 1em;
+  -moz-margin-start: 1.4em;
+  -moz-margin-end: 1em;
+}
+
+.feedBackground {
+  background-image: url("chrome://browser/skin/feeds/feedIcon.png");
+  background-position: 0% 10%;
+  background-repeat: no-repeat;
+}
+
+.videoPodcastBackground {
+  background-image: url("chrome://browser/skin/feeds/videoFeedIcon.png");
+  background-position: 0% 10%;
+  background-repeat: no-repeat;
+}
+
+.audioPodcastBackground {
+  background-image: url("chrome://browser/skin/feeds/audioFeedIcon.png");
+  background-position: 0% 10%;
+  background-repeat: no-repeat;
+}
+
+#feedIntroText {
+  display: none;
+}
+
+#feedHeader[firstrun="true"] #feedIntroText {
+  padding-top: 0.1em;
+  -moz-padding-start: 0.6em;
+  display: block;
+}
+
+#feedHeader[firstrun="true"] > #feedSubscribeLine {
+  -moz-padding-start: 1.8em;
+}
+
+#feedSubscribeLine {
+  padding-top: 0.2em;
+}
+
+#alwaysUse {
+  padding: 5px;
+}
+
+#chooseApplicationMenuItem {
+  list-style-image: url("chrome://browser/skin/preferences/application.png");
+}
+
+/* Don't print subscription UI */
+@media print {
+  #feedHeaderContainer {
+    display: none;
+  }
+}
+
+body {
+  font: message-box;
+  color: rgb(0, 0, 0);
+  padding: 0 3em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 160%;
+  color: rgb(91, 118, 147);
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  border-bottom: 1px solid rgb(122, 132, 144);
+}
+
+h2 {
+  font-size: 110%;
+  font-weight: normal;
+  color: rgb(73, 79, 93);
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+}
+
+#feedTitleLink {
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 0.6em;
+  -moz-margin-end: 0;
+  float: right;
+}
+
+a[href] img {
+  border-width: 0;
+}
+
+#feedTitleContainer {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+}
+
+#feedTitleImage {
+  max-width: 300px;
+  max-height: 150px;
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 0.6em;
+  -moz-margin-end: 0;
+}
+
+.feedEntryContent {
+  font-size: 110%;
+}
+
+.link {
+  color: rgb(0, 0, 255);
+  text-decoration: underline;
+  margin-top: -2px;
+  cursor: pointer;
+}
+
+.link:hover:active {
+  color: rgb(255, 0, 0);
+}
+
+.lastUpdated {
+  font-size: 85%;
+  font-weight: normal;
+  color: rgb(73, 79, 93);
+}
+
+.type-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+}
+
+.enclosures {
+  background-color: rgb(221, 227, 235);
+  padding: 1em;
+  margin: 1em auto;
+  border: 1px solid rgb(149, 160, 173);
+}
+
+.enclosure {
+  -moz-margin-start: 2px;
+  vertical-align: middle;
+}

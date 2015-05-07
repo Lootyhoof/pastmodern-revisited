@@ -1,0 +1,81 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== alert.css =====================================================
+  == Styles specific to the alerts dialog.
+  ======================================================================= */
+
+@import url("chrome://global/skin/");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.alertBox {
+  border: 1px solid #7B969C;
+  border-radius: 3px;
+  background-color: #C7D0D9;
+}
+
+.alertImageBox {
+  padding: 8px;
+  width: 64px;
+}
+
+.alertTextBox {
+  padding: 8px;
+  width: 255px;
+}
+
+.alertTitle {
+  font-weight: bold;
+  font-size: 110%;
+}
+
+#alertImage {
+  max-width: 48px;
+  max-height: 48px;
+  list-style-image: url("chrome://global/skin/alerts/notification-48.png");
+}
+
+#alertNotification {
+  border: ridge #5486DA 4px;
+}
+
+#alertNotification[clickable="true"] {
+  cursor: pointer;
+}
+
+label {
+  cursor: inherit;
+}
+
+.alertText[clickable="true"] {
+  color: #1455D6;
+  text-decoration: underline;
+}
+
+.alertText[clickable="true"]:hover:active {
+  color: #424F63;
+}
+
+@keyframes alert-animation {
+  from {
+    opacity: 0;
+  }
+  6.25% {
+    opacity: 1;
+  }
+  93.75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.alertCloseButton {
+  list-style-image: url("chrome://global/skin/icons/closebox.gif");
+  -moz-appearance: none;
+  padding: 2px 0px 0px;
+  border: none;
+}

@@ -1,0 +1,90 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License
+ * Version 1.1 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS"
+ * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+ * License for the specific language governing rights and limitations
+ * under the License.
+ * 
+ * The Original Code is mozilla.org code.
+ * 
+ * The Initial Developer of the Original Code is Mozilla Foundation.
+ * Portions created by the Initial Developer are Copyright (C) 2008
+ * the Initial Developer. All Rights Reserved.
+ * 
+ * Contributor(s):
+ *   William Price <bugzilla@mob.rice.edu>
+ *   Steven Garrity <steven@silverorange.com>
+ *   Henrik Skupin  <mozilla@hskupin.info>
+ *   Johnathan Nightingale <johnath@mozilla.com>
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+html {
+  background-color: rgb(255, 255, 255);
+}
+
+body {
+  font: message-box;
+  color: rgb(34, 38, 47);
+  padding: 0 1em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 160%;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  border-bottom: 1px solid rgb(122, 132, 144);
+}
+
+h2 {
+  font-size: 130%;
+}
+
+#errorPageContainer {
+  min-width: 13em;
+  max-width: 52em;
+  background-color: rgb(199, 208, 217);
+  background-image: url("chrome://global/skin/icons/sslWarning.png");
+  background-position: left 0;
+  background-repeat: no-repeat;
+  -moz-background-origin: content;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  -moz-padding-start: 30px;
+  -moz-padding-end: 3em;
+  margin: 4em auto;
+  border: 1px solid rgb(238, 187, 21);
+  -moz-border-radius: 10px;
+  position: relative;
+}
+
+#errorTitle {
+  -moz-margin-start: 80px;
+}
+
+#errorLongContent {
+  -moz-margin-start: 80px;
+}
+
+#technicalContent > h2,
+#expertContent > h2 {
+  background-image: url("chrome://browser/skin/section_expanded.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  -moz-padding-start: 17px !important;
+  left: -17px !important;
+}
+
+#technicalContent[collapsed] > h2,
+#expertContent[collapsed] > h2 {
+  background-image: url("chrome://browser/skin/section_collapsed.png");
+}

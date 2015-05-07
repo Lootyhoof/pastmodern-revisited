@@ -1,0 +1,5 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.autoscroller {
+  background-image: url("chrome://platform/skin/autoscroll.png") !important;
+}

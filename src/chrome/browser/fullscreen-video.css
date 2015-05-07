@@ -1,0 +1,15 @@
+#close {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("chrome://browser/skin/fullscreen-close.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+}
+
+#close:hover {
+  opacity: 1.0;
+}

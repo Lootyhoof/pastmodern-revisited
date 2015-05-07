@@ -1,0 +1,94 @@
+/* Hide the duration dropdown suffix label if it's empty.  Otherwise it
+   takes up a little space, causing the end of the dropdown to not be aligned
+   with the warning box. */
+#sanitizeDurationSuffixLabel[value=""] {
+  display: none;
+}
+
+#sanitizeDurationChoice {
+  -moz-margin-end: 0;
+}
+
+#sanitizeDurationLabel {
+  -moz-margin-start: 3px;
+}
+
+/* ::::: Places tree ::::: */
+
+#placesTreechildren::-moz-tree-row(selected),
+#placesTreechildren::-moz-tree-row(grippyRow) {
+  background-color: rgb(170, 182, 196);
+}
+
+#placesTreechildren::-moz-tree-cell-text(selected) {
+  color: rgb(0, 0, 0);
+}
+
+/* ::::: Sanitize everything warning box ::::: */
+
+#sanitizeEverythingWarningBox {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 16px;
+  border: 1px solid rgb(110, 115, 120);
+  -moz-border-radius: 5px;
+}
+
+#sanitizeEverythingWarningIcon {
+  list-style-image: url("chrome://global/skin/icons/warning-large.png");
+  padding: 0;
+  margin: 0;
+}
+
+#sanitizeEverythingWarningDescBox {
+  padding: 0 16px;
+  margin: 0;
+}
+
+/* ::::: expander ::::: */
+
+#detailsExpanderWrapper {
+  padding: 0;
+  margin: 2px 0;
+}
+
+.expander-up,
+.expander-down {
+  min-width: 0;
+  -moz-margin-start: 0;
+}
+
+.expander-up {
+  list-style-image: url("chrome://global/skin/icons/collapse.png");
+}
+
+.expander-down {
+  list-style-image: url("chrome://global/skin/icons/expand.png");
+}
+
+.expander-up > .button-box > .button-icon,
+.expander-down > .button-box > .button-icon {
+  margin: 4px 2px;
+}
+
+.expander-up > .button-box > .button-text,
+.expander-down > .button-box > .button-text {
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 0 !important;
+}
+
+#detailsExpanderLabel {
+  -moz-margin-start: 0;
+}
+
+/* リストアイテムの幅を警告表示部と同じにする */
+#itemList {
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+}
+
+/* listboxにrowsで行数を指定すると不必要なスクロールバーが表示されることがあるので。
+   Bug 491788とBug 489958のコメント14を参照 */
+#itemList > listitem {
+  padding: 1px 0;
+}

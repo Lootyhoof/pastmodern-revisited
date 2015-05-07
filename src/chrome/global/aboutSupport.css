@@ -1,0 +1,86 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://global/skin/plugins.css");
+
+body {
+  text-align: justify;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.page-subtitle {
+  margin-bottom: 1.5em;
+}
+
+.major-section {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: start;
+}
+
+th.column {
+  text-align: start;
+  border-top: 1px dotted #2D3B49;
+  white-space: nowrap;
+  width: 0px;
+}
+
+tr:first-child > th,
+tr:first-child > td {
+  border-top: 0;
+}
+
+.prefs-table {
+  table-layout: fixed;
+}
+
+.name {
+  width: 70%;
+}
+
+.value {
+  width: 30%;
+}
+
+.pref-name,
+.pref-value {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#reset-box {
+  background-color: #C7D0D9;
+  border: 1px solid #2D3B49;
+  color: #22262F;
+  float: right;
+  margin-top: 2em;
+  margin-bottom: 20px;
+  -moz-margin-start: 20px;
+  -moz-margin-end: 0;
+  padding: 16px;
+  width: 30%;
+  visibility: hidden;
+}
+
+#reset-box:-moz-dir(rtl) {
+  float: left;
+}
+
+#reset-box > h3 {
+  margin-top: 0;
+}
+
+#reset-box > button {
+  display: block;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

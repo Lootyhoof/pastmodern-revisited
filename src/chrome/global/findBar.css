@@ -1,0 +1,129 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+findbar {
+  min-width: 1px; /* 念のため */
+  background-color: rgb(199, 208, 217);
+  border-top: 1px solid rgb(238, 240, 243);
+  border-right: 1px solid rgb(165, 171, 176);
+  border-bottom: 2px solid;
+  -moz-border-bottom-colors: rgb(93, 97, 110) rgb(190, 195, 211);
+  border-left: 1px solid rgb(224, 236, 246);
+}
+
+/* lightweight themes用スタイル */
+findbar:-moz-lwtheme {
+  background-color: transparent;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+/* ::::: ページ検索ツールバーの閉じるボタン ::::: */
+
+.findbar-closebutton {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0px, 15px, 16px, 0px);
+  padding: 0 !important;
+  margin: 2px 5px;
+  border-width: 0;
+}
+
+.findbar-closebutton:hover {
+  -moz-image-region: rect(0px, 30px, 16px, 15px);
+}
+
+.findbar-closebutton:hover:active {
+  -moz-image-region: rect(0px, 45px, 16px, 30px);
+}
+
+/* ::::: 文字入力部分 ::::: */
+
+.findbar-textbox {
+  -moz-box-align: center;
+  min-height: 24px;
+}
+
+.findbar-textbox[status="notfound"] {
+  background-color: rgb(255, 204, 204);
+}
+
+.findbar-textbox[flash="true"] {
+  background-color: rgb(232, 219, 153);
+}
+
+/* ::::: 次を検索ボタン ::::: */
+
+.findbar-find-next {
+  list-style-image: url("chrome://global/skin/icons/find.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+.findbar-find-next:not([disabled="true"]):hover,
+.findbar-find-next:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+}
+
+.findbar-find-next[disabled="true"] {
+  -moz-image-region: rect(32px, 16px, 48px, 0px);
+}
+
+/* ::::: 前を検索ボタン ::::: */
+
+.findbar-find-previous {
+  list-style-image: url("chrome://global/skin/icons/find.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+.findbar-find-previous:not([disabled="true"]):hover,
+.findbar-find-previous:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+.findbar-find-previous[disabled="true"] {
+  -moz-image-region: rect(32px, 32px, 48px, 16px);
+}
+
+/* ::::: ハイライトボタン ::::: */
+
+.findbar-highlight {
+  list-style-image: url("chrome://global/skin/icons/find.png");
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+.findbar-highlight:hover {
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
+}
+
+.findbar-highlight[checked="true"] {
+  -moz-image-region: rect(48px, 48px, 64px, 32px) !important;
+}
+
+.findbar-highlight[disabled="true"] {
+  -moz-image-region: rect(32px, 48px, 48px, 32px) !important;
+}
+
+.find-status-icon {
+  width: 16px;
+  height: 16px;
+  list-style-image: none;
+  margin-top: 2px;
+  margin-bottom: 0;
+  -moz-margin-start: 8px;
+  -moz-margin-end: 0;
+}
+
+.find-status-icon[status="notfound"] {
+  list-style-image: url("chrome://global/skin/icons/notfound.png");
+}
+
+.find-status-icon[status="wrapped"] {
+  list-style-image: url("chrome://global/skin/icons/wrap.png");
+}
+
+/* !important is needed to override description in global.css */
+.findbar-find-status {
+  padding: 2px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 2px !important;
+  -moz-margin-end: 0 !important;
+}
