@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.1
+- pinned tabs fix
+
 ### 1.0.0
 - tab bar fix
 - full Pale Moon compatibility added
