@@ -2460,6 +2460,10 @@ tabpanels {
   min-height: 16px; /* corresponds to the max. height of non-textual tab contents, i.e. the favicon */
 }
 
+#tabbrowser-tabs[overflow=true] > .tabbrowser-tab[pinned]{
+  margin-top: -23px !important;
+}
+
 .tab-throbber[pinned],
 .tab-icon-image[pinned] {
   -moz-margin-start: 5px;
@@ -2704,7 +2708,8 @@ tabpanels {
 
 /* ::::: new tab button in the tab bar ::::: */
 
-.tabs-newtab-button {
+.tabs-newtab-button,
+#TabsToolbar #new-tab-button {
   list-style-image: url("chrome://browser/skin/tabbrowser/newtab.png");
   -moz-image-region: rect(0px, 22px, 17px, 0px);
   padding: 2px;
@@ -2712,11 +2717,13 @@ tabpanels {
   border-width: 0;
 }
 
-.tabs-newtab-button:hover {
+.tabs-newtab-button:hover,
+#TabsToolbar #new-tab-button:hover {
   -moz-image-region: rect(0px, 44px, 17px, 22px);
 }
 
-.tabs-newtab-button:hover:active {
+.tabs-newtab-button:hover:active,
+#TabsToolbar #new-tab-button:hover:active {
   -moz-image-region: rect(0px, 66px, 17px, 44px);
 }
 
