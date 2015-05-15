@@ -9,6 +9,10 @@ notification {
   color: #000000;
 }
 
+notification[type="info"] {
+  background-color: #77D0D9;
+}
+
 notification[type="warning"] {
   background-color: #E8DB99;
 }
@@ -16,6 +20,10 @@ notification[type="warning"] {
 notification[type="critical"] {
   background-color: #FF0000;
   color: #FFFFFF;
+}
+
+.notification-inner[type="info"] {
+  border-color: #77D0D9 !important;
 }
 
 .notification-inner[type="warning"] {
@@ -57,13 +65,14 @@ notification[type="critical"] {
 }
 
 .messageCloseButton {
-  list-style-image: url("chrome://global/skin/icons/close.gif");
+  list-style-image: url("chrome://global/skin/icons/closebox.gif");
   padding: 4px 2px;
   border: none;
 }
 
 .messageCloseButton:hover {
   list-style-image: url("chrome://global/skin/icons/close-hov.gif");
+  padding-right: 3px;
 }
 
 .messageCloseButton:hover:active {
