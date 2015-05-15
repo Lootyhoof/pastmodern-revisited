@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.2
+- fix several close button issues
+- add javascript alert box
+- add infobar styling
+- misc improvements
+
 ### 1.0.1
 - pinned tabs fix
 
