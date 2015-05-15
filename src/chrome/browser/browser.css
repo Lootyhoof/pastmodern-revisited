@@ -182,6 +182,12 @@ toolbox {
   -moz-box-pack: end;
 }
 
+#appmenu-popup menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+#appmenu-popup menu[_moz-menuactive="true"]:not([disabled="true"]) {
+  color: rgb(255, 255, 255);
+  background-color: rgb(66, 79, 99);
+}
+
 .appmenu-edit-button {
   -moz-appearance: none;
   border: 1px solid transparent;
@@ -208,6 +214,7 @@ toolbox {
     background-color: rgb(204,214,234);
     padding: 2px;
     -moz-border-end: none;
+	margin-left: -2px;
   }
   #appmenuSecondaryPane {
     background-color: #9cabba;
@@ -217,6 +224,7 @@ toolbox {
     padding-top: 2px;
     padding-bottom: 2px;
     font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+	margin-right: -2px;
   }
   #appmenuSecondaryPane:-moz-locale-dir(rtl) {
     box-shadow: -1px 0 2px rgb(204,214,234) inset;
@@ -2408,6 +2416,7 @@ toolbar[iconsize="small"][mode="icons"]
 
 .tabbrowser-tabs {
   margin-bottom: -1px;
+  -moz-margin-start: 3px;
 }
 
 /* To bottom-align the tab scrolling buttons except on the tab bar */
