@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.0.3
+- Linux: appmenu style
+- autocomplete history dropmarker style
+- border fixes for tabsontop
+
 ### 1.0.2
 - fix several close button issues
 - add javascript alert box
