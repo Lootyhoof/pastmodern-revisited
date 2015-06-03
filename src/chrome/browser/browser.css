@@ -105,6 +105,12 @@ toolbox {
   border-top: none;
 }
 
+@media not all and (-moz-windows-default-theme) {
+#navigator-toolbox {
+  padding-bottom: 2px;
+}
+}
+
 #print-preview-toolbar:not(:-moz-lwtheme) {
   -moz-appearance: toolbox;
 }
@@ -409,6 +415,8 @@ toolbox {
   border-bottom-color: rgb(149, 160, 173);
   border-left-color: rgb(218, 227, 237);
 }
+
+#main-window[tabsontop=true] #PersonalToolbar
 
 #personal-bookmarks {
   min-height: 20px;
