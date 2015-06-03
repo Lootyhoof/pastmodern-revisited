@@ -100,16 +100,6 @@ toolbox {
   min-height: 24px;
 }
 
-#navigator-toolbox:-moz-system-metric(windows-default-theme):not(:-moz-lwtheme) {
-  padding-bottom: 1px; /* uxtheme border drawing fix/hack */
-}
-
-@media (-moz-windows-default-theme) {
-#navigator-toolbox{
-  margin-bottom: -1px !important;
-}
-}
-
 #navigator-toolbox[inFullscreen="true"],
 #navigator-toolbox[inFullscreen="true"] > #nav-bar {
   border-top: none;
