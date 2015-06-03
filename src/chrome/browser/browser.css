@@ -106,7 +106,7 @@ toolbox {
 }
 
 @media not all and (-moz-windows-default-theme) {
-#navigator-toolbox {
+#navigator-toolbox[tabsontop=true] {
   padding-bottom: 2px;
 }
 }
