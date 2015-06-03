@@ -105,7 +105,7 @@ toolbox {
   border-top: none;
 }
 
-@media not all and (-moz-windows-default-theme) {
+@media not all and (-moz-windows-compositor) {
 #navigator-toolbox[tabsontop=true] {
   padding-bottom: 2px;
 }
