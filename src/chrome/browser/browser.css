@@ -48,19 +48,6 @@ toolbox {
   border-bottom-color: transparent;
 }
 
-/* Make titlebar text light/dark depending on persona */
-@media all and (-moz-windows-theme: aero), (-moz-windows-glass), all and (-moz-windows-compositor) {
-  #main-window[sizemode="normal"]:-moz-lwtheme:after{
-    color: inherit !important;
-    text-shadow: inherit !important;
-  }
-}
-
-#main-window[sizemode="maximized"]:-moz-lwtheme:after{
-  color: inherit !important;
-  text-shadow: inherit !important;
-}
-
 /* ::::: menubar ::::: */
 
 #toolbar-menubar {
@@ -105,10 +92,11 @@ toolbox {
   border-top: none;
 }
 
-@media not all and (-moz-windows-compositor) {
-#navigator-toolbox[tabsontop=true] {
-  padding-bottom: 2px;
-}
+@media not -moz-windows-compositor,
+       (-moz-windows-theme: windows-win10) {
+  #navigator-toolbox[tabsontop=true] {
+    padding-bottom: 2px;
+  }
 }
 
 #print-preview-toolbar:not(:-moz-lwtheme) {
