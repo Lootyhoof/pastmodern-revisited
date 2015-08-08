@@ -1,4 +1,4 @@
-This theme is published under the Mozilla Public License Version 1.1.
-http://www.mozilla.org/MPL/MPL-1.1.html
+This theme is published under the Mozilla Public License Version 2.0.
+https://www.mozilla.org/MPL/2.0/
 
 Exception: If you use the resource included in this theme for The SeaMonkey Project, all the codes and images are published under the triple licence (GPL/LGPL/MPL).
