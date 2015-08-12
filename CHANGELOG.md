@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.1.0
+- Pale Moon v26 compatibility
+- fix window borders on Windows 10
+- fix bottom border on Windows 10
+
 ### 1.0.3
 - Linux: appmenu style
 - autocomplete history dropmarker style
