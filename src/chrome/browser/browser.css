@@ -660,8 +660,13 @@ toolbar[mode="full"] .toolbarbutton-menubutton-button {
 /* toolbar groove */
 toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
   border-top: 1px solid #EEF0F3;
-  border-right: 1px solid #86929E;
   border-bottom: 1px solid #86929E;
+}
+
+@media not all and (-moz-os-version: windows-win10) {
+  toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
+    border-right: 1px solid #86929E;
+  }
 }
 
 #main-window:not([tabsintitlebar]) #TabsToolbar {
