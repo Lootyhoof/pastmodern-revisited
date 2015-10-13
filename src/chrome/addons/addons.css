@@ -51,20 +51,24 @@
 
 /* ::::: Tree Style Tab ::::: */
 
-tabbrowser[treestyletab-mode="vertical"] .tabbrowser-tabs {
+.tabbrowser-tabs[treestyletab-mode="vertical"] {
   border-bottom-width: 0;
 }
 
-tabbrowser[treestyletab-mode="vertical"] .tabs-bottom {
+.tabbrowser-tabs[treestyletab-mode="vertical"] .tabs-bottom {
 	display: none;
 }
 
-tabbrowser[treestyletab-mode="vertical"] .tabs-container,
-tabbrowser[treestyletab-mode="vertical"] .tabbrowser-arrowscrollbox > scrollbox {
+.tabbrowser-tabs[treestyletab-mode="vertical"] .tabs-container,
+.tabbrowser-tabs[treestyletab-mode="vertical"] .tabbrowser-arrowscrollbox > scrollbox {
   -moz-box-align: stretch !important;
 }
 
-tabbrowser[treestyletab-mode="vertical"] tabbox .tabs-newtab-button,
-tabbrowser[treestyletab-mode="vertical"] tabbox .tabs-alltabs-button {
+.tabbrowser-tabs[treestyletab-mode="vertical"] tabbox .tabs-newtab-button,
+.tabbrowser-tabs[treestyletab-mode="vertical"] tabbox .tabs-alltabs-button {
   height: 18px !important;
+}
+
+.tabbrowser-tabs[treestyletab-mode=vertical] .tabbrowser-tab > * > * > .tab-close-button {
+  padding: 0 !important;
 }
