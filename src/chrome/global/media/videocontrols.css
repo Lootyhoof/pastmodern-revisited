@@ -35,6 +35,18 @@ button {
   background: url(chrome://global/skin/media/unmuteButton.png) no-repeat center;
 }
 
+.fullscreenButton {
+  background-image: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 16, 16, 0);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fullscreenButton[fullscreened] {
+  background-image: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 32, 16, 16);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .backgroundBar {
   /* make bar 8px tall (control height = 28, minus 2 * 10 margin) */
   /* margin left/right: 1/2 of scrubber thumb width, for overhang. */
@@ -73,8 +85,20 @@ button {
   min-height: 20px;
 }
 
+.volumeStack {
+  width: 28px;
+  height: 70px;
+  background-color: #B1BBC5;
+  /* use negative margin to place stack over the mute button to its left. */
+  margin: -70px 3px 28px -31px;
+  overflow: hidden; /* crop it when sliding down, don't grow the control bar */
+  position: relative; /* Trick to work around negative margin interfering with dragging the thumb. */
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 .volumeControl {
-  width: 32px;
+  min-height: 64px;
 }
 
 /* .scale-thumb is an element inside the <scale> implementation. */
