@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.3
+- media controls: fix volume slider
+- media controls: add fullscreen button
+
 ### 1.1.2
 - (Win10) shade window background on Pale Moon 26 builds later than b2
 - reduce appmenu width
