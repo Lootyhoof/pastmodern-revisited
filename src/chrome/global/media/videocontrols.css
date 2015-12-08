@@ -144,8 +144,8 @@ button {
 
 .scrubber .scale-slider {
   /* abs(margin-top) + margin-bottom + bar height == timeThumb height */
-  margin-top: -9px;
-  margin-bottom: 15px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 /* .scale-thumb is an element inside the <scale> implementation. */
