@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.0
+- (PM26) add history menu button
+- show more icons in history/bookmarks menus
+- ensure scrollarrows are shown correctly
+- media controls: fix time bar
+
 ### 1.1.3
 - media controls: fix volume slider
 - media controls: add fullscreen button
