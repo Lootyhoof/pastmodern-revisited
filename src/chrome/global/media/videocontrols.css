@@ -34,6 +34,9 @@ button {
 .muteButton[muted="true"] {
   background: url(chrome://global/skin/media/unmuteButton.png) no-repeat center;
 }
+.muteButton[noAudio] {
+  background: url(chrome://global/skin/media/noAudio.png) no-repeat center;
+}
 
 .fullscreenButton {
   background-image: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 16, 16, 0);
@@ -85,44 +88,35 @@ button {
   min-height: 20px;
 }
 
-.volumeStack {
-  width: 28px;
-  height: 70px;
-  background-color: #B1BBC5;
-  /* use negative margin to place stack over the mute button to its left. */
-  margin: -70px 3px 28px -31px;
-  overflow: hidden; /* crop it when sliding down, don't grow the control bar */
-  position: relative; /* Trick to work around negative margin interfering with dragging the thumb. */
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
 .volumeControl {
-  min-height: 64px;
+  width: 32px;
+  opacity: 0;
 }
 
-/* .scale-thumb is an element inside the <scale> implementation. */
-.volumeControl .scale-thumb {
-  /* Override the default thumb appearance. */
-  background-color: #B1BBC5;
-  background-image: none;
-  border: 2px solid;
-  -moz-border-top-colors: #000000;
-  -moz-border-right-colors: #000000;
-  -moz-border-bottom-colors: #000000;
-  -moz-border-left-colors: #000000;
-  border-radius: 4px;
-  min-height: 20px;
-  min-width: 8px;
+.volumeBackground,
+.volumeForeground {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
 }
 
-/* Draws a right-angled triangle. */
 .volumeBackground {
-  margin: 6px 0px;
-  border: 0px solid transparent;
-  border-top-width: 16px;
-  -moz-border-end-width: 32px;
-  -moz-border-end-color: #B1BBC5;
+  background-image: url(chrome://global/skin/media/volume-empty.png);
+}
+
+.volumeForeground {
+  background-image: url(chrome://global/skin/media/volume-full.png);
+  background-clip: content-box;
+}
+
+.controlBar[audio-only] > .volumeStack {
+  /* This value is duplicated in the videocontrols.xml adjustControlSize function. */
+  -moz-margin-end: 8px;
+}
+
+.volumeControl .scale-thumb {
+  min-width: 0;
+  opacity: 0;
 }
 
 .durationBox {
@@ -149,7 +143,8 @@ button {
 }
 
 /* .scale-thumb is an element inside the <scale> implementation. */
-.scrubber .scale-thumb {
+.scrubber .scale-thumb,
+.volumeControl .scale-thumb {
   /* Override the default thumb appearance with a custom image. */
   background: transparent;
   border: none;
