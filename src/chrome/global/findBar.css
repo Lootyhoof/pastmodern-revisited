@@ -20,19 +20,9 @@ findbar:-moz-lwtheme {
 /* ::::: ページ検索ツールバーの閉じるボタン ::::: */
 
 .findbar-closebutton {
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0px, 15px, 16px, 0px);
   padding: 0 !important;
   margin: 2px 5px;
   border-width: 0;
-}
-
-.findbar-closebutton:hover {
-  -moz-image-region: rect(0px, 30px, 16px, 15px);
-}
-
-.findbar-closebutton:hover:active {
-  -moz-image-region: rect(0px, 45px, 16px, 30px);
 }
 
 /* ::::: 文字入力部分 ::::: */

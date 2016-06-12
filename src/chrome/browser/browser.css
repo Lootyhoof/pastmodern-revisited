@@ -2287,19 +2287,9 @@ toolbar[iconsize="small"][mode="icons"]
 
 .panel-promo-closebutton {
   -moz-appearance: none;
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0, 16px, 16px, 0);
   border: none;
   -moz-margin-end: -10px;
   margin-top: -5px;
-}
-
-.panel-promo-closebutton:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.panel-promo-closebutton:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 .panel-promo-closebutton > .toolbarbutton-text {
@@ -2569,19 +2559,9 @@ tabpanels {
 /* ::::: tabbar close button ::::: */
 
 .tabs-closebutton {
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0px, 15px, 16px, 0px);
   padding: 0;
   margin: 2px 4px;
   border-width: 0;
-}
-
-.tabs-closebutton:hover {
-  -moz-image-region: rect(0px, 30px, 16px, 15px);
-}
-
-.tabs-closebutton:hover:active {
-  -moz-image-region: rect(0px, 45px, 16px, 30px);
 }
 
 /* close tab on tab bar */
@@ -3090,17 +3070,7 @@ tabpanels {
 #addonbar-closebutton {
   border: none;
   padding: 0 5px;
-  list-style-image: url("chrome://global/skin/icons/close.png");
   -moz-appearance: none;
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-#addonbar-closebutton:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-#addonbar-closebutton:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 /* Status panel */
