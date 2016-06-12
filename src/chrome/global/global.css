@@ -456,3 +456,18 @@ label[disabled="true"] {
   -moz-border-bottom-colors: rgb(248, 250, 254) rgb(93, 97, 110);
   -moz-border-left-colors: rgb(190, 195, 211) rgb(93, 97, 110);
 }
+
+/* :::::: Close button icons ::::: */
+
+.close-icon {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0, 15px, 16px, 0);
+}
+
+.close-icon:hover {
+  -moz-image-region: rect(0, 30px, 16px, 15px);
+}
+
+.close-icon:hover:active {
+  -moz-image-region: rect(0, 45px, 16px, 30px);
+}
