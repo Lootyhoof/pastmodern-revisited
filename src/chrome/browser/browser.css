@@ -3977,6 +3977,11 @@ chatbox {
       border: none;
       margin: 0 !important;
       padding: 9px 17px;
+      transition: background-color linear 120ms;
+    }
+    
+    .titlebar-button:hover:active {
+      transition: none;
     }
         
     #main-window[sizemode="maximized"][tabsontop=true] #tabbrowser-tabs {
@@ -4003,15 +4008,18 @@ chatbox {
       padding-right: 19px;
     }
     
-    #titlebar-close:hover {
+    #titlebar-close:not(:-moz-lwtheme) {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
-      background-color: hsla(0, 86%, 49%, 1) !important; 
-      transition: opacity linear 100ms;
+      opacity: 0;
+    }
+    
+    #titlebar-close:hover {
+      background-color: hsla(0, 86%, 49%, 1) !important;
+      opacity: 1;
     }
 
     #titlebar-close:hover:active {
       background-color: hsla(0, 86%, 49%, 0.6) !important; 
-      transition: none;
     }
     
     /* light persona */
@@ -4100,30 +4108,41 @@ chatbox {
     }
 
     .titlebar-button:hover {
-      background-color: hsla(0, 0%, 0%, .12);
-      transition: background-color linear 100ms;
+      background-color: hsla(0, 0%, 0%, .17);
     }
 
     .titlebar-button:hover:active {
-      background-color: hsla(0, 0%, 0%, .22);
-      transition: none;
+      background-color: hsla(0, 0%, 0%, .27);
     }
 
     .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
       opacity: 0.5;
     }
           
-    /* dark persona/titlebar */
-    .titlebar-button:-moz-lwtheme-brighttext:hover,
-    #main-window[darkwindowframe="true"] .titlebar-button:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-      background-color: hsla(0, 0%, 100%, .12);
-      transition: background-color linear 100ms;
+    /* dark persona */
+    .titlebar-button:-moz-lwtheme-brighttext:hover {
+      background-color: hsla(0, 0%, 100%, .27);
     }
 
-    .titlebar-button:-moz-lwtheme-brighttext:hover:active,
-    #main-window[darkwindowframe="true"] .titlebar-button:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
+    .titlebar-button:-moz-lwtheme-brighttext:hover:active {
+      background-color: hsla(0, 0%, 100%, .37);
+    }
+    
+    /* dark accent color */
+    #main-window[darkwindowframe="true"] .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+      background-color: hsla(0, 0%, 100%, .12);
+    }
+
+    #main-window[darkwindowframe="true"] .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
       background-color: hsla(0, 0%, 100%, .22);
-      transition: none;
+    }
+    
+    #main-window[darkwindowframe="true"] #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+      background-color: hsla(0, 86%, 49%, 1);
+    }
+
+    #main-window[darkwindowframe="true"] #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
+      background-color: hsla(0, 60%, 39%, 0.6);
     }
       
     #appmenu-button {
