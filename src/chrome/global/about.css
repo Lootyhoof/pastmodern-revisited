@@ -28,23 +28,13 @@ body {
 }
 
 #aboutLogoContainer {
-  border: 1px solid #494F5D;
   width: 300px;
+  margin: 0 auto;
   margin-bottom: 2em;
 }
 
 img {
   border: 0;
-}
-
-#version {
-  font-weight: bold;
-  color: #000;
-  margin-top: -24px;
-  margin-bottom: 9px;
-  -moz-margin-start: 10px;
-  -moz-margin-end: 0px;
-  font-size: 130%;
 }
 
 ul {
