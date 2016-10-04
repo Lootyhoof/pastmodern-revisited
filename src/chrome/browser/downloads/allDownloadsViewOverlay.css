@@ -104,14 +104,10 @@ richlistitem.download:hover > .downloadButton.downloadRetry:active {
   -moz-image-region: rect(32px, 64px, 48px, 48px);
 }
 
-
-@media (-moz-windows-default-theme) {
-
-  #downloadsRichListBox > richlistitem.download[selected] {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    background-color: rgb(66, 79, 99);
-    background-clip: content-box;
-    outline-offset: -2px;
-  }
+#downloadsRichListBox > richlistitem.download[selected] {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  background-color: rgb(66, 79, 99);
+  background-clip: content-box;
+  outline-offset: -2px;
 }
