@@ -9,3 +9,5 @@ skin 	platform 	pastmodern-r chrome/platform/standard/
 skin 	platform 	pastmodern-r chrome/platform/winnt/ os=WINNT
 skin 	platform 	pastmodern-r chrome/platform/linux/ os=Linux
 skin 	platform 	pastmodern-r chrome/platform/darwin/ os=Darwin
+skin 	appver 	pastmodern-r chrome/appver/26/ appversion<27.0.0b1
+skin 	appver 	pastmodern-r chrome/appver/27/ appversion>=27.0.0b1
