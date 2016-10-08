@@ -70,9 +70,17 @@ p {
   float: left;
 }
 
+#UI_goUp:-moz-dir(rtl) {
+  float: right;
+}
+
 #UI_showHidden {
   margin-top: 0;
   float: right;
+}
+
+#UI_showHidden:-moz-dir(rtl) {
+  float: left;
 }
 
 table {
@@ -107,10 +115,8 @@ td:first-child + td + td {
 }
 
 /* last modifiedの時間 */
-td:last-child {
-  text-align: right;
-  -moz-padding-start: 0.5em;
-  -moz-padding-end: 2px;
+th:last-child {
+  text-align: center;
 }
 
 tbody > tr:hover {
