@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.4.0
+- PM27: add statusbar styling
+- PM27: add styling for downloads panel components
+- PM27: style devtools
+- improve appearance of about:
+- fix alignment of directory listings
+
 ### 1.3.0
 - titlebar colorisation for Windows 10
 - use dark window frame detection on Windows 8/10
