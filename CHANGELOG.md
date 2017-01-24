@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.5.1
+- stop directory listing stylings being truncated
+- sync devtools styling with default theme
+
 ### 1.5.0
 - support PM27's devtools
 - drop PM26 support
