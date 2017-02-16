@@ -1,35 +1,14 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1
- * 
- * The contents of this file are subject to the Mozilla Public License
- * Version 1.1 (the "License"); you may not use this file except in
- * compliance with the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- * 
- * Software distributed under the License is distributed on an "AS IS"
- * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
- * License for the specific language governing rights and limitations
- * under the License.
- * 
- * The Original Code is mozilla.org code.
- * 
- * The Initial Developer of the Original Code is 
- * Netscape Communications Corporation.
- * Portions created by the Initial Developer are Copyright (C) 1998
- * the Initial Developer. All Rights Reserved.
- * 
- * Contributor(s):
- *  Joe Hewitt (hewitt@netscape.com)
- * 
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* ===== toolbarbutton.css ==============================================
-  == Styles used by XUL toolbarbutton elements.
+/* ===== toolbarbutton.css =====================================================
+  == Styles used by the XUL button element.
   ======================================================================= */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* ::::: ツールバーボタン ::::: */
+/* ::::: toolbarbutton ::::: */
 
 toolbarbutton {
   -moz-box-align: center;
@@ -124,7 +103,7 @@ toolbarbutton:-moz-lwtheme:not([checked="true"]):not([disabled="true"]) {
   text-shadow: inherit;
 }
 
-/* ::::: ツールバーボタン メニュー ::::: */
+/* ::::: toolbarbutton menu ::::: */
 
 .toolbarbutton-menu-dropmarker {
   background-color: transparent !important;
@@ -138,7 +117,7 @@ toolbarbutton:-moz-lwtheme:not([checked="true"]):not([disabled="true"]) {
   list-style-image: url("chrome://global/skin/button/tbmenu-arrow-dis.png");
 }
 
-/* ::::: ツールバーボタン メニューボタン ::::: */
+/* ::::: toolbarbutton menu-button ::::: */
 
 toolbarbutton[type="menu-button"] {
   -moz-box-align: stretch;
@@ -161,7 +140,49 @@ toolbarbutton[type="menu-button"][disabled="true"] {
   font: inherit;
 }
 
-/* ..... ドロップマーカ ..... */
+/* ::::: toolbarbutton badged ::::: */
+
+.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]) {
+  -moz-margin-end: 0;
+}
+
+.toolbarbutton-badge[badge=""] {
+  display: none;
+}
+
+.toolbarbutton-badge {
+  background-color: #d90000;
+}
+
+.toolbarbutton-badge::after {
+  /* The |content| property is set in the content stylesheet. */
+  font-size: 10px;
+  font-weight: bold;
+  padding: 1px 2px 2px;
+  color: #fff;
+  background-color: inherit;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 hsla(0, 100%, 100%, .2) inset,
+              0 -1px 0 hsla(0, 0%, 0%, .1) inset,
+              0 1px 0 hsla(206, 50%, 10%, .2);
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  min-width: 10px;
+  line-height: 10px;
+  text-align: center;
+}
+
+.toolbarbutton-badge:-moz-locale-dir(rtl)::after {
+  left: -2px;
+  right: auto;
+}
+
+.toolbarbutton-badge-container {
+  position: relative;
+}
+
+/* .......... dropmarker .......... */
 
 .toolbarbutton-menubutton-dropmarker {
   background-color: transparent !important;
