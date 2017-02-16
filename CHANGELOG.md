@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.5.2
+- add dropshadow to toolbar icons on the navigation toolbar
+- allow extensions to style their own toolbarbutton badges
+
 ### 1.5.1
 - stop directory listing stylings being truncated
 - sync devtools styling with default theme
