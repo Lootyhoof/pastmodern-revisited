@@ -654,6 +654,13 @@ toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
   }
 }
 
+/* Add dropshadow to toolbar icons on #nav-bar */
+#nav-bar :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button):not(:-moz-any(#sync-button, #feed-button, #alltabs-button, #tabview-button)) > .toolbarbutton-icon:not(:-moz-lwtheme) {
+  box-shadow: 2px 2px 5px rgba(0,0,0,.4),
+              -2px -2px 5px rgba(255,255,255,.4);
+  border-radius: 9999999px;
+}
+
 #main-window:not([tabsintitlebar]) #TabsToolbar {
   border-top: 1px solid #494F5D;
 }
