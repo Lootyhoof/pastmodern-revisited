@@ -34,6 +34,11 @@ notification[type="critical"] {
   border-color: #FF0000 !important;
 }
 
+.messageText > .text-link {
+  color: inherit !important;
+  text-decoration: underline;
+}
+
 .messageImage {
   width: 16px;
   height: 16px;
@@ -78,6 +83,14 @@ notification[type="critical"] {
 
 popupnotification {
   background-color: #C7D0D9;
+}
+
+.popup-notification-learnmore-link {
+  margin-top: 1em !important;
+}
+
+.popup-notification-learnmore-link:not([href]) {
+  display: none;
 }
 
 .popup-notification-description {
