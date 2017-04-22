@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="7.008" y1="3.528" x2="23.117" y2="26.534">
+    <stop offset="0" stop-color="#717f90"/>
+    <stop offset="1" stop-color="#5d6d7f"/>
+  </linearGradient>
+  <ellipse fill="url(#a)" stroke="#313843" stroke-width="1.5" stroke-miterlimit="10" cx="15.1" cy="15" rx="14.1" ry="14"/>
+  <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="9.42" y1="3.034" x2="20.58" y2="26.966">
+    <stop offset="0" stop-color="#717f90" stop-opacity="0"/>
+    <stop offset=".225" stop-color="#738192" stop-opacity=".225"/>
+    <stop offset=".387" stop-color="#7a8697" stop-opacity=".387"/>
+    <stop offset=".528" stop-color="#86909f" stop-opacity=".528"/>
+    <stop offset=".657" stop-color="#989fac" stop-opacity=".657"/>
+    <stop offset=".779" stop-color="#b1b5bf" stop-opacity=".779"/>
+    <stop offset=".893" stop-color="#d1d3d8" stop-opacity=".893"/>
+    <stop offset="1" stop-color="#fff"/>
+  </linearGradient>
+  <circle fill="none" stroke="url(#b)" stroke-miterlimit="10" cx="15" cy="15" r="12.7"/>
+  <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="13.696" y1="13.117" x2="16.657" y2="17.346">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="1" stop-color="#bee5e9"/>
+  </linearGradient>
+  <linearGradient id="d" gradientUnits="userSpaceOnUse" x1="8.878" y1="6.237" x2="21.3" y2="23.976">
+    <stop offset="0" stop-color="#a8b4bf"/>
+    <stop offset="0" stop-color="#a0acb8"/>
+    <stop offset="0" stop-color="#838f9e"/>
+    <stop offset="0" stop-color="#6f7c8c"/>
+    <stop offset="0" stop-color="#617081"/>
+    <stop offset="0" stop-color="#59697b"/>
+    <stop offset="0" stop-color="#576779"/>
+  </linearGradient>
+  <path fill="url(#c)" stroke="url(#d)" stroke-width=".5" stroke-miterlimit="10" d="M23.4 16c-.1.7-.2 1.4-.5 2-.5 1.6-1.4 3-3 4 .5.5 1.6 1.1 1.6 1.1l-4.9.4h-.1s-2.4-.4-3.6-.7c.8-.7 1.4-1.6 1.9-2.5.7-1.4.7-3.6.7-3.6s1.1 1.8 1.7 2.5c1.4-.7 2.4-2.2 2.5-3.6.1-1.1-.2-2-.7-2.8-.5-.8-1.2-1.3-2-1.7.2-.5.6-1.1 1-1.6.4-.7 1-1.2 1.5-1.5 2.5 1.4 4.3 4.5 3.9 8zM15 13.6s-1.3-1.8-1.9-2.4c-1.7.8-2.6 2.4-2.6 4.1.1 1.8 1.3 3.2 2.9 4-.4.6-.7 1.2-1.2 1.7-.5.6-1.1 1-1.4 1.3-2.8-1.7-4.4-4.8-4-8.2.1-.8.4-1.7.6-2.4.5-1.3 1.3-2.4 2.5-3.2.1-.1.2-.1.4-.2-.5-.5-1.9-1-1.9-1s3-1 8.2-.4c-1.7 2.2-1.6 6.7-1.6 6.7z"/>
+</svg>

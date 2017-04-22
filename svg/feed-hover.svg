@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="7.008" y1="3.528" x2="23.117" y2="26.534">
+    <stop offset="0" stop-color="#bcc6d1"/>
+    <stop offset="1" stop-color="#56687b"/>
+  </linearGradient>
+  <ellipse fill="url(#a)" stroke="#313843" stroke-width="1.5" stroke-miterlimit="10" cx="15.1" cy="15" rx="14.1" ry="14"/>
+  <g>
+    <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="11.868" y1="14.793" x2="15.919" y2="20.579">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#bee5e9"/>
+    </linearGradient>
+    <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="6.888" y1="7.68" x2="19.146" y2="25.187">
+      <stop offset="0" stop-color="#a8b4bf"/>
+      <stop offset=".037" stop-color="#9fabb7"/>
+      <stop offset=".196" stop-color="#828f9d"/>
+      <stop offset=".365" stop-color="#6f7c8c"/>
+      <stop offset=".545" stop-color="#617081"/>
+      <stop offset=".744" stop-color="#59697b"/>
+      <stop offset="1" stop-color="#576779"/>
+    </linearGradient>
+    <path fill="url(#b)" stroke="url(#c)" stroke-width=".5" stroke-miterlimit="10" d="M22 22.7h-1.6c-.4 0-.9-.3-.9-.9 0 0 .3-4-3.5-7.9-2.8-3.3-7.7-3.5-7.7-3.5-.6 0-.9-.3-.9-.8V8c0-.4.3-.8.9-.8 0 0 6.9.4 10.6 4.9 3.6 3.4 4 9.7 4 9.7-.1.5-.4.9-.9.9zM8.2 12.8s4.1.6 6.4 2.6c2.3 2.2 2.8 6.5 2.8 6.5 0 .4-.1.9-.6.9h-1.6c-.4 0-.7-.3-.7-.9 0 0 .1-2.6-2-4.6-1.6-1.4-4.3-1.5-4.3-1.5-.6 0-.9-.3-.9-.8v-1.4c.1-.5.4-.8.9-.8zm1.4 5.5c1.2 0 2.2 1 2.2 2.2 0 1.2-1 2.2-2.2 2.2s-2.2-1-2.2-2.2c0-1.2 1-2.2 2.2-2.2z"/>
+  </g>
+</svg>

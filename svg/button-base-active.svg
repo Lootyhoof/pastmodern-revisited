@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="7.008" y1="3.528" x2="23.117" y2="26.534">
+    <stop offset="0" stop-color="#717f90"/>
+    <stop offset="1" stop-color="#5d6d7f"/>
+  </linearGradient>
+  <ellipse fill="url(#a)" stroke="#313843" stroke-width="1.5" stroke-miterlimit="10" cx="15.1" cy="15" rx="14.1" ry="14"/>
+  <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="9.42" y1="3.034" x2="20.58" y2="26.966">
+    <stop offset="0" stop-color="#717f90" stop-opacity="0"/>
+    <stop offset=".225" stop-color="#738192" stop-opacity=".225"/>
+    <stop offset=".387" stop-color="#7a8697" stop-opacity=".387"/>
+    <stop offset=".528" stop-color="#86909f" stop-opacity=".528"/>
+    <stop offset=".657" stop-color="#989fac" stop-opacity=".657"/>
+    <stop offset=".779" stop-color="#b1b5bf" stop-opacity=".779"/>
+    <stop offset=".893" stop-color="#d1d3d8" stop-opacity=".893"/>
+    <stop offset="1" stop-color="#fff"/>
+  </linearGradient>
+  <circle fill="none" stroke="url(#b)" stroke-miterlimit="10" cx="15" cy="15" r="12.7"/>
+</svg>

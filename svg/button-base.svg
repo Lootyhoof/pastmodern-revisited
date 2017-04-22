@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="7.008" y1="3.528" x2="23.117" y2="26.534">
+    <stop offset="0" stop-color="#bcc6d1"/>
+    <stop offset="1" stop-color="#56687b"/>
+  </linearGradient>
+  <ellipse fill="url(#a)" stroke="#313843" stroke-width="1.5" stroke-miterlimit="10" cx="15.1" cy="15" rx="14.1" ry="14"/>
+</svg>
