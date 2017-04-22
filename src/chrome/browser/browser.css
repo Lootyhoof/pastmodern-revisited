@@ -625,7 +625,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 .toolbarbutton-1 {
   min-width: 0;
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  list-style-image: url("chrome://browser/skin/Toolbar-large.png");
 }
 
 toolbar[mode="full"] .toolbarbutton-1:not([type=menu-button]) {
@@ -655,7 +655,7 @@ toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
 }
 
 /* Add dropshadow to toolbar icons on #nav-bar */
-#nav-bar :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button):not(:-moz-any(#sync-button, #feed-button, #alltabs-button, #tabview-button)) > .toolbarbutton-icon:not(:-moz-lwtheme) {
+#nav-bar :-moz-any(#back-button, #forward-button, #reload-button, #stop-button, #home-button, #print-button, #downloads-button, #downloads-indicator, #status4evar-download-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button):not(:-moz-any(#alltabs-button, #tabview-button)) > .toolbarbutton-icon:not(:-moz-lwtheme) {
   box-shadow: 2px 2px 5px rgba(0,0,0,.4),
               -2px -2px 5px rgba(255,255,255,.4);
   border-radius: 9999999px;
@@ -904,15 +904,6 @@ toolbar[mode="text"] .bookmark-item > .toolbarbutton-text {
   -moz-image-region: rect(60px, 180px, 90px, 150px);
 }
 
-/* download status button */
-#status4evar-download-button #status4evar-download-icon,
-#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
-                              0, 180, 30, 150) !important;
-  width:30px;
-  height:30px;
-}
-
 /* ::::: history ::::: */
 
 #history-button,
@@ -1081,7 +1072,72 @@ toolbar[mode="text"] .bookmark-item > .toolbarbutton-text {
   -moz-image-region: rect(60px, 450px, 90px, 420px);
 }
 
-/* tabview button */
+/* ::::: zoom controls ::::: */
+
+#zoom-in-button {
+  -moz-image-region: rect(0px, 480px, 30px, 450px);
+}
+
+#zoom-in-button:hover {
+  -moz-image-region: rect(30px, 480px, 60px, 450px);
+}
+
+#zoom-in-button:hover:active,
+#zoom-in-button[checked="true"] {
+  -moz-image-region: rect(60px, 480px, 90px, 450px);
+}
+
+#zoom-out-button {
+  -moz-image-region: rect(0px, 510px, 30px, 480px);
+}
+
+#zoom-out-button:hover {
+  -moz-image-region: rect(30px, 510px, 60px, 480px);
+}
+
+#zoom-out-button:hover:active,
+#zoom-out-button[checked="true"] {
+  -moz-image-region: rect(60px, 510px, 90px, 480px);
+}
+
+#zoom-in-button[disabled="true"] .toolbarbutton-icon,
+#zoom-out-button[disabled="true"] .toolbarbutton-icon {
+  opacity: 0.5;
+}
+
+/* ::::: sync ::::: */
+
+#sync-button {
+  -moz-image-region: rect(0px, 540px, 30px, 510px);
+}
+
+#sync-button:hover {
+  -moz-image-region: rect(30px, 540px, 60px, 510px);
+}
+
+#sync-button:hover:active {
+  -moz-image-region: rect(60px, 540px, 90px, 510px);
+}
+
+/* ::::: feed ::::: */
+
+#feed-button {
+  -moz-image-region: rect(0px, 570px, 30px, 540px);
+}
+
+#feed-button:hover {
+  -moz-image-region: rect(30px, 570px, 60px, 540px);
+}
+
+#feed-button:hover:active {
+  -moz-image-region: rect(60px, 570px, 90px, 540px);
+}
+
+#feed-button[disabled="true"] .toolbarbutton-icon {
+  opacity: 0.5;
+}
+
+/* ::::: tabview ::::: */
 
 #tabview-button,
 #menu_tabview {
@@ -1135,83 +1191,6 @@ toolbar[iconsize="small"] #tabview-button > image {
 
 #menu_tabview[groups="3"] {
   -moz-image-region: rect(1px, 71px, 17px, 55px);
-}
-
-/* sync button */
-
-#sync-button {
-  -moz-image-region: rect(90px, 30px, 120px, 0px);
-}
-#sync-button:hover,
-#sync-button[checked="true"] {
-  -moz-image-region: rect(120px, 30px, 150px, 0px);
-}
-
-/* feed button */
-
-#feed-button {
-  -moz-image-region: rect(90px, 59px, 119px, 30px);
-}
-#feed-button:hover,
-#feed-button[checked="true"] {
-  -moz-image-region: rect(120px, 59px, 149px, 30px);
-}
-#feed-button[disabled="true"] {
-  -moz-image-region: rect(150px, 59px, 179px, 30px);
-}
-
-/* zoom controls */
-
-#zoom-out-button {
-  -moz-image-region: rect(90px, 120px, 120px, 90px);
-  margin-right: 0px !important;  /* Render the zoom buttons side-by-side by cutting out the margin */
-  
-  /* These margins need to be zero so that with Aero's rendering, the buttons' borders overlap the container's borders */
-  margin-left: 0px !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-#zoom-out-button:hover,
-#zoom-out-button[checked="true"] {
-  -moz-image-region: rect(120px, 120px, 150px, 90px);
-}
-#zoom-out-button[disabled="true"] {
-  -moz-image-region: rect(150px, 120px, 180px, 90px);
-}
-
-#zoom-in-button {
-  -moz-image-region: rect(90px, 90px, 120px, 60px);
-  margin-left: 0px !important;  /* Render the zoom buttons side-by-side by cutting out the margin */
-  
-  /* These margins need to be zero so that with Aero's rendering, the buttons' borders overlap the container's borders */
-  margin-right: 0px !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-#zoom-in-button:hover,
-#zoom-in-button[checked="true"] {
-  -moz-image-region: rect(120px, 90px, 150px, 60px);
-}
-#zoom-in-button[disabled="true"] {
-  -moz-image-region: rect(150px, 90px, 180px, 60px);
-}
-
-#zoom-controls:hover #zoom-out-button:not([disabled="true"]) {
-  border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight;
-}
-#zoom-controls:hover #zoom-out-button:active:not([disabled="true"]),
-#zoom-controls:hover #zoom-out-button[open="true"],
-#zoom-controls #zoom-out-button[open="true"] {
-  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
-}
-
-#zoom-controls:hover #zoom-in-button:not([disabled="true"]) {
-  border-color: ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight;
-}
-#zoom-controls:hover #zoom-in-button:active:not([disabled="true"]),
-#zoom-controls:hover #zoom-in-button[open="true"],
-#zoom-controls #zoom-in-button[open="true"] {
-  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
 }
 
 /* ::::: 24px default toolbar icons ::::: */
@@ -1309,18 +1288,6 @@ toolbar[iconsize="small"] #downloads-button:hover {
 toolbar[iconsize="small"] #downloads-button:hover:active {
   -moz-image-region: rect(48px, 144px, 72px, 120px);
 }
-
-
-
-/* download status button */
-toolbar[iconsize="small"] #status4evar-download-button #status4evar-download-icon,
-toolbar[iconsize="small"] #status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
-                              0, 144, 24, 120) !important;
-  width:24px;
-  height:24px;
-}
-
 
 /* ::::: history ::::: */
 
@@ -1469,51 +1436,61 @@ toolbar[iconsize="small"] #fullscreen-button[checked="true"] {
   -moz-image-region: rect(48px, 360px, 72px, 336px);
 }
 
-/* sync button */
-
-toolbar[iconsize="small"] #sync-button {
-  -moz-image-region: rect(72px, 24px, 96px, 0px);
-}
-toolbar[iconsize="small"] #sync-button:hover,
-toolbar[iconsize="small"] #sync-button[checked="true"] {
-  -moz-image-region: rect(96px, 24px, 120px, 0px);
-}
-
-/* feed button */
-
-toolbar[iconsize="small"] #feed-button {
-  -moz-image-region: rect(72px, 48px, 96px, 24px);
-}
-toolbar[iconsize="small"] #feed-button:hover,
-toolbar[iconsize="small"] #feed-button[checked="true"] {
-  -moz-image-region: rect(96px, 48px, 120px, 24px);
-}
-toolbar[iconsize="small"] #feed-button[disabled="true"] {
-  -moz-image-region: rect(120px, 48px, 144px, 24px);
-}
-
-/* zoom controls */
-
-toolbar[iconsize="small"] #zoom-out-button {
-  -moz-image-region: rect(72px, 96px, 96px, 72px);
-}
-toolbar[iconsize="small"] #zoom-out-button:hover,
-toolbar[iconsize="small"] #zoom-out-button[checked="true"] {
-  -moz-image-region: rect(96px, 96px, 120px, 72px);
-}
-toolbar[iconsize="small"] #zoom-out-button[disabled="true"] {
-  -moz-image-region: rect(120px, 96px, 144px, 72px);
-}
+/* ::::: zoom controls ::::: */
 
 toolbar[iconsize="small"] #zoom-in-button {
-  -moz-image-region: rect(72px, 72px, 96px, 48px);
+  -moz-image-region: rect(0px, 384px, 24px, 360px);
 }
-toolbar[iconsize="small"] #zoom-in-button:hover,
+
+toolbar[iconsize="small"] #zoom-in-button:hover {
+  -moz-image-region: rect(24px, 384px, 48px, 360px);
+}
+
+toolbar[iconsize="small"] #zoom-in-button:hover:active,
 toolbar[iconsize="small"] #zoom-in-button[checked="true"] {
-  -moz-image-region: rect(96px, 72px, 120px, 48px);
+  -moz-image-region: rect(48px, 384px, 72px, 360px);
 }
-toolbar[iconsize="small"] #zoom-in-button[disabled="true"] {
-  -moz-image-region: rect(120px, 72px, 144px, 48px);
+
+toolbar[iconsize="small"] #zoom-out-button {
+  -moz-image-region: rect(0px, 408px, 24px, 384px);
+}
+
+toolbar[iconsize="small"] #zoom-out-button:hover {
+  -moz-image-region: rect(24px, 408px, 48px, 384px);
+}
+toolbar[iconsize="small"] #zoom-out-button:hover:active,
+toolbar[iconsize="small"] #zoom-out-button[checked="true"] {
+  -moz-image-region: rect(48px, 408px, 72px, 384px);
+}
+
+/* ::::: sync ::::: */
+
+toolbar[iconsize="small"] #sync-button {
+  -moz-image-region: rect(0px, 432px, 24px, 408px);
+}
+
+toolbar[iconsize="small"] #sync-button:hover {
+  -moz-image-region: rect(24px, 432px, 48px, 408px);
+}
+
+toolbar[iconsize="small"] #sync-button:hover:active,
+toolbar[iconsize="small"] #sync-button[checked="true"] {
+  -moz-image-region: rect(48px, 432px, 72px, 408px);
+}
+
+/* ::::: feed ::::: */
+
+toolbar[iconsize="small"] #feed-button {
+  -moz-image-region: rect(0px, 456px, 24px, 432px);
+}
+
+toolbar[iconsize="small"] #feed-button:hover {
+  -moz-image-region: rect(24px, 456px, 48px, 432px);
+}
+
+toolbar[iconsize="small"] #feed-button:hover:active,
+toolbar[iconsize="small"] #feed-button[checked="true"] {
+  -moz-image-region: rect(48px, 456px, 72px, 432px);
 }
 
 /* ::::: home button (on the bookmarks toolbar) ::::: */
@@ -1553,104 +1530,7 @@ toolbar[iconsize="small"] #zoom-in-button[disabled="true"] {
   opacity: 1.0;
 }
 
-/* :::::: drop markers keyhole :::::: */
-
-/* ..... large keyhole icon drop marker ..... */
-
-#back-forward-dropmarker {
-  -moz-box-orient: vertical;
-  padding: 0 !important;
-  border-width: 0;
-}
-
-toolbar:not([mode="text"])
- #back-forward-dropmarker > .toolbarbutton-menu-dropmarker {
-  -moz-box-align: end;
-  -moz-box-flex: 1;
-  list-style-image: url("chrome://global/skin/button/bf-arrow.png");
-  -moz-image-region: rect(0px, 13px, 11px, 0px);
-  padding-top: 2px;
-  padding-bottom: 3px;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 2px;
-}
-
-toolbar[mode="text"]
- #back-forward-dropmarker > .toolbarbutton-menu-dropmarker {
-  -moz-padding-start: 2px;
-  -moz-padding-end: 2px;
-}
-
-toolbar[mode="icons"]
- #back-forward-dropmarker > .toolbarbutton-menu-dropmarker {
-  -moz-padding-start: 1px;
-}
-
-toolbar:not([mode="text"])
- #back-forward-dropmarker:not([disabled="true"]):hover > .toolbarbutton-menu-dropmarker {
-  -moz-image-region: rect(11px, 13px, 22px, 0px);
-}
-
-toolbar:not([mode="text"])
- #back-forward-dropmarker:not([disabled="true"])[open="true"] > .toolbarbutton-menu-dropmarker {
-  -moz-image-region: rect(22px, 13px, 33px, 0px);
-}
-
-toolbar:not([mode="text"])
- #back-forward-dropmarker[disabled="true"] > .toolbarbutton-menu-dropmarker {
-  -moz-image-region: rect(0px, 13px, 11px, 0px);
-  opacity: 0.4;
-}
-
-/* ..... small keyhole icon drop marker ..... */
-
-toolbar[iconsize="small"]:not([mode="text"])
- #back-forward-dropmarker > .toolbarbutton-menu-dropmarker {
-  list-style-image: url("chrome://global/skin/button/bfs-arrow.png");
-  -moz-image-region: rect(0px, 11px, 9px, 0px);
-}
-
-toolbar[iconsize="small"]:not([mode="text"])
- #back-forward-dropmarker:not([disabled="true"]):hover > .toolbarbutton-menu-dropmarker {
-  -moz-image-region: rect(9px, 11px, 18px, 0px);
-}
-
-toolbar[iconsize="small"]:not([mode="text"])
- #back-forward-dropmarker:not([disabled="true"])[open="true"] > .toolbarbutton-menu-dropmarker {
-  -moz-image-region: rect(18px, 11px, 27px, 0px);
-}
-
-toolbar[iconsize="small"]:not([mode="text"])
- #back-forward-dropmarker[disabled="true"] > .toolbarbutton-menu-dropmarker {
-  -moz-image-region: rect(0px, 11px, 9px, 0px);
-}
-
-/* ::::: Keyhole drop-down menu in the drop marker ::::: */
-
-/* ..... large icons ..... */
-
-toolbar[mode="icons"]
- #back-forward-dropmarker > menupopup {
-  -moz-margin-start: -72px;
-}
-
-#nav-bar[mode="icons"]
- #back-forward-dropmarker > menupopup:not(:-moz-lwtheme) {
-  -moz-margin-start: -70px;
-}
-
-/* ..... small icons ..... */
-
-toolbar[iconsize="small"][mode="icons"]
- #back-forward-dropmarker > menupopup {
-  -moz-margin-start: -60px;
-}
-
-#nav-bar[iconsize="small"][mode="icons"]
- #back-forward-dropmarker > menupopup:not(:-moz-lwtheme) {
-  -moz-margin-start: -58px;
-}
-
+/* back/forward history dropdown */
 .unified-nav-back,
 .unified-nav-forward {
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
