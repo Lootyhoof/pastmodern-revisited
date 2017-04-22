@@ -16,6 +16,7 @@
   border-right: 1px solid black;
   margin: 2px 4px;
   width: 100px;
+  height: 15px;
 }
 
 .scale-slider[orient="vertical"]
@@ -26,7 +27,7 @@
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   margin: 4px 2px;
-  width: auto;
+  width: 15px;
   height: 100px;
 }
 
