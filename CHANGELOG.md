@@ -1,5 +1,15 @@
 # Changelog
 
+### 2.0.0
+- add new icons for zoom/feed/sync buttons
+- add new toolbar image to help extension compatibility
+- style the downloads indicator icon properly
+- add imagedocument.png for when viewing standalone images
+- fix size of scale widget
+- fix learn more links in popup notifications
+- remove Social API components
+- cleanup of current toolbar images to save space
+
 ### 1.5.2
 - add dropshadow to toolbar icons on the navigation toolbar
 - allow extensions to style their own toolbarbutton badges
