@@ -3,9 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @import url("chrome://global/skin/plugins.css");
+@import url("chrome://global/skin/button.css");
 
 body {
-  text-align: justify;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
@@ -19,6 +19,17 @@ body {
   margin-top: 2em;
   margin-bottom: 1em;
   text-align: start;
+}
+
+button {
+  margin-inline-start: 0;
+  margin-inline-end: 8px;
+}
+
+th.title-column {
+  white-space: nowrap;
+  width: 0px;
+  font-size: medium;
 }
 
 th.column {
@@ -51,21 +62,27 @@ tr:first-child > td {
   overflow: hidden;
 }
 
-#reset-box {
+#action-box {
   background-color: #C7D0D9;
   border: 1px solid #2D3B49;
+  border-radius: 6px;
   color: #22262F;
   float: right;
   margin-top: 2em;
   margin-bottom: 20px;
-  -moz-margin-start: 20px;
-  -moz-margin-end: 0;
+  margin-inline-start: 20px;
+  margin-inline-end: 0;
   padding: 16px;
   width: 30%;
-  visibility: hidden;
 }
 
-#reset-box:-moz-dir(rtl) {
+#action-box,
+#reset-box,
+#safe-mode-box {
+  display: none;
+}
+
+#action-box:dir(rtl) {
   float: left;
 }
 
@@ -73,8 +90,13 @@ tr:first-child > td {
   margin-top: 0;
 }
 
-#reset-box > button {
+#action-box button {
   display: block;
+}
+
+#verify-place-result {
+  max-height: 200px;
+  overflow: auto;
 }
 
 .block {
