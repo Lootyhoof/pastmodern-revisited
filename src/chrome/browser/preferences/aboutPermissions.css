@@ -7,9 +7,29 @@
 /* header */
 
 #permissions-pagetitle {
-  font-size: 200%;
+  font-size: 2em;
   font-weight: bold;
   padding-bottom: 0.5em;
+}
+
+/* page */
+
+#permissions-page {
+  color: #000;
+  font: message-box;
+  background: #C7D0D9;
+}
+
+/* content box */
+
+#permissions-content {
+  background: transparent;
+  border: 2px solid;
+  -moz-border-top-colors: #BEC3D3 #5D616E;
+  -moz-border-right-colors: #F8FAFE #5D616E;
+  -moz-border-bottom-colors: #F8FAFE #5D616E;
+  -moz-border-left-colors: #BEC3D3 #5D616E;
+  border-radius: 0;
 }
 
 /* sites box */
@@ -21,12 +41,16 @@
 
 #sites-filter {
   margin: 0;
+  padding: 2px;
 }
 
 #sites-list {
   -moz-appearance: none;
-  border: 1px solid rgba(0, 0, 0, 0.32);
-  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid;
+  -moz-border-top-colors: #BEC3D3 #5D616E;
+  -moz-border-right-colors: #F8FAFE #5D616E;
+  -moz-border-bottom-colors: #F8FAFE #5D616E;
+  -moz-border-left-colors: #BEC3D3 #5D616E;
   margin: 5px 0 0 0;
 }
 
@@ -111,7 +135,7 @@
   list-style-image: url(chrome://global/skin/icons/question-48.png);
 }
 .pref-icon[type="pointerLock"] {
-  list-style-image: url(chrome://global/skin/icons/question-48.png);
+  list-style-image: url(chrome://browser/skin/pointerLock-64.png);
 }
 
 .pref-title {
