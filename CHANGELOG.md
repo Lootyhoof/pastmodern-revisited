@@ -1,5 +1,14 @@
 # Changelog
 
+### 2.1.0
+- sync about:support styling with default
+- redesign about:permissions page
+- add new notification icons
+- add new pointer lock icons
+- add image document favicon when viewing standalone images
+- fix "learn more" links in notification popups
+- improve downloads panel appearance
+
 ### 2.0.0
 - add new icons for zoom/feed/sync buttons
 - add new toolbar image to help extension compatibility
