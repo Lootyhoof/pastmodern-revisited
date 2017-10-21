@@ -1,3 +1,9 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 /* ::::: Library ::::: */
 
 #placesToolbar {
@@ -9,62 +15,61 @@
   border-left-color: rgb(218, 227, 237);
 }
 
-/* OS X対応 */
+/* OS X compatible */
 #placesToolbar > toolbarbutton[type="menu"] {
   min-height: 28px;
 }
 
-/* ::::: 「戻る」と「進む」ボタン ::::: */
+/* ::::: "Back" and "Forward" buttons ::::: */
 
 #back-button,
 #forward-button {
   list-style-image: url("chrome://browser/skin/Toolbar-small.png");
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
   border-width: 0 !important;
+  padding: 0;
+  margin: 0 3px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.4),
+              -2px -2px 5px rgba(255,255,255,.4);
+  border-radius: 9999999px;
 }
 
-/* ::::: 戻る ::::: */
+/* ::::: Back ::::: */
 
 #back-button {
-  -moz-padding-start: 4px !important;
-  -moz-padding-end: 0 !important;
-  -moz-image-region: rect(0px, 387px, 26px, 360px);
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
 }
 
 #back-button:not([disabled="true"]):hover {
-  -moz-image-region: rect(26px, 387px, 52px, 360px);
+  -moz-image-region: rect(24px, 24px, 48px, 0px);
 }
 
 #back-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(52px, 387px, 78px, 360px);
+  -moz-image-region: rect(48px, 24px, 72px, 0px);
 }
 
-#back-button[disabled="true"] {
-  -moz-image-region: rect(78px, 387px, 104px, 360px);
+#back-button[disabled="true"] .toolbarbutton-icon {
+  opacity: 0.5;
 }
 
-/* ::::: 進む ::::: */
+/* ::::: Forward ::::: */
 
 #forward-button {
-  -moz-padding-start: 0 !important;
-  -moz-padding-end: 4px !important;
-  -moz-image-region: rect(0px, 414px, 26px, 387px);
+  -moz-image-region: rect(0px, 48px, 24px, 24px);
 }
 
 #forward-button:not([disabled="true"]):hover {
-  -moz-image-region: rect(26px, 414px, 52px, 387px);
+  -moz-image-region: rect(24px, 48px, 48px, 24px);
 }
 
 #forward-button:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(52px, 414px, 78px, 387px);
+  -moz-image-region: rect(48px, 48px, 72px, 24px);
 }
 
-#forward-button[disabled="true"] {
-  -moz-image-region: rect(78px, 414px, 104px, 387px);
+#forward-button[disabled="true"] .toolbarbutton-icon {
+  opacity: 0.5;
 }
 
-/* ::::: メニューバー ::::: */
+/* ::::: Menubar ::::: */
 
 #placesMenu {
   background-color: transparent;
@@ -92,14 +97,14 @@
   border-left-color: rgb(134, 146, 158);
 }
 
-/* ::::: PlaceリストとPlaceコンテント ::::: */
+/* ::::: Place list and Place content ::::: */
 
-/* 左ペイン */
+/* Left pane */
 #placesList {
   border-width: 0;
 }
 
-/* 右ペイン */
+/* Right pane */
 #contentView {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
@@ -144,7 +149,7 @@
   -moz-margin-end: 2px;
 }
 
-/* ::::: 右ペインのツリー ::::: */
+/* ::::: Tree in the right pane ::::: */
 
 .placesTree {
   margin: 0;
@@ -166,7 +171,7 @@
   background-color: rgb(66, 79, 99);
 }
 
-/* ::::: 情報ペイン ::::: */
+/* ::::: Information pane ::::: */
 
 #detailsDeck {
   background-color: rgb(199, 208, 217);
