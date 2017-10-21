@@ -1,5 +1,12 @@
 # Changelog
 
+### 2.1.1
+- fix margins of urlbar notification box
+- improve places window appearance
+- don't remove add-on bar close button when in text mode
+- use a background for window styling on Windows 10
+- sync devtools styling with default
+
 ### 2.1.0
 - sync about:support styling with default
 - redesign about:permissions page
