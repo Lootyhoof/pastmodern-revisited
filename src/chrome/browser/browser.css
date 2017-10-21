@@ -3722,7 +3722,129 @@ html|*#gcli-output-frame {
 /* ==== Windows 10 styling ==== */
 
   @media (-moz-os-version: windows-win10) {
-    /* Draw XUL caption buttons on Win10 in lwthemes */
+    /* Draw XUL caption buttons and background on Win10 */
+    @media (-moz-windows-accent-color-applies: 0) {
+      /* Default styling for when no accent color is applied */
+      #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        background-color: white;
+      }
+      
+      :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        --window-text-color: black;
+      }
+      
+      #titlebar-min:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
+      }
+
+      #titlebar-max:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize);
+      }
+
+      #main-window[sizemode="maximized"] #titlebar-max:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore);
+      }
+      
+      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
+      }
+
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+        background-color: hsla(0, 0%, 0%, .17);
+      }
+
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
+        background-color: hsla(0, 0%, 0%, .27);
+        transition: none;
+      }
+      
+      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+        background-color: hsla(0, 86%, 49%, 1);
+      }
+
+      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
+        background-color: hsla(0, 60%, 49%, 0.6);
+        transition: none;
+      }
+    }
+    
+    @media (-moz-windows-accent-color-applies) {
+      /* Styling for when an accent color is applied to the titlebar */
+      #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        background-color: -moz-win-accentcolor;
+      }
+      
+      :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        --window-text-color: -moz-win-accentcolortext;
+      }
+      
+      #titlebar-min {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
+      }
+
+      #titlebar-max {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize);
+      }
+
+      #main-window[sizemode="maximized"] #titlebar-max {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore);
+      }
+
+      #titlebar-close {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
+      }
+      
+      .titlebar-button:hover {
+        background-color: hsla(0, 0%, 0%, .17);
+      }
+
+      .titlebar-button:hover:active {
+        background-color: hsla(0, 0%, 0%, .27);
+        transition: none;
+      }
+      
+      @media (-moz-windows-accent-color-is-dark) {
+        /* dark accent color */
+        #titlebar-min {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-white);
+        }
+
+        #titlebar-max {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize-white);
+        }
+
+        #main-window[sizemode="maximized"] #titlebar-max {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore-white);
+        }
+
+        #titlebar-close {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+        }
+      
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          background-color: hsla(0, 0%, 100%, .17);
+        }
+
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
+          background-color: hsla(0, 0%, 100%, .27);
+          transition: none;
+        }
+      
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          background-color: hsla(0, 86%, 49%, 1);
+        }
+
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
+          background-color: hsla(0, 60%, 39%, 1);
+          transition: none;
+        }
+      }
+    }
+    
+    #main-window:-moz-window-inactive:not(:-moz-lwtheme) {
+      background-color: hsl(0, 0%, 90%);
+    }
 
     #titlebar-buttonbox,
     .titlebar-button {
@@ -3731,24 +3853,22 @@ html|*#gcli-output-frame {
 
     .titlebar-button {
       border: none;
-      margin: 0 !important;
+      margin: 0 0 1px 0 !important;
       padding: 9px 17px;
       transition: background-color linear 120ms;
-    }
-    
-    .titlebar-button:hover:active {
-      transition: none;
     }
         
     #main-window[sizemode="maximized"][tabsontop=true] #tabbrowser-tabs {
       min-height: 28px;
-      margin-bottom: -1px;
-      padding-bottom: 0;
     }
 
     #main-window[sizemode=maximized] .titlebar-button {
       padding-top: 8px;
-      padding-bottom: 6px;
+      padding-bottom: 8px;
+    }
+    
+    #main-window[tabsintitlebar] .titlebar-button {
+      margin-bottom: 2px !important;
     }
 
     .titlebar-button > .toolbarbutton-icon {
@@ -3756,29 +3876,66 @@ html|*#gcli-output-frame {
       height: 12px;
     }
 
+    .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
+      opacity: 0.5;
+    }
+
     #main-window[chromemargin^="0,"][sizemode=normal] #navigator-toolbox {
       margin-top: -4px;
     }
 
-	#main-window[sizemode="maximized"] #titlebar-close {
+    #main-window[sizemode="maximized"] #titlebar-close {
       padding-right: 19px;
     }
     
-    #titlebar-close:not(:-moz-lwtheme) {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
-      opacity: 0;
-    }
-    
     #titlebar-close:hover {
-      background-color: hsla(0, 86%, 49%, 1) !important;
-      opacity: 1;
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+      background-color: hsla(0, 86%, 49%, 1);
+      transition: background-color linear 160ms;
     }
 
     #titlebar-close:hover:active {
-      background-color: hsla(0, 86%, 49%, 0.6) !important; 
+      background-color: hsla(0, 86%, 49%, 0.6); 
+      transition: none;
+    }
+    
+    /* inactive window */
+
+    #titlebar-min:-moz-window-inactive:not(:-moz-lwtheme) {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize);
+    }
+
+    #titlebar-max:-moz-window-inactive:not(:-moz-lwtheme) {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#maximize);
+    }
+
+    #main-window[sizemode="maximized"] #titlebar-max:-moz-window-inactive:not(:-moz-lwtheme) {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#restore);
+    }
+
+    #titlebar-close:-moz-window-inactive:not(:-moz-lwtheme):not(:hover) {
+      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
+    }
+    
+    .titlebar-button:-moz-window-inactive:not(:-moz-lwtheme):hover {
+      background-color: hsla(0, 0%, 0%, .17);
+    }
+
+    .titlebar-button:-moz-window-inactive:not(:-moz-lwtheme):hover:active {
+      background-color: hsla(0, 0%, 0%, .27);
+      transition: none;
     }
     
     /* light persona */
+    
+    .titlebar-button:-moz-lwtheme-darktext:hover {
+      background-color: hsla(0, 0%, 0%, .17);
+    }
+
+    .titlebar-button:-moz-lwtheme-darktext:hover:active {
+      background-color: hsla(0, 0%, 0%, .27);
+      transition: none;
+    }
     
     #titlebar-min:-moz-lwtheme-darktext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-darktext);
@@ -3800,6 +3957,15 @@ html|*#gcli-output-frame {
     }
         
     /* dark persona */
+    
+    .titlebar-button:-moz-lwtheme-brighttext:hover {
+      background-color: hsla(0, 0%, 100%, .27);
+    }
+
+    .titlebar-button:-moz-lwtheme-brighttext:hover:active {
+      background-color: hsla(0, 0%, 100%, .37);
+      transition: none;
+    }
     
     #titlebar-min:-moz-lwtheme-brighttext {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#minimize-themes);
@@ -3862,49 +4028,11 @@ html|*#gcli-output-frame {
         height: 10.8px;
       }
     }
-
-    .titlebar-button:hover {
-      background-color: hsla(0, 0%, 0%, .17);
-    }
-
-    .titlebar-button:hover:active {
-      background-color: hsla(0, 0%, 0%, .27);
-    }
-
-    .titlebar-button:not(:hover) > .toolbarbutton-icon:-moz-window-inactive {
-      opacity: 0.5;
-    }
-          
-    /* dark persona */
-    .titlebar-button:-moz-lwtheme-brighttext:hover {
-      background-color: hsla(0, 0%, 100%, .27);
-    }
-
-    .titlebar-button:-moz-lwtheme-brighttext:hover:active {
-      background-color: hsla(0, 0%, 100%, .37);
-    }
-    
-    /* dark accent color */
-    #main-window[darkwindowframe="true"] .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-      background-color: hsla(0, 0%, 100%, .12);
-    }
-
-    #main-window[darkwindowframe="true"] .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-      background-color: hsla(0, 0%, 100%, .22);
-    }
-    
-    #main-window[darkwindowframe="true"] #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-      background-color: hsla(0, 86%, 49%, 1);
-    }
-
-    #main-window[darkwindowframe="true"] #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-      background-color: hsla(0, 60%, 39%, 0.6);
-    }
       
     #appmenu-button {
       margin-top: -1px;
-      margin-bottom: 5px;
-    }   
+      margin-bottom: 5px !important;
+    }    
   }
 
 /* ==== Windows Vista/7/8 styling ==== */
@@ -3959,6 +4087,12 @@ html|*#gcli-output-frame {
 
     #appmenu-button {
       margin-bottom: -1px; 
+    }
+  }
+
+  @media (-moz-os-version: windows-win8) {
+    :root[darkwindowframe="true"]:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+      --window-text-color: white;
     }
   }
     
