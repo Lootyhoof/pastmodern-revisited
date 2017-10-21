@@ -10,6 +10,13 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
+:root {
+  --appmenu-border-radius: 4px;
+  --toolbarbutton-large-image: url("chrome://browser/skin/Toolbar-large.png");
+  --toolbarbutton-small-image: url("chrome://browser/skin/Toolbar-small.png");
+  --window-text-color: currentColor;
+}
+
 /* ::::: toolbox ::::: */
 
 toolbox {
@@ -83,7 +90,7 @@ toolbox {
   -moz-appearance: none;
   background: -moz-linear-gradient(rgb(170,182,196), rgb(170,182,196) 95%);
   background-clip: padding-box;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 var(--appmenu-border-radius) var(--appmenu-border-radius);
   border: 1px solid rgba(0,0,0,.9);
   border-top: none;
   box-shadow: 0 1px 0 rgba(0,0,0,.25) inset,
@@ -625,7 +632,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 .toolbarbutton-1 {
   min-width: 0;
-  list-style-image: url("chrome://browser/skin/Toolbar-large.png");
+  list-style-image: var(--toolbarbutton-large-image);
 }
 
 toolbar[mode="full"] .toolbarbutton-1:not([type=menu-button]) {
@@ -1197,7 +1204,7 @@ toolbar[iconsize="small"] #tabview-button > image {
 
 toolbar[iconsize="small"] .toolbarbutton-1 {
   min-width: 0;
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  list-style-image: var(--toolbarbutton-small-image);
 }
 
 /* ::::: back ::::: */
@@ -1328,7 +1335,7 @@ toolbar[iconsize="small"] #bookmarks-button[checked="true"] {
 }
 
 toolbar[iconsize="small"] #bookmarks-menu-button {
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png") !important;
+  list-style-image: var(--toolbarbutton-small-image) !important;
 }
 toolbar[iconsize="small"]#bookmarks-menu-button.toolbarbutton-1 {
   -moz-box-orient: horizontal;

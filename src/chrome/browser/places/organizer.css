@@ -4,6 +4,10 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+:root {
+  --toolbarbutton-small-image: url("chrome://browser/skin/Toolbar-small.png");
+}
+
 /* ::::: Library ::::: */
 
 #placesToolbar {
@@ -24,7 +28,7 @@
 
 #back-button,
 #forward-button {
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  list-style-image: var(--toolbarbutton-small-image);
   border-width: 0 !important;
   padding: 0;
   margin: 0 3px;
