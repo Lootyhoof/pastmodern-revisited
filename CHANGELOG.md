@@ -2,6 +2,7 @@
 
 ### 2.1.1
 - fix margins of urlbar notification box
+- fix statusbar progressmeter
 - improve places window appearance
 - don't remove add-on bar close button when in text mode
 - use a background for window styling on Windows 10
