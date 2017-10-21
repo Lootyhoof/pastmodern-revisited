@@ -1891,13 +1891,11 @@ toolbar[iconsize="small"] #feed-button[checked="true"] {
   position: relative;
   background-color: #fff;
   background-clip: padding-box;
-  padding: 3px 4px 2px 3px;
+  padding: 0px 2px 0px 3px;
   border-width: 0 8px 0 0;
   border-style: solid;
   border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
   -moz-margin-end: -8px;
-  margin-top: -4px;
-  margin-bottom: -4px;
   margin-right: -5px;
 }
 
