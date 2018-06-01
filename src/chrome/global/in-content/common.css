@@ -176,263 +176,6 @@ html|button {
   font: inherit;
 }
 
-/* xul buttons and menulists */
-
-*|button,
-html|select,
-xul|colorpicker[type="button"],
-xul|menulist {
-  -moz-appearance: none;
-  min-height: 30px;
-  color: var(--in-content-text-color);
-  border: 1px solid var(--in-content-box-border-color);
-  -moz-border-top-colors: none !important;
-  -moz-border-right-colors: none !important;
-  -moz-border-bottom-colors: none !important;
-  -moz-border-left-colors: none !important;
-  border-radius: 2px;
-  background-color: var(--in-content-page-background);
-}
-
-html|button:enabled:hover,
-html|select:enabled:hover,
-xul|button:not([disabled="true"]):hover,
-xul|colorpicker[type="button"]:not([disabled="true"]):hover,
-xul|menulist:not([disabled="true"]):hover {
-  background-color: var(--in-content-box-background-hover);
-}
-
-html|button:enabled:hover:active,
-html|select:enabled:hover:active,
-xul|button:not([disabled="true"]):hover:active,
-xul|colorpicker[type="button"]:not([disabled="true"]):hover:active,
-xul|menulist[open="true"]:not([disabled="true"]) {
-  background-color: var(--in-content-box-background-active);
-}
-
-html|button:disabled,
-html|select:disabled,
-xul|button[disabled="true"],
-xul|colorpicker[type="button"][disabled="true"],
-xul|menulist[disabled="true"] {
-  opacity: 0.5;
-}
-
-*|button.primary {
-  background-color: var(--in-content-primary-button-background) !important;
-  background-image: none;
-  box-shadow: none;
-  border-color: transparent;
-  color: var(--in-content-selected-text);
-}
-
-html|button.primary:enabled:hover,
-xul|button.primary:not([disabled="true"]):hover {
-  background-color: var(--in-content-primary-button-background-hover) !important;
-}
-
-html|button.primary:enabled:hover:active,
-xul|button.primary:not([disabled="true"]):hover:active {
-  background-color: var(--in-content-primary-button-background-active) !important;
-}
-
-xul|colorpicker[type="button"] {
-  padding: 6px;
-  width: 50px;
-}
-
-xul|button > xul|*.button-box,
-xul|menulist > xul|*.menulist-label-box {
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-}
-
-xul|menulist > xul|*.menulist-label-box > xul|*.menulist-icon[src] {
-  margin-inline-end: 5px;
-}
-
-xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
-  -moz-appearance: none;
-  margin: 1px 0;
-  margin-inline-start: 10px;
-  padding: 0;
-  width: 10px;
-  height: 16px;
-  border: none;
-  background-color: transparent;
-  list-style-image: url("chrome://global/skin/incontent/dropdown.svg#dropdown");
-}
-
-xul|*.help-button {
-  min-width: 16px;
-  margin-inline-end: 0;
-  border-width: 0;
-  background-image: none;
-  box-shadow: none;
-  list-style-image: url("chrome://global/skin/incontent/help-glyph.svg#help");
-}
-
-xul|*.help-button:not([disabled="true"]):hover {
-  background-image: none;
-  /* Override default button background */
-  background-color: transparent;
-  list-style-image: url("chrome://global/skin/incontent/help-glyph.svg#help-hover");
-}
-
-xul|*.help-button:not([disabled="true"]):hover:active {
-  background-image: none;
-  /* Override default button background */
-  background-color: transparent;
-  list-style-image: url("chrome://global/skin/incontent/help-glyph.svg#help-pressed");
-}
-
-xul|*.close-icon > xul|*.button-box,
-xul|*.help-button > xul|*.button-box {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-xul|*.help-button > xul|*.button-box > xul|*.button-icon {
-  width: 16px;
-  height: 16px;
-}
-
-xul|*.help-button > xul|*.button-box > xul|*.button-text {
-  display: none;
-}
-
-html|*.help-button {
-  width: 16px;
-  height: 16px;
-  border: 0;
-  padding: 0;
-  display: inline-block;
-  background-image: url("chrome://global/skin/incontent/help-glyph.svg#help");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-}
-
-html|*.help-button:hover {
-  background-image: url("chrome://global/skin/incontent/help-glyph.svg#help-hover");
-}
-
-html|*.help-button:hover:active {
-  background-image: url("chrome://global/skin/incontent/help-glyph.svg#help-pressed");
-}
-
-xul|*.spinbuttons-button {
-  min-height: initial;
-  margin-inline-start: 10px !important;
-  margin-inline-end: 2px !important;
-}
-
-xul|*.spinbuttons-up {
-  margin-top: 2px !important;
-  border-radius: 1px 1px 0 0;
-}
-
-xul|*.spinbuttons-down  {
-  margin-bottom: 2px !important;
-  border-radius: 0 0 1px 1px;
-}
-
-xul|*.spinbuttons-button > xul|*.button-box {
-  padding: 1px 5px 2px !important;
-}
-
-xul|*.spinbuttons-up > xul|*.button-box > xul|*.button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-up.gif");
-}
-
-xul|*.spinbuttons-up[disabled="true"] > xul|*.button-box > xul|*.button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-up-dis.gif");
-}
-
-xul|*.spinbuttons-down > xul|*.button-box > xul|*.button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
-}
-
-xul|*.spinbuttons-down[disabled="true"] > xul|*.button-box > xul|*.button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
-}
-
-xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker {
-  -moz-appearance: none;
-  margin-inline-end: 4px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  list-style-image: url("chrome://global/skin/incontent/dropdown.svg#dropdown");
-}
-
-xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker > xul|*.dropmarker-icon {
-  width: 18px;
-  height: 18px;
-}
-
-xul|menulist[disabled="true"]:not([editable="true"]) > xul|*.menulist-dropmarker {
-  list-style-image: url("chrome://global/skin/incontent/dropdown.svg#dropdown-disabled")
-}
-
-xul|menulist > xul|menupopup,
-xul|button[type="menu"] > xul|menupopup {
-  -moz-appearance: none;
-  border: 1px solid var(--in-content-box-border-color);
-  border-radius: 2px;
-  background-color: var(--in-content-box-background);
-}
-
-xul|menulist > xul|menupopup xul|menu,
-xul|menulist > xul|menupopup xul|menuitem,
-xul|button[type="menu"] > xul|menupopup xul|menu,
-xul|button[type="menu"] > xul|menupopup xul|menuitem {
-  -moz-appearance: none;
-  font-size: 1em;
-  color: var(--in-content-text-color);
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  padding-inline-start: 10px;
-  padding-inline-end: 30px;
-}
-
-xul|menulist > xul|menupopup > xul|menu:not([disabled="true"])[_moz-menuactive="true"],
-xul|menulist > xul|menupopup > xul|menuitem:not([disabled="true"])[_moz-menuactive="true"],
-xul|button[type="menu"] > xul|menupopup > xul|menu:not([disabled="true"])[_moz-menuactive="true"],
-xul|button[type="menu"] > xul|menupopup > xul|menuitem:not([disabled="true"])[_moz-menuactive="true"] {
-  color: var(--in-content-text-color);
-  background-color: var(--in-content-item-hover);
-}
-
-xul|menulist > xul|menupopup > xul|menu:not([disabled="true"])[selected="true"],
-xul|menulist > xul|menupopup > xul|menuitem:not([disabled="true"])[selected="true"],
-xul|button[type="menu"] > xul|menupopup > xul|menu:not([disabled="true"])[selected="true"],
-xul|button[type="menu"] > xul|menupopup > xul|menuitem:not([disabled="true"])[selected="true"] {
-  color: var(--in-content-selected-text);
-  background-color: var(--in-content-item-selected);
-}
-
-xul|menulist > xul|menupopup > xul|menu[disabled="true"],
-xul|menulist > xul|menupopup > xul|menuitem[disabled="true"],
-xul|button[type="menu"] > xul|menupopup > xul|menu[disabled="true"],
-xul|button[type="menu"] > xul|menupopup > xul|menuitem[disabled="true"] {
-  color: #999;
-  /* override the [_moz-menuactive="true"] background color from
-     global/menu.css */
-  background-color: transparent;
-}
-
-xul|menulist > xul|menupopup xul|menuseparator,
-xul|button[type="menu"] > xul|menupopup xul|menuseparator {
-  -moz-appearance: none;
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--in-content-box-border-color);
-  border-bottom: none;
-}
-
 /* Links */
 
 html|a,
@@ -504,12 +247,12 @@ html|input[type="checkbox"]:not(:disabled) + html|label:hover:before {
 }
 
 xul|*.checkbox-check[checked] {
-  list-style-image: url("chrome://global/skin/incontent/check.svg#check");
+  list-style-image: url("chrome://global/skin/in-content/check.svg#check");
   -moz-image-region: auto;
 }
 
 html|input[type="checkbox"]:checked + html|label:before {
-  background-image: url("chrome://global/skin/incontent/check.svg#check"), linear-gradient(#fff, rgba(255,255,255,0.8)) !important;
+  background-image: url("chrome://global/skin/in-content/check.svg#check"), linear-gradient(#fff, rgba(255,255,255,0.8)) !important;
 }
 
 xul|checkbox[disabled="true"] > xul|*.checkbox-check,
@@ -552,7 +295,7 @@ xul|radio:not([disabled="true"]):hover > xul|*.radio-check {
 }
 
 xul|*.radio-check[selected] {
-  list-style-image: url("chrome://global/skin/incontent/radio.svg#radio");
+  list-style-image: url("chrome://global/skin/in-content/radio.svg#radio");
 }
 
 xul|radio[disabled="true"] > xul|*.radio-check {
@@ -759,7 +502,7 @@ xul|treecolpicker {
 }
 
 xul|treecol:not([hideheader="true"]) > xul|*.treecol-sortdirection[sortDirection] {
-  list-style-image: url("chrome://global/skin/incontent/dropdown.svg#dropdown");
+  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
   width: 18px;
   height: 18px;
 }
@@ -808,7 +551,7 @@ xul|checkbox {
   }
 
   xul|*.checkbox-check[checked] {
-    list-style-image: url("chrome://global/skin/incontent/check.svg#check-native");
+    list-style-image: url("chrome://global/skin/in-content/check.svg#check-native");
     background-color: -moz-dialog;
   }
 }
@@ -824,7 +567,7 @@ xul|radio {
   }
 
   xul|*.radio-check[selected] {
-    list-style-image: url("chrome://global/skin/incontent/radio.svg#radio-native");
+    list-style-image: url("chrome://global/skin/in-content/radio.svg#radio-native");
     background-color: -moz-dialog;
   }
 }

@@ -16,4 +16,3 @@ override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplet
 override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
 override chrome://devtools/skin/floating-scrollbars-dark-theme.css chrome://global/skin/devtools/floating-scrollbars.css
 override chrome://devtools/skin/floating-scrollbars-responsive-design.css chrome://global/skin/devtools/floating-scrollbars-light.css
-override chrome://global/skin/in-content/common.css chrome://global/skin/incontent/common.css
