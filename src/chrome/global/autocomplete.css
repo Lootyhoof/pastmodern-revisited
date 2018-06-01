@@ -44,7 +44,8 @@ textbox[nomatch="true"][highlightnonmatches="true"] {
 }
 
 .textbox-input-box,
-.autocomplete-textbox-container {
+.autocomplete-textbox-container,
+.private-autocomplete-textbox-container {
   -moz-box-align: center;
 }
 
@@ -57,14 +58,16 @@ textbox:not(.padded) .textbox-input-box {
 
 /* ::::: history button ::::: */
 
-.autocomplete-history-dropmarker {
+.autocomplete-history-dropmarker,
+.private-autocomplete-history-dropmarker {
   margin: 2px;
   padding: 0;
   border: none !important;
   background-color: transparent !important;
 }
 
-.autocomplete-history-dropmarker[open="true"] {
+.autocomplete-history-dropmarker[open="true"],
+.private-autocomplete-history-dropmarker[open="true"] {
   margin-top: 3px;
   margin-bottom: 1px;
   -moz-margin-start: 3px;
@@ -75,7 +78,10 @@ textbox:not(.padded) .textbox-input-box {
 
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
-.autocomplete-history-popup {
+.autocomplete-history-popup,
+panel[type="private-autocomplete"],
+panel[type="private-autocomplete-richlistbox"],
+.private-autocomplete-history-popup {
   background-color: rgb(255, 255, 255);
   border: 1px solid;
   -moz-border-top-colors: rgb(107, 116, 126);
@@ -85,37 +91,44 @@ panel[type="autocomplete-richlistbox"],
   margin-left: 0px !important;
 }
 
-.autocomplete-history-popup {
+.autocomplete-history-popup,
+.private-autocomplete-history-popup {
   max-height: 180px;
 }
 
 /* ::::: tree ::::: */
 
-.autocomplete-tree {
+.autocomplete-tree,
+.private-autocomplete-tree {
   border: none;
   background-color: transparent !important;
 }
 
-.autocomplete-treecol {
+.autocomplete-treecol,
+.private-autocomplete-treecol {
   margin: 0px !important;
   border: none !important;
   padding: 0px !important;
 }
 
-.autocomplete-treebody::-moz-tree-cell-text {
+.autocomplete-treebody::-moz-tree-cell-text,
+.private-autocomplete-treebody::-moz-tree-cell-text {
   -moz-padding-start: 8px;
   color: #000000;
 }
 
-.autocomplete-treebody::-moz-tree-row(selected) {
+.autocomplete-treebody::-moz-tree-row(selected),
+.private-autocomplete-treebody::-moz-tree-row(selected) {
   background-color: #9499AC;
 }
 
-.autocomplete-treebody::-moz-tree-cell-text(selected) {
+.autocomplete-treebody::-moz-tree-cell-text(selected),
+.private-autocomplete-treebody::-moz-tree-cell-text(selected) {
   color: #FFFFFF !important;
 }
 
-.autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue) {
+.autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue),
+.private-autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue) {
   max-width: 16px;
   height: 16px;
 }
@@ -123,21 +136,25 @@ panel[type="autocomplete-richlistbox"],
 
 /* ::::: richlistbox autocomplete ::::: */
 
-.autocomplete-richlistbox {
+.autocomplete-richlistbox,
+.private-autocomplete-richlistbox {
   margin: 0;
   border-width: 0;
 }
 
-.autocomplete-richlistitem {
+.autocomplete-richlistitem,
+.private-autocomplete-richlistitem {
   padding: 1px 2px;
   border-bottom-width: 0;
 }
 
-.autocomplete-richlistitem:not(:first-child) {
+.autocomplete-richlistitem:not(:first-child),
+.private-autocomplete-richlistitem:not(:first-child) {
   border-top: 1px solid rgb(152, 165, 178);
 }
 
-.autocomplete-richlistitem[selected="true"] {
+.autocomplete-richlistitem[selected="true"],
+.private-autocomplete-richlistitem[selected="true"] {
   color: rgb(255, 255, 255);
   background-color: rgb(66, 79, 99);
 }
