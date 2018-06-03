@@ -17,11 +17,10 @@
 }
 
 #alertBox {
-  border: 1px solid ThreeDShadow;
+  border: 1px solid #7B969C;
   border-radius: 1px;
-  background-color: -moz-Dialog;
-  color: -moz-DialogText;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.59);
+  background-color: #C7D0D9;
+  color: #22262F;
 }
 
 .alertCloseButton {
@@ -42,12 +41,4 @@
      gear button is moved over to accomodate it and
      keep the two buttons horizontally aligned together. */
   margin-inline-end: 5px;
-}
-
-@media (-moz-windows-default-theme) {
-  #alertBox {
-    border-color: rgba(107,107,107,.3);
-    background-color: rgba(255,255,255,.9);
-    color: rgba(0,0,0,.9);
-  }
 }
