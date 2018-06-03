@@ -142,7 +142,8 @@ toolbarbutton[type="menu-button"][disabled="true"] {
 
 /* ::::: toolbarbutton badged ::::: */
 
-.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]) {
+.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]),
+.toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
   -moz-margin-end: 0;
 }
 
