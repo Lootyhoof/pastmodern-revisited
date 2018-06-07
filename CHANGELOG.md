@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.2.0
+- add initial Pale Moon 28 support
+- improve Windows 10 titlebar appearance
+
 ### 2.1.1
 - fix margins of urlbar notification box
 - fix statusbar progressmeter
