@@ -468,7 +468,7 @@ toolbar:-moz-lwtheme,
   border-bottom: 1px solid rgb(73, 79, 93);
 }
 
-/* ::::: sidebar ::::: */
+/* ::::: content area ::::: */
 
 #sidebar-box {
   background-color: rgb(185, 196, 208);
@@ -484,6 +484,16 @@ toolbar:-moz-lwtheme,
 #sidebar-throbber[loading="true"] {
   list-style-image: url("chrome://global/skin/icons/loading_16.png");
   -moz-margin-end: 4px;
+}
+
+.browserContainer > findbar {
+  color: rgb(34, 38, 47);
+  background-color: rgb(199, 208, 217);
+  text-shadow: none;
+  border-top: 1px solid rgb(34, 38, 47);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 /* ::::: bookmark menus ::::: */
