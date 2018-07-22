@@ -7,7 +7,8 @@
 }
 
 /* Stylish */
-#stylish #findbar {
+#stylish #findbar,
+#stylem-edit #findbar {
   border-right-width: 0 !important;
   border-bottom-width: 0 !important;
   border-left-width: 0 !important;
