@@ -38,14 +38,14 @@
 /* ::::: folder menulist ::::: */
 
 .folder-icon > .menulist-label-box {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
 }
 
 .folder-icon > .menulist-label-box > .menulist-icon {
   width: 16px;
   height: 16px;
-  -moz-margin-end: 2px;
-  -moz-padding-end: 0;
+  margin-inline-end: 2px;
+  padding-inline-end: 0;
 }
 
 .folder-icon > .menu-iconic-left {
@@ -53,7 +53,7 @@
 }
 
 .folder-icon > .menu-iconic-left > .menu-iconic-icon {
-  -moz-margin-start: 6px;
+  margin-inline-start: 6px;
 }
 
 .folder-icon {
@@ -74,7 +74,7 @@
 
 #editBookmarkPanel .expander-up,
 #editBookmarkPanel .expander-down {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 .expander-up {
@@ -100,8 +100,8 @@
 
 .expander-up > .button-box > .button-text,
 .expander-down > .button-box > .button-text {
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
 }
 
 #editBookmarkPanelContent {
@@ -122,8 +122,8 @@
   background-color: rgb(255, 255, 255);
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 0;
+  padding-inline-start: 2px;
+  padding-inline-end: 0;
   margin-top: 2px;
   margin-bottom: 2px;
   -moz-border-top-colors: rgb(190, 195, 211) rgb(93, 97, 110);
@@ -155,10 +155,10 @@
   background-color: transparent;
   list-style-image: url("chrome://browser/skin/history-dropmarker.png") !important;
   -moz-image-region: rect(0px, 13px, 12px, 0px);
-  -moz-padding-start: 0;
-  -moz-padding-end: 0;
-  -moz-margin-start: 0;
-  -moz-margin-end: 3px;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 3px;
   border-width: 0;
 }
 

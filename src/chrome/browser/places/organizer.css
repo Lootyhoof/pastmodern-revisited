@@ -134,7 +134,7 @@
 
 #searchActions,
 #advancedSearchRows {
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
 }
 
 .small {
@@ -150,7 +150,7 @@
 #saveSearch {
   margin-top: 0;
   margin-bottom: 0;
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 /* ::::: Tree in the right pane ::::: */
@@ -189,7 +189,7 @@
 }
 
 #infoBoxExpanderLabel {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 /**
@@ -201,8 +201,8 @@
 }
 
 #clearDownloadsButton {
-  -moz-padding-start: 9px;
-  -moz-padding-end: 9px;
+  padding-inline-start: 9px;
+  padding-inline-end: 9px;
 }
 
 

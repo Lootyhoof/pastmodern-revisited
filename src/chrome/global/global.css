@@ -63,8 +63,8 @@ prefwindow {
 window.dialog {
   padding-top: 7px;
   padding-bottom: 5px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
 }
 
 /* ::::: 警告とかのアイコン :::::*/
@@ -275,8 +275,8 @@ statusbar > statusbarpanel:-moz-lwtheme:first-child {
 .inset {
   margin-top: 0;
   margin-bottom: 5px;
-  -moz-margin-start: 5px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
   border: 1px inset rgb(199, 208, 217);
 }
 
@@ -315,8 +315,8 @@ separator.groove:not([orient="vertical"]) {
 }
 
 separator.groove[orient="vertical"] {
-  -moz-margin-start: 0.4em;
-  -moz-margin-end: 0.4em;
+  margin-inline-start: 0.4em;
+  margin-inline-end: 0.4em;
   border-left: 1px solid rgb(122, 132, 144);
   border-right: 1px solid rgb(254, 254, 254);
 }
@@ -336,8 +336,8 @@ description,
 label {
   margin-top: 1px;
   margin-bottom: 2px;
-  -moz-margin-start: 5px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
   cursor: default;
 }
 
@@ -362,7 +362,7 @@ label[disabled="true"] {
 }
 
 .indent {
-  -moz-margin-start: 20px;
+  margin-inline-start: 20px;
 }
 
 .box-padded {
@@ -372,15 +372,15 @@ label[disabled="true"] {
 .spaced {
   margin-top: 3px;
   margin-bottom: 4px;
-  -moz-margin-start: 5px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
 }
 
 .wizard-box {
   padding-top: 20px;
   padding-bottom: 10px;
-  -moz-padding-start: 44px;
-  -moz-padding-end: 44px;
+  padding-inline-start: 44px;
+  padding-inline-end: 44px;
 }
 
 /* ..... class for text with a 'link' appearance ..... */

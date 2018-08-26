@@ -72,19 +72,19 @@
 .contentPane {
   margin-top: 9px;
   margin-bottom: 5px;
-  -moz-margin-start: 8px;
-  -moz-margin-end: 8px;
+  margin-inline-start: 8px;
+  margin-inline-end: 8px;
 }
 
 .actionButtons {
   margin-top: 0 !important;
   margin-bottom: 5px !important;
-  -moz-margin-start: 5px !important;
-  -moz-margin-end: 0 !important;
+  margin-inline-start: 5px !important;
+  margin-inline-end: 0 !important;
 }
 
 .actionButtons:only-child {
-  -moz-margin-end: 5px !important;
+  margin-inline-end: 5px !important;
 }
 
 /* Applications Pane */

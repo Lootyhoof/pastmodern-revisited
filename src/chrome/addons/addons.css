@@ -16,7 +16,7 @@
 
 /* Ez Sidebar */
 #ezsidebar-window > #sidebar-box {
-  -moz-border-end: 1px solid rgb(137, 152, 170);
+  border-inline-end: 1px solid rgb(137, 152, 170);
 }
 
 /* Google Toolbar */
@@ -33,17 +33,17 @@
 
 /* Firebug */
 .toolbarbutton-menu-dropmarker {
-  -moz-margin-start: 0 !important;
+  margin-inline-start: 0 !important;
 }
 
 /* ::::: MR Tech Toolkit ::::: */
 
 #addons-sort-button {
-  -moz-margin-end: 4px;
+  margin-inline-end: 4px;
 }
 
 #addons-sort-button > .button-box > .button-icon {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 #addons-sort-button > .button-box > .button-text {

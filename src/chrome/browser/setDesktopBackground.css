@@ -4,8 +4,8 @@
 html|canvas#screen {
   margin-top: 12px;
   margin-bottom: 37px;
-  -moz-margin-start: 11px;
-  -moz-margin-end: 11px;
+  margin-inline-start: 11px;
+  margin-inline-end: 11px;
 }
 
 #monitor {

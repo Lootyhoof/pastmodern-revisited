@@ -33,8 +33,8 @@
   padding: 2px 0;
   margin-top: 0;
   margin-bottom: 0;
-  -moz-margin-start: 0;
-  -moz-margin-end: 2px;
+  margin-inline-start: 0;
+  margin-inline-end: 2px;
   border-top-width: 0;
   border-right: 1px solid;
   -moz-border-right-colors: rgb(93, 97, 110) !important;
@@ -58,7 +58,7 @@
   width: 16px;
   list-style-image: url("chrome://global/skin/icons/folder-item.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
-  -moz-margin-start: 3px;
+  margin-inline-start: 3px;
 }
 
 .searchbar-dropmarker-image {
@@ -71,7 +71,7 @@
 }
 
 .textbox-input-box {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 /* ::::: Web検索バーの検索エンジンボタンのプルダウンメニュー ::::: */
@@ -96,8 +96,8 @@
   -moz-image-region: rect(0px, 16px, 16px, 0px);
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-padding-start: 1px;
-  -moz-padding-end: 2px;
+  padding-inline-start: 1px;
+  padding-inline-end: 2px;
 }
 
 .search-go-button:hover:active {
@@ -111,8 +111,8 @@
   list-style-image: url("chrome://browser/skin/history-dropmarker.png");
   -moz-image-region: rect(0px, 13px, 12px, 0px);
   padding: 0 !important;
-  -moz-margin-start: 4px;
-  -moz-margin-end: 3px;
+  margin-inline-start: 4px;
+  margin-inline-end: 3px;
 }
 
 .autocomplete-history-dropmarker[open="true"] {

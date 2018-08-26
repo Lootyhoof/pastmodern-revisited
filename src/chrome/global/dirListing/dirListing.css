@@ -48,8 +48,8 @@ h1 {
   color: rgb(91, 118, 147);
   margin-top: 0;
   margin-bottom: 0.6em;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   border-bottom: 1px solid rgb(122, 132, 144);
 }
 
@@ -109,14 +109,14 @@ tbody > tr:hover {
 
 .up {
   padding: 0 0.5em;
-  -moz-margin-start: 24px;
+  margin-inline-start: 24px;
 }
 
 .up::before {
   vertical-align: middle;
   content: url("chrome://global/skin/dirListing/up.png");
-  -moz-margin-start: -24px;
-  -moz-margin-end: 4px;
+  margin-inline-start: -24px;
+  margin-inline-end: 4px;
 }
 
 .dir::before {

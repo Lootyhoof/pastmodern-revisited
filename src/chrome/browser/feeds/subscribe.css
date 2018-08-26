@@ -12,8 +12,8 @@ html {
   background-color: rgb(255, 255, 255);
   padding-top: 3em;
   padding-bottom: 3em;
-  -moz-padding-start: 30px;
-  -moz-padding-end: 3em;
+  padding-inline-start: 30px;
+  padding-inline-end: 3em;
   margin: 2em auto;
   border: 1px solid rgb(122, 132, 144);
 }
@@ -22,8 +22,8 @@ html {
   background-color: rgb(255, 255, 231);
   margin-top: -4em;
   margin-bottom: 0;
-  -moz-margin-start: auto;
-  -moz-margin-end: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   border: 1px solid rgb(149, 160, 173);
   -moz-border-radius: 10px;
 }
@@ -35,7 +35,7 @@ html {
 }
 
 #handlersMenuList > .menulist-label-box > .menulist-label {
-  -moz-margin-start: 2px !important;
+  margin-inline-start: 2px !important;
 }
 
 #feedHeaderContainer checkbox {
@@ -49,11 +49,11 @@ html {
 
 #feedHeader {
   font-size: 110%;
-  -moz-padding-start: 2.9em;
+  padding-inline-start: 2.9em;
   margin-top: 4.9em;
   margin-bottom: 1em;
-  -moz-margin-start: 1.4em;
-  -moz-margin-end: 1em;
+  margin-inline-start: 1.4em;
+  margin-inline-end: 1em;
 }
 
 .feedBackground {
@@ -80,12 +80,12 @@ html {
 
 #feedHeader[firstrun="true"] #feedIntroText {
   padding-top: 0.1em;
-  -moz-padding-start: 0.6em;
+  padding-inline-start: 0.6em;
   display: block;
 }
 
 #feedHeader[firstrun="true"] > #feedSubscribeLine {
-  -moz-padding-start: 1.8em;
+  padding-inline-start: 1.8em;
 }
 
 #feedSubscribeLine {
@@ -119,8 +119,8 @@ h1 {
   color: rgb(91, 118, 147);
   margin-top: 0;
   margin-bottom: 0.2em;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   border-bottom: 1px solid rgb(122, 132, 144);
 }
 
@@ -130,15 +130,15 @@ h2 {
   color: rgb(73, 79, 93);
   margin-top: 0;
   margin-bottom: 0.6em;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 #feedTitleLink {
   margin-top: 0;
   margin-bottom: 0;
-  -moz-margin-start: 0.6em;
-  -moz-margin-end: 0;
+  margin-inline-start: 0.6em;
+  margin-inline-end: 0;
   float: right;
 }
 
@@ -149,8 +149,8 @@ a[href] img {
 #feedTitleContainer {
   margin-top: 0;
   margin-bottom: 0.6em;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 #feedTitleImage {
@@ -158,8 +158,8 @@ a[href] img {
   max-height: 150px;
   margin-top: 0;
   margin-bottom: 0;
-  -moz-margin-start: 0.6em;
-  -moz-margin-end: 0;
+  margin-inline-start: 0.6em;
+  margin-inline-end: 0;
 }
 
 .feedEntryContent {
@@ -197,6 +197,6 @@ a[href] img {
 }
 
 .enclosure {
-  -moz-margin-start: 2px;
+  margin-inline-start: 2px;
   vertical-align: middle;
 }

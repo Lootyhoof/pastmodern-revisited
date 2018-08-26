@@ -44,8 +44,8 @@ notification[type="critical"] {
   height: 16px;
   margin-top: 0px;
   margin-bottom: 3px;
-  -moz-margin-start: 5px;
-  -moz-margin-end: 1px;
+  margin-inline-start: 5px;
+  margin-inline-end: 1px;
 }
 
 /* Default icons for notifications */
@@ -65,16 +65,16 @@ notification[type="critical"] {
 .messageText {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  -moz-margin-start: 5px !important;
-  -moz-margin-end: 1px !important;
+  margin-inline-start: 5px !important;
+  margin-inline-end: 1px !important;
 }
 
 .messageCloseButton {
   padding: 0;
   margin-top: 4px;
   margin-bottom: 4px;
-  -moz-margin-start: 2px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 2px;
+  margin-inline-end: 5px;
   border-width: 0;
   outline-offset: 1px;
 }

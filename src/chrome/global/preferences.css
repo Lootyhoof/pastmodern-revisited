@@ -46,8 +46,8 @@ prefwindow[type="child"] > prefpane {
 /* !importantは念のため */
 .prefWindow-dlgbuttons {
   padding-bottom: 5px !important;
-  -moz-padding-start: 5px !important;
-  -moz-padding-end: 5px !important;
+  padding-inline-start: 5px !important;
+  padding-inline-end: 5px !important;
 }
 
 /* ::::: ヘルプボタン ::::: */
@@ -57,15 +57,15 @@ button[dlgtype="help"] {
 }
 
 button + button[dlgtype="help"] {
-  -moz-margin-start: 12px;
+  margin-inline-start: 12px;
 }
 
 /* ::::: Prefindow Vの一番上の切り替え部分 ::::: */
 
 .paneSelector {
   background-color: rgb(255, 255, 255);
-  -moz-padding-start: 5px;
-  -moz-padding-end: 1em;
+  padding-inline-start: 5px;
+  padding-inline-end: 1em;
   margin: 0;
   border-bottom: 2px solid;
   -moz-border-bottom-colors: rgb(238, 240, 243) rgb(110, 115, 120);

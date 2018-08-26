@@ -15,7 +15,7 @@
 }
 
 .tabbrowser-tabs[tabmix_firefox3] > .tabbrowser-tab .always-left {
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 .tabbrowser-tabs[tabmix_firefox3] > .tabbrowser-tab .tab-middle .progress-bar {

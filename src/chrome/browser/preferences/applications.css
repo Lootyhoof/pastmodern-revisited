@@ -31,7 +31,7 @@
 
 .typeIcon,
 .actionIcon {
-  -moz-margin-start: 2px;
+  margin-inline-start: 2px;
 }
 
 richlistitem {
@@ -63,7 +63,7 @@ menuitem[appHandlerIcon="plugin"] {
 }
 
 richlistitem > hbox > hbox + hbox {
-  -moz-padding-start: 8px;
+  padding-inline-start: 8px;
 }
 
 /* ::::: メニューリスト ::::: */
@@ -97,8 +97,8 @@ richlistitem > hbox > hbox + hbox {
 .actionsMenu > .menulist-label-box > .menulist-label {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  -moz-margin-start: 3px !important;
-  -moz-margin-end: 0 !important;
+  margin-inline-start: 3px !important;
+  margin-inline-end: 0 !important;
 }
 
 .actionsMenu > .menulist-dropmarker {

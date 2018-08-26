@@ -33,7 +33,7 @@ treechildren::-moz-tree-image(title) {
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
   width: 16px;
   height: 16px;
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
   margin: 0 2px;
 }
 
@@ -148,8 +148,8 @@ treechildren::-moz-tree-cell-text(date, session-continue) {
   padding: 2px; /* アクセスキーとフォーカスリングが重なるので上下に1pxづつプラス */
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 1px !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 1px !important;
   border: 1px solid;
   -moz-border-top-colors: transparent;
   -moz-border-right-colors: transparent;
@@ -165,7 +165,7 @@ treechildren::-moz-tree-cell-text(date, session-continue) {
 }
 
 #viewButton > .button-box > .box-inherit > .button-icon {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 #viewButton > .button-box > .box-inherit > .button-text {
@@ -201,7 +201,7 @@ treechildren::-moz-tree-cell-text(date, session-continue) {
   list-style-image: url("chrome://global/skin/button/tbmenu-arrow.png");
   padding-top: 0;
   padding-bottom: 0;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 0;
+  padding-inline-start: 2px;
+  padding-inline-end: 0;
   margin: 0;
 }

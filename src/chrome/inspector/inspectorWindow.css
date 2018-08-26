@@ -36,12 +36,12 @@
 #tfURLBar {
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
 }
 
 #imgURLBarIcon {
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png") !important;
-  -moz-margin-end: 1px;
+  margin-inline-end: 1px;
 }
 
 #bxSearch {

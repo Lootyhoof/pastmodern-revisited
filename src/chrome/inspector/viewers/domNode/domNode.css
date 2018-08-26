@@ -27,7 +27,7 @@
 @import url("chrome://inspector/content/extensions/treeEditable.css");
 
 .olNodeInfoLabel {
-  -moz-padding-end: 0.5em;
+  padding-inline-end: 0.5em;
 }
 
 #olNodeInfo {

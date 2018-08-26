@@ -28,5 +28,5 @@
 /* ::::: statistics ::::: */
 
 .value-column {
-  -moz-margin-end: 30px;
+  margin-inline-end: 30px;
 }

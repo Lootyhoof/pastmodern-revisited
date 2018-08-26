@@ -40,8 +40,8 @@ h1 {
   font-size: 160%;
   margin-top: 0;
   margin-bottom: 0.6em;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   border-bottom: 1px solid rgb(122, 132, 144);
 }
 
@@ -59,8 +59,8 @@ h2 {
   -moz-background-origin: content;
   padding-top: 3em;
   padding-bottom: 3em;
-  -moz-padding-start: 30px;
-  -moz-padding-end: 3em;
+  padding-inline-start: 30px;
+  padding-inline-end: 3em;
   margin: 4em auto;
   border: 1px solid rgb(238, 187, 21);
   -moz-border-radius: 10px;
@@ -68,11 +68,11 @@ h2 {
 }
 
 #errorTitle {
-  -moz-margin-start: 80px;
+  margin-inline-start: 80px;
 }
 
 #errorLongContent {
-  -moz-margin-start: 80px;
+  margin-inline-start: 80px;
 }
 
 #technicalContent > h2,
@@ -80,7 +80,7 @@ h2 {
   background-image: url("chrome://browser/skin/section_expanded.png");
   background-position: left center;
   background-repeat: no-repeat;
-  -moz-padding-start: 17px !important;
+  padding-inline-start: 17px !important;
   left: -17px !important;
 }
 

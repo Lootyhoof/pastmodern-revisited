@@ -15,7 +15,7 @@ body.normal > #errorPageContainer {
 }
 
 #startPrivateBrowsingDesc > button {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 #footerDesc > p {
@@ -27,7 +27,7 @@ body.normal > #errorPageContainer {
   background-image: url("chrome://global/skin/icons/information-16.png");
   background-position: top left;
   background-repeat: no-repeat;
-  -moz-padding-start: 25px;
+  padding-inline-start: 25px;
 }
 
 #moreInfoText {
