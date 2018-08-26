@@ -11,6 +11,5 @@ skin 	platform 	pastmodern-r chrome/platform/linux/ os=Linux
 skin 	platform 	pastmodern-r chrome/platform/darwin/ os=Darwin
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
-override chrome://browser/skin/permissions/aboutPermissions.css chrome://browser/skin/preferences/aboutPermissions.css
 override chrome://devtools/skin/floating-scrollbars-dark-theme.css chrome://global/skin/devtools/floating-scrollbars.css
 override chrome://devtools/skin/floating-scrollbars-responsive-design.css chrome://global/skin/devtools/floating-scrollbars-light.css
