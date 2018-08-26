@@ -1,119 +1,89 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-findbar {
-  min-width: 1px; /* 念のため */
-  background-color: rgb(199, 208, 217);
-  border-top: 1px solid rgb(238, 240, 243);
-  border-right: 1px solid rgb(165, 171, 176);
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: rgb(93, 97, 110) rgb(190, 195, 211);
-  border-left: 1px solid rgb(224, 236, 246);
-}
-
-/* lightweight themes用スタイル */
-findbar:-moz-lwtheme {
-  background-color: transparent;
-  border-right-width: 0;
-  border-left-width: 0;
-}
-
-/* ::::: ページ検索ツールバーの閉じるボタン ::::: */
 
 .findbar-closebutton {
   padding: 0 !important;
-  margin: 2px 5px;
-  border-width: 0;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+  margin-inline-start: 6px !important;
+  margin-inline-end: 4px !important;
+  border: none;
 }
 
-/* ::::: 文字入力部分 ::::: */
-
-.findbar-textbox {
-  -moz-box-align: center;
-  min-height: 24px;
+findbar {
+  min-width: 1px;
+  background-color: #C7D0D9;
+  border-top: 1px solid #EBF4FF;
+  border-right: 1px solid #95A0AD;
+  border-bottom: 1px solid #95A0AD;
 }
 
-.findbar-textbox[status="notfound"] {
-  background-color: rgb(255, 204, 204);
-}
-
-.findbar-textbox[flash="true"] {
-  background-color: rgb(232, 219, 153);
-}
-
-/* ::::: 次を検索ボタン ::::: */
+/* find-next button */
 
 .findbar-find-next {
   list-style-image: url("chrome://global/skin/icons/find.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
-.findbar-find-next:not([disabled="true"]):hover,
-.findbar-find-next:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(16px, 16px, 32px, 0px);
-}
-
 .findbar-find-next[disabled="true"] {
-  -moz-image-region: rect(32px, 16px, 48px, 0px);
+  -moz-image-region: rect(16px, 16px, 32px, 0px) !important;
 }
 
-/* ::::: 前を検索ボタン ::::: */
+/* find-previous button */
 
 .findbar-find-previous {
   list-style-image: url("chrome://global/skin/icons/find.png");
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
-.findbar-find-previous:not([disabled="true"]):hover,
-.findbar-find-previous:not([disabled="true"]):hover:active {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
-}
-
 .findbar-find-previous[disabled="true"] {
-  -moz-image-region: rect(32px, 32px, 48px, 16px);
+  -moz-image-region: rect(16px, 32px, 32px, 16px) !important;
 }
 
-/* ::::: ハイライトボタン ::::: */
+/* highlight button */
 
 .findbar-highlight {
   list-style-image: url("chrome://global/skin/icons/find.png");
   -moz-image-region: rect(0px, 48px, 16px, 32px);
 }
 
-.findbar-highlight:hover {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
+.findbar-highlight[disabled="true"] {
+  -moz-image-region: rect(16px, 48px, 32px, 32px) !important;
+}
+
+.findbar-highlight:hover:active {
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
 }
 
 .findbar-highlight[checked="true"] {
-  -moz-image-region: rect(48px, 48px, 64px, 32px) !important;
-}
-
-.findbar-highlight[disabled="true"] {
-  -moz-image-region: rect(32px, 48px, 48px, 32px) !important;
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
 }
 
 .find-status-icon {
-  width: 16px;
-  height: 16px;
   list-style-image: none;
   margin-top: 2px;
-  margin-bottom: 0;
-  -moz-margin-start: 8px;
-  -moz-margin-end: 0;
+  margin-bottom: 2px;
+  margin-inline-start: 8px;
+  margin-inline-end: 0;
+  width: 16px;
+  height: 16px;
 }
 
 .find-status-icon[status="notfound"] {
   list-style-image: url("chrome://global/skin/icons/notfound.png");
 }
 
-.find-status-icon[status="wrapped"] {
-  list-style-image: url("chrome://global/skin/icons/wrap.png");
+.findbar-textbox[status="notfound"] {
+  background-color: #FFCCCC;
 }
 
-/* !important is needed to override description in global.css */
-.findbar-find-status {
-  padding: 2px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  -moz-margin-start: 2px !important;
-  -moz-margin-end: 0 !important;
+.findbar-textbox[flash="true"] {
+  background-color: #FFFF00;
+}
+
+.find-status-icon[status="wrapped"] {
+  list-style-image: url("chrome://global/skin/icons/wrap.png");
 }

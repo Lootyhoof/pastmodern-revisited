@@ -1,30 +1,6 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1
- * 
- * The contents of this file are subject to the Mozilla Public License
- * Version 1.1 (the "License"); you may not use this file except in
- * compliance with the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- * 
- * Software distributed under the License is distributed on an "AS IS"
- * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
- * License for the specific language governing rights and limitations
- * under the License.
- * 
- * The Original Code is Mozilla Communicator client code, released
- * March 31, 1998.
- * 
- * The Original Code is mozilla.org code.
- * 
- * The Initial Developer of the Original Code is
- * Netscape Communications Corporation.
- * Portions created by the Initial Developer are Copyright (C) 1998
- * the Initial Developer. All Rights Reserved.
- * 
- * Contributor(s):
- *   Joe Hewitt (hewitt@netscape.com)
- * 
- * ***** END LICENSE BLOCK ***** */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* ===== menu.css =======================================================
   == Styles used by XUL menu-related elements.
@@ -36,10 +12,11 @@
 
 menu,
 menuitem,
+menucaption,
 .splitmenu-menuitem {
   -moz-box-align: center;
+  color: #000000;
   font: menu;
-  color: rgb(0, 0, 0);
   list-style-image: none;
   -moz-image-region: auto;
 }
@@ -54,23 +31,23 @@ menuitem[disabled="true"],
 menu[_moz-menuactive="true"][disabled="true"],
 menuitem[_moz-menuactive="true"][disabled="true"],
 .splitmenu-menuitem[_moz-menuactive="true"][disabled="true"] {
-  color: rgb(140, 153, 171);
+  color: #8C99AB;
 }
 
 menuitem.spell-suggestion {
-  font-weight:bold;
+  font-weight: bold;
 }
 
 /* ..... internal content .... */
 
-.menu-text,
+.menu-text, 
 .menu-iconic-left,
 .menu-iconic-text {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-inline-start: 0px !important;
+  margin-inline-end: 2px !important;
   color: inherit;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 2px !important;
 }
 
 .menu-iconic-left {
@@ -85,34 +62,40 @@ menuitem.spell-suggestion {
 }
 
 .menu-text {
+  margin-inline-start: 18px !important;
   font-weight: inherit;
-  -moz-margin-start: 18px !important;
+}
+
+menucaption > .menu-text,
+menucaption > .menu-iconic-text {
+  font-weight: bold;
+  padding-inline-start: 0 !important;
 }
 
 .menu-description {
   font-style: italic;
-  color: rgb(140, 153, 171);
-  -moz-margin-start: 1ex !important;
+  color: #8C99AB;
+  margin-inline-start: 1ex !important;
 }
 
 .menu-accel,
 .menu-iconic-accel {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-inline-start: 7px !important;
+  margin-inline-end: 2px !important;
+  padding-inline-end: 14px;
   color: inherit;
-  -moz-padding-end: 14px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  -moz-margin-start: 7px !important;
-  -moz-margin-end: 2px !important;
 }
 
 /* ..... menu arrow box ..... */
 
 .menu-right {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: 6px;
+  margin-inline-end: 0px;
   width: 8px;
-  margin-top: 0;
-  margin-bottom: 0;
-  -moz-margin-start: 6px;
-  -moz-margin-end: 0;
   list-style-image: url("chrome://global/skin/menu/menu-arrow.gif");
   -moz-image-region: rect(0px, 4px, 7px, 0px);
 }
@@ -128,15 +111,12 @@ menuitem.spell-suggestion {
 /* ::::: menu/menuitems in menubar ::::: */
 
 menubar > menu {
-  padding-top: 1px;
-  padding-bottom: 2px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 4px;
-  margin: 1px 0;
   border: 1px solid transparent;
+  padding: 1px 4px 2px;
+  margin: 1px 0px;
 }
 
-menubar > menu:not([open="true"]):not([disabled="true"]):hover, /* 仮修正 */
+menubar > menu:not([open="true"]):not([disabled="true"]):hover,
 menubar > menu[_moz-menuactive="true"]:not([disabled="true"]) {
   border: 1px outset rgb(221, 227, 235);
 }
@@ -145,7 +125,7 @@ menubar > menu[_moz-menuactive="true"][open="true"] {
   border-style: inset;
 }
 
-/* ::::: lightweight themes用スタイル ::::: */
+/* ::::: lightweight themes ::::: */
 
 menubar > menu:-moz-lwtheme {
   border-style: solid !important;
@@ -169,26 +149,28 @@ menubar > menu:-moz-window-inactive {
 /* ..... internal content .... */
 
 .menubar-left {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 2px;
   color: inherit;
-  margin-top: 0;
-  margin-bottom: 0;
-  -moz-margin-start: 0;
-  -moz-margin-end: 2px;
 }
 
 .menubar-text {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-inline-start: 0px !important;
+  margin-inline-end: 2px !important;
   color: inherit;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 2px !important;
 }
 
 /* ::::: menu/menuitems in popups ::::: */
 
 popup > menu,
+popup > menucaption,
 popup > menuitem,
 menupopup > menu,
+menupopup > menucaption,
 menupopup > menuitem {
   max-width: 38em;
   padding: 2px;
@@ -206,36 +188,31 @@ menupopup > menuitem[_moz-menuactive="true"],
 
 /* ::::: menu/menuitems in menulist popups ::::: */
 
-menulist > menupopup > menu,
 menulist > menupopup > menuitem,
-.menulist-menupopup > menu,
-.menulist-menupopup > menuitem {
+menulist > menupopup > menucaption,
+menulist > menupopup > menu {
   max-width: none;
   font: message-box;
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-padding-end: 26px;
+  padding-inline-end: 26px;
 }
 
-.menulist-menupopup > menuitem[_moz-menuactive="true"],
 menulist > menupopup > menuitem[_moz-menuactive="true"],
-.menulist-menupopup > menu[_moz-menuactive="true"],
 menulist > menupopup > menu[_moz-menuactive="true"] {
   color: rgb(255, 255, 255);
   background-color: rgb(66, 79, 99);
 }
 
-.menulist-menupopup > menuitem > .menu-iconic-left,
 menulist > menupopup > menuitem > .menu-iconic-left,
-.menulist-menupopup > menu > .menu-iconic-left,
+menulist > menupopup > menucaption > .menu-iconic-left,
 menulist > menupopup > menu > .menu-iconic-left {
   display: none;
   padding-top: 0px;
 }
 
-.menulist-menupopup > menuitem > label,
 menulist > menupopup > menuitem > label,
-.menulist-menupopup > menu > label,
+menulist > menupopup > menucaption > label,
 menulist > menupopup > menu > label {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -252,17 +229,14 @@ menulist > menupopup > menuitem[_moz-menuactive="true"][disabled="true"] {
 menulist > menupopup > menuitem:not(.menuitem-iconic) > .menu-iconic-text {
   margin: 0 !important;
 }
-
-
+    
 /* ..... selected state ..... */
 
-.menulist-menupopup > menuitem[selected="true"],
 menulist > menupopup > menuitem[selected="true"] {
   list-style-image: url("chrome://global/skin/menu/menu-check.gif");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
-
-.menulist-menupopup > menuitem[_moz-menuactive="true"][selected="true"],
+  
 menulist > menupopup > menuitem[_moz-menuactive="true"][selected="true"] {
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
@@ -301,15 +275,14 @@ menuitem[checked="true"][type="radio"][disabled="true"] {
 
 menuseparator {
   margin: 2px 3px;
-  border-top: 1px solid rgb(165, 171, 192);
-  border-bottom: 1px solid rgb(238, 241, 247);
+  border-top: 1px solid #A5ABC0;
+  border-bottom: 1px solid #EEF1F7;
 }
 
 menulist > menupopup > menuseparator,
 .menulist-menupopup > menuseparator {
   margin: 2px 0;
-  border-top: 1px solid rgb(0, 0, 0);
-  border-bottom-width: 0;
+  border-bottom: none;
 }
 
 /* ::::: autocomplete ::::: */
@@ -317,12 +290,4 @@ menulist > menupopup > menuseparator,
 .autocomplete-history-popup > menuitem {
   max-width: none !important;
   font: message-box;
-}
-
-/* ::::: tree column picker ::::: */
-
-.treecell-popupcell-menu {
-  -moz-margin-start: -2px;
-  list-style-image: url("chrome://global/skin/tree/columnpicker.gif");
-  -moz-image-region: auto;
 }

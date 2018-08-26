@@ -18,15 +18,15 @@ textbox {
   border: 2px solid;
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 0px;
+  padding-inline-start: 2px;
+  padding-inline-end: 0px;
   background-color: #FFFFFF;
   color: #000000;
   font: inherit;
 }
 
-html|*.textbox-input::-moz-placeholder,
-html|*.textbox-textarea::-moz-placeholder {
+html|*.textbox-input::placeholder,
+html|*.textbox-textarea::placeholder {
   color: #999999;
   opacity: 1.0;
 }
@@ -89,7 +89,12 @@ textbox.plain {
 /* ::::: search textbox ::::: */
 
 .textbox-search-icon {
-  list-style-image: url("chrome://global/skin/icons/search.gif");
+  list-style-image: url(chrome://global/skin/icons/Search-glass.png);
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.textbox-search-icon:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
 }
 
 .textbox-search-clear {
