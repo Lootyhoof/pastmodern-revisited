@@ -2520,6 +2520,70 @@ tabpanels {
   -moz-image-region: rect(0px, 45px, 16px, 30px);
 }
 
+/* ::::: tab icon overlay ::::: */
+
+.tab-icon-overlay {
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-inline-start: -15px;
+  margin-inline-end: -1px;
+  position: relative;
+}
+
+/* ::::: tab sound indicator ::::: */
+
+.tab-icon-sound {
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+}
+
+.allTabs-endimage,
+.tab-icon-sound,
+.tab-icon-overlay[soundplaying],
+.tab-icon-overlay[muted] {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio.png");
+}
+
+.allTabs-endimage[soundplaying],
+.tab-icon-sound[soundplaying],
+.tab-icon-overlay[soundplaying] {
+  -moz-image-region: rect(0px 15px 16px 0px);
+}
+
+.allTabs-endimage[soundplaying]:hover,
+.tab-icon-sound[soundplaying]:hover,
+.tab-icon-overlay[soundplaying]:hover {
+  -moz-image-region: rect(0px 30px 16px 15px);
+}
+
+.allTabs-endimage[soundplaying]:hover:active,
+.tab-icon-sound[soundplaying]:hover:active,
+.tab-icon-overlay[soundplaying]:hover:active {
+  -moz-image-region: rect(0px 45px 16px 30px);
+}
+
+.allTabs-endimage[muted],
+.tab-icon-sound[muted],
+.tab-icon-overlay[muted] {
+  -moz-image-region: rect(16px 15px 32px 0px);
+}
+
+.allTabs-endimage[muted]:hover,
+.tab-icon-sound[muted]:hover,
+.tab-icon-overlay[muted]:hover {
+  -moz-image-region: rect(16px 30px 32px 15px);
+}
+
+.allTabs-endimage[muted]:hover:active,
+.tab-icon-sound[muted]:hover:active,
+.tab-icon-overlay[muted]:hover:active {
+  -moz-image-region: rect(16px 45px 32px 30px);
+}
+
 /* ::::: tabbar scroll buttons ::::: */
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up,

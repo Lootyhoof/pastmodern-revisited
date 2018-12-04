@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="16px" enable-background="new 0 0 15 16" version="1.1" viewBox="0 0 15 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<linearGradient id="d" x1="1.8896" x2="13.111" y1="-.0127" y2="16.014" gradientUnits="userSpaceOnUse">
+	<stop stop-color="#7B848D" offset="0"/>
+	<stop stop-color="#2A3B4D" offset="1"/>
+</linearGradient>
+<path d="m14.5 14.5c0 0.55-0.42 1-0.934 1h-12.133c-0.513 0-0.933-0.45-0.933-1v-13c0-0.55 0.42-1 0.933-1h12.133c0.514 0 0.934 0.45 0.934 1v13z" fill="url(#d)" stroke="#313843" stroke-miterlimit="10"/>
+	<linearGradient id="c" x1="2.1758" x2="12.835" y1=".3965" y2="15.619" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#2A3B4D" stop-opacity=".7" offset="0"/>
+		<stop stop-color="#717F90" stop-opacity="0" offset="1"/>
+	</linearGradient>
+	<path d="m13.5 14.49c0 5e-3 -5e-3 0.01-0.01 0.01h-11.98c-5e-3 0-0.01-5e-3 -0.01-0.01v-12.98c0-5e-3 4e-3 -0.01 0.01-0.01h11.98c5e-3 0 0.01 4e-3 0.01 0.01v12.98z" fill="none" stroke="url(#c)" stroke-miterlimit="10"/>
+<g stroke="#576779" stroke-miterlimit="10">
+		<linearGradient id="b" x1="584.05" x2="589.29" y1="829.67" y2="837.15" gradientTransform="translate(-579.32 -824.92)" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#fff" offset="0"/>
+		<stop stop-color="#BEE5E9" offset="1"/>
+	</linearGradient>
+	<path d="M8.616,3.053L5.75,5.359H4.535   c-1.124,0-2.035,0.855-2.035,1.91V8.68c0,1.057,0.911,1.909,2.035,1.909H5.75l2.943,2.368c0.078,0.064,0.197,0.055,0.263-0.018   C8.984,12.907,9,12.869,9,12.824V3.218C9,3.098,8.896,3,8.77,3C8.713,3,8.659,3.019,8.616,3.053z" fill="url(#b)"/>
+		<linearGradient id="a" x1="589.54" x2="592.52" y1="830.73" y2="835" gradientTransform="translate(-579.32 -824.92)" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#fff" offset="0"/>
+		<stop stop-color="#BEE5E9" offset="1"/>
+	</linearGradient>
+	<path d="m13.172 8c-0.027-1.353-0.102-2.537-1.424-2.962-0.281-0.108-0.6 0.026-0.71 0.3s0.026 0.582 0.312 0.69c6e-3 3e-3 0.017 6e-3 0.023 9e-3 0.889 0.274 0.69 1.059 0.721 1.963-0.031 0.906 0.166 1.699-0.722 1.97-0.28 0.109-0.419 0.42-0.308 0.691 0.104 0.264 0.406 0.4 0.684 0.311 1.322-0.426 1.397-1.618 1.424-2.972z" fill="url(#a)" stroke-width=".25"/>
+</g>
+</svg>
