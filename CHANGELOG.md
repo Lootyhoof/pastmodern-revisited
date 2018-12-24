@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.5.0
+- add tab audio indicators for Pale Moon 28.3.0+
+- update in-browser developer tools
+
 ### 2.4.0
 - sync global stylings with Pale Moon 28
 - remove redundant devtools styling
