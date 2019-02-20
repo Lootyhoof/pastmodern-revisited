@@ -2541,8 +2541,13 @@ tabpanels {
   padding: 0;
 }
 
-.allTabs-endimage,
+.allTabs-endimage {
+  margin: 2px 4px 0 0;
+}
+
 .tab-icon-sound,
+.allTabs-endimage[soundplaying],
+.allTabs-endimage[muted],
 .tab-icon-overlay[soundplaying],
 .tab-icon-overlay[muted] {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio.png");
