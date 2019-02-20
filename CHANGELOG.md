@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.5.1
+- fix all-tabs audio icon and improve margins
+
 ### 2.5.0
 - add tab audio indicators for Pale Moon 28.3.0+
 - update in-browser developer tools
