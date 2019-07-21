@@ -29,7 +29,7 @@
 
 @import url("chrome://global/locale/intl.css"); /* ロケールによるスタイル指定 */
 @import url("chrome://addons/skin/addons.css"); /* 拡張への対応 */
-@import url("chrome://platform/skin/platform.css");
+@import url("chrome://os/skin/platform.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 

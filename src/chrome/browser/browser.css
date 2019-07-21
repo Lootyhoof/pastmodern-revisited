@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 @import url("chrome://global/skin/");
-@import url("chrome://platform/skin/windowcontrols.css");
+@import url("chrome://os/skin/windowcontrols.css");
 @import url("chrome://addons/skin/tabmixplus.css"); /* Tab Mix Plus */
 @import url("chrome://browser/skin/devtools.css");
 @import url("chrome://browser/skin/padlock/padlock.css");

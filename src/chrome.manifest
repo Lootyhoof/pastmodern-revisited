@@ -4,10 +4,9 @@ skin 	global 	pastmodern-r chrome/global/
 skin 	mozapps 	pastmodern-r chrome/mozapps/
 skin 	inspector 	pastmodern-r chrome/inspector/
 skin 	addons 	pastmodern-r chrome/addons/
-skin 	platform 	pastmodern-r chrome/platform/standard/
-skin 	platform 	pastmodern-r chrome/platform/winnt/ os=WINNT
-skin 	platform 	pastmodern-r chrome/platform/linux/ os=Linux
-skin 	platform 	pastmodern-r chrome/platform/darwin/ os=Darwin
+skin 	os 	pastmodern-r chrome/os/winnt/ os=WINNT
+skin 	os 	pastmodern-r chrome/os/linux/ os=Linux
+skin 	os 	pastmodern-r chrome/os/darwin/ os=Darwin
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
 override chrome://devtools/skin/floating-scrollbars-dark-theme.css chrome://global/skin/devtools/floating-scrollbars.css

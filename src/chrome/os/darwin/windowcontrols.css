@@ -10,7 +10,7 @@
 /* ..... restore window button ..... */
 
 #restore-button {
-  list-style-image: url("chrome://platform/skin/Restore.png");
+  list-style-image: url("chrome://os/skin/Restore.png");
   -moz-image-region: rect(0px, 24px, 24px, 0px);
   padding: 3px 4px !important;
   border-width: 0;
