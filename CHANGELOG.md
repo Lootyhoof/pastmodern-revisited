@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.6.0
+- update Reader View styling to reflect changes in Pale Moon 28.6.0+
+
 ### 2.5.1
 - fix all-tabs audio icon and improve margins
 
