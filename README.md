@@ -1,5 +1,5 @@
 # Past Modern Revisited
-![Preview](http://i64.tinypic.com/2dl8bqw.png)
+![Preview](https://i.imgur.com/v32im9S.png)
 
 "Modern" theme for Pale Moon, based on the "Past Modern" theme by Kuden using elements from the SeaMonkey Modern theme.
 
