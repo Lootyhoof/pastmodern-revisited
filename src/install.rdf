@@ -9,7 +9,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>past-modern-revisited@lootyhoof-pm</em:id>
-    <em:version>2.6.0</em:version>
+    <em:version>2.6.1</em:version>
     <em:name>Past Modern Revisited</em:name>
     <em:description>Remake of the classic Past Modern theme by Kuden for Pale Moon.</em:description>
     <em:creator>Lootyhoof</em:creator>
@@ -26,7 +26,7 @@
         <!-- Pale Moon -->
         <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
         <em:minVersion>28.6.0</em:minVersion>
-        <em:maxVersion>28.*</em:maxVersion>
+        <em:maxVersion>29.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>
