@@ -3787,6 +3787,13 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
 
 #window-controls {
   -moz-box-align: start;
+  /* Make sure the window controls are always last on the toolbar */
+  -moz-box-ordinal-group: 100;
+  margin-inline-end: -4px;
+}
+
+#main-window[tabsontop=false] #window-controls {
+  margin-top: -1px;
 }
 
 #minimize-button,
