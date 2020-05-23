@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.7.0
+- support other GTK-based operating systems
+- Windows/Linux: improve fullscreen styling
+
 ### 2.6.2
 - Pale Moon 29: clarify the status of Firefox extensions in the Add-ons Manager
 
