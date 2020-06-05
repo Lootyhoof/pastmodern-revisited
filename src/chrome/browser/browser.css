@@ -465,7 +465,7 @@ toolbar:-moz-lwtheme,
 }
 
 /* content display */
-#content {
+#main-window:not([inFullscreen]) #content {
   border-bottom: 1px solid rgb(73, 79, 93);
 }
 
