@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.7.1
+- don't show a border on fullscreen
+
 ### 2.7.0
 - support other GTK-based operating systems
 - Windows/Linux: improve fullscreen styling
