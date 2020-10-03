@@ -1699,6 +1699,17 @@ toolbar[iconsize="small"] #feed-button[checked="true"] {
   background-image: -moz-linear-gradient(center top, rgb(128, 222, 99), rgb(128, 222, 99) 20%, rgb(98, 200, 73) 50%, rgb(68, 178, 47) 80%);
 }
 
+/* ..... Mixed SSL ..... */
+
+#identity-box.mixedContent {
+  background-image: linear-gradient(to bottom, rgb(239, 238, 168), rgb(239, 238, 168) 20%, rgb(226, 224, 136) 50%, rgb(213, 211, 104) 80%);
+}
+
+#identity-box.mixedContent[open="true"],
+#identity-box.mixedContent:hover:active {
+  background-image: linear-gradient(to bottom, rgb(222, 214, 99), rgb(222, 214, 99) 20%, rgb(200, 187, 73) 50%, rgb(178, 169, 47) 80%);
+}
+
 #identity-icon-label {
   padding: 0 2px;
   margin: 0;
