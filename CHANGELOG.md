@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.9.0
+- add mixed-mode SSL styling
+- support Pale Moon 30
+
 ### 2.7.1
 - don't show a border on fullscreen
 
