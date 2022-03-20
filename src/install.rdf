@@ -16,6 +16,7 @@
     <em:type>4</em:type>
     <em:internalName>pastmodern-r</em:internalName>
     <em:skinnable>true</em:skinnable>
+    <em:updateURL>https://raw.githubusercontent.com/Lootyhoof/pastmodern-revisited/master/update.xml</em:updateURL>
 
     <em:contributor>Kuden</em:contributor>
     <em:contributor>The SeaMonkey Project</em:contributor>
