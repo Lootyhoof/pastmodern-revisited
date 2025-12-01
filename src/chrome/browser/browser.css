@@ -75,8 +75,11 @@ toolbox {
 
 @media not -moz-windows-compositor,
        (-moz-windows-theme: windows-win10) {
-  #navigator-toolbox[tabsontop=true] {
-    padding-bottom: 2px;
+  @media not -moz-windows-compositor,
+       (-moz-windows-theme: windows-win11) {
+    #navigator-toolbox[tabsontop=true] {
+      padding-bottom: 2px;
+    }
   }
 }
 
@@ -667,8 +670,10 @@ toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
 }
 
 @media not all and (-moz-os-version: windows-win10) {
-  toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
-    border-right: 1px solid #86929E;
+  @media not all and (-moz-os-version: windows-win11) {
+    toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
+      border-right: 1px solid #86929E;
+    }
   }
 }
 
@@ -3262,14 +3267,22 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
     -moz-appearance: -moz-win-exclude-glass;
   }
 
-/* ==== Windows 10 styling ==== */
+/* ==== Windows 10/11 styling ==== */
 
-  @media (-moz-os-version: windows-win10) {
-    /* Draw XUL caption buttons and background on Win10 */
+  @media (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
+    /* Draw XUL caption buttons and background on Win10/11 */
     @media (-moz-windows-accent-color-applies: 0) {
       /* Default styling for when no accent color is applied */
       #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
         background-color: white;
+      }
+      
+      @media (-moz-os-version: windows-win11) {
+        #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+          /* Windows 11 defaults to RGB 243 */
+          background-color: rgb(243,243,243);
+        }
       }
       
       :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
@@ -3292,23 +3305,48 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
       }
 
-      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-        background-color: hsla(0, 0%, 0%, .17);
-      }
+      /* Windows 10 caption button effects */
+      @media (-moz-os-version: windows-win10) {
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          background-color: hsla(0, 0%, 0%, .17);
+        }
 
-      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-        background-color: hsla(0, 0%, 0%, .27);
-        transition: none;
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(0, 0%, 0%, .27);
+          transition: none;
+        }
+      
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+          background-color: hsla(0, 86%, 49%, 1);
+        }
+
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(0, 60%, 49%, 0.6);
+          transition: none;
+        }
       }
       
-      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
-        background-color: hsla(0, 86%, 49%, 1);
-      }
+      /* Windows 11 caption button effects */
+      @media (-moz-os-version: windows-win11) {
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          background-color: hsla(0, 0%, 0%, .17);
+        }
 
-      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-        background-color: hsla(0, 60%, 49%, 0.6);
-        transition: none;
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(0, 0%, 0%, .07);
+          transition: none;
+        }
+      
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+          background-color: hsla(0, 75%, 44%, 1);
+        }
+
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(0, 61%, 48%, 1);
+          transition: none;
+        }
       }
     }
     
@@ -3365,22 +3403,48 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
           list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
         }
       
-        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-          background-color: hsla(0, 0%, 100%, .17);
-        }
+        /* Windows 10 caption button effects */
+        @media (-moz-os-version: windows-win10) {
+          .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+            background-color: hsla(0, 0%, 100%, .17);
+          }
 
-        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-          background-color: hsla(0, 0%, 100%, .27);
-          transition: none;
+          .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+            background-color: hsla(0, 0%, 100%, .27);
+            transition: none;
+          }
+      
+          #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+            list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+            background-color: hsla(0, 86%, 45%, 1);
+          }
+
+          #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+            background-color: hsla(0, 60%, 49%, 0.6);
+            transition: none;
+          }
         }
       
-        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-          background-color: hsla(0, 86%, 49%, 1);
-        }
+        /* Windows 11 caption button effects */
+        @media (-moz-os-version: windows-win11) {
+          .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+            background-color: hsla(0, 0%, 0%, .17);
+          }
 
-        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-          background-color: hsla(0, 60%, 39%, 1);
-          transition: none;
+          .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+            background-color: hsla(0, 0%, 0%, .07);
+            transition: none;
+          }
+      
+          #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+            list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+            background-color: hsla(4, 75%, 44%, 1);
+          }
+
+          #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+            background-color: hsla(4, 61%, 48%, 1);
+            transition: none;
+          }
         }
       }
     }
@@ -3458,6 +3522,10 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
 
     #titlebar-close:-moz-window-inactive:not(:-moz-lwtheme):not(:hover) {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
+    }
+
+    .titlebar-button:-moz-window-inactive:not(:-moz-lwtheme):not(:hover):not(:active) {
+      opacity: 0.5;
     }
     
     .titlebar-button:-moz-window-inactive:not(:-moz-lwtheme):hover {
@@ -3578,12 +3646,11 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
     }    
   }
 
-/* ==== Windows Vista/7/8 styling ==== */
+/* ==== Windows 7/8 styling ==== */
 
-  @media (-moz-os-version: windows-vista),
-         (-moz-os-version: windows-win7),
+  @media (-moz-os-version: windows-win7),
          (-moz-os-version: windows-win8) {
-    /* Make sure the native margins are correct on Win Vista/7/8.
+    /* Make sure the native margins are correct on Win 7/8.
      * We can't use -moz-win-glass there because the border sizing would
      * not be correct. */
     #main-window {
@@ -3596,7 +3663,7 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
     }
 
     /* The borders on the glass frame are ours, and inside #browser, and on
-     * vista and win7 we want to make sure they are "glassy", so we can't use
+     * win7 we want to make sure they are "glassy", so we can't use
      * #browser as the exclude-glass container. We use #appcontent instead. */
     #browser {
       -moz-appearance: none;
@@ -3639,8 +3706,7 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
     }
   }
   
-  @media (-moz-os-version: windows-vista),
-         (-moz-os-version: windows-win7) {
+  @media (-moz-os-version: windows-win7) {
     /* Make the menu toolbar and tabs toolbar transparent in Aero+glass IIF tabs are on top and menu toolbar is autohidden */
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"],
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"],
@@ -3656,7 +3722,8 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
   }
   
   @media (-moz-os-version: windows-win8),
-         (-moz-os-version: windows-win10) {
+         (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     /* Make the menu toolbar and tabs toolbar transparent in Aero+glass IIF tabs are on top and menu toolbar is autohidden */
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"],
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"],
@@ -3679,10 +3746,9 @@ toolbar[mode="text"] #addonbar-closebutton > .toolbarbutton-icon {
     background-color: #556;
   }
 
-  /* Show toolbar borders on vista through win8, but not on win10 and later: */
-  @media (-moz-os-version: windows-vista),          
-  (-moz-os-version: windows-win7),          
-  (-moz-os-version: windows-win8) {
+  /* Show toolbar borders on win7/win8, but not on win10 and later: */
+  @media (-moz-os-version: windows-win7),          
+         (-moz-os-version: windows-win8) {
      /* Vertical toolbar border */
     #main-window[sizemode=normal] #navigator-toolbox:not(:-moz-lwtheme) {
       border-left: 1px solid rgba(10%,10%,10%,.4);
